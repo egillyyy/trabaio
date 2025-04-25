@@ -16,7 +16,7 @@ function salvarUsuario($conexao, $senha, $tipo, $email, $nome)
 };
 
 // Cadastro de serviços
-function salvarServico($conexao, $servico, $preco, $horario_disponivel)
+function salvarServico($conexao, $preco_servico, $tipo_servico)
 {
     $sql = "INSERT INTO tb_servico (servico, preco, horario_disponivel) VALUES (?, ?, ?)";
     $comando = mysqli_prepare($conexao, $sql);
