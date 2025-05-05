@@ -3,10 +3,10 @@
     require_once "../funcoes.php";
 
 
-    $email = "Ian@gmail.com";
-    $senha_hash = "123";
-    $tipo = "3";
-    $nome = "Gabriel";
+    $email = "gay@gmail.com";
+    $senha_hash = "321";
+    $tipo = "2";
+    $nome = "GelFacial";
 
     salvarUsuario($conexao, $email, $senha_hash, $tipo, $nome);
 ?>
