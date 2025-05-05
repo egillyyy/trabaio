@@ -1,12 +1,12 @@
 <?php
 //  Cadastro de Usuário
-function salvarUsuario($conexao, $email, $senha, $tipo, $nome) {
-    $sql = "INSERT INTO tb_usuario (email, senha, tipo, nome) VALUES (?, ?, ?, ?)";
+function salvarUsuario($conexao, $email, $senha, $tipo, $nome, $telefone, $cpf) {
+    $sql = "INSERT INTO tb_usuario (email, senha, tipo, nome, telefone, cpf) VALUES (?, ?, ?, ?, ?, ?)";
     $comando = mysqli_prepare($conexao, $sql);
     
     $senha_hash = password_hash($senha, PASSWORD_DEFAULT);
 
-    mysqli_stmt_bind_param($comando, 'ssss', $email, $senha_hash, $tipo, $nome);
+    mysqli_stmt_bind_param($comando, 'ssssss', $email, $senha_hash, $tipo, $nome, $telefone, $cpf);
     
     $funcionou = mysqli_stmt_execute($comando);
     mysqli_stmt_close($comando);
