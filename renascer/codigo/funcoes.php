@@ -57,12 +57,12 @@ function editarUsuario($conexao, $email, $senha, $tipo, $nome, $telefone, $cpf) 
     return $funcionou;    
 };
 
-// Deletar de clientes
-function deletarCliente($conexao, $idcliente) {
-    $sql = "DELETE FROM tb_cliente WHERE idcliente = ?";
+// Deletar de Usuario
+function deletarUsuario($conexao, $idusuario) {
+    $sql = "DELETE FROM tb_usuario WHERE idusuario = ?";
     $comando = mysqli_prepare($conexao, $sql);
 
-    mysqli_stmt_bind_param($comando, 'i', $id);
+    mysqli_stmt_bind_param($comando, 'i', $idusuario);
 
     $funcionou = mysqli_stmt_execute($comando);
     mysqli_stmt_close($comando);
