@@ -27,9 +27,9 @@ function salvarServico($conexao, $preco_servico, $tipo_servico) {
     return $funcionou;
 };
 
-// Cadastro de cliente
-function salvarCliente($conexao, $telefone) {
-    $sql = "INSERT INTO tb_cliente (telefone) VALUES (?)";
+// Cadastro de usuario
+function salvarCliente($conexao, $telefone, $tb_usuario_idusuario) {
+    $sql = "INSERT INTO tb_cliente (telefone, tb_usuario_idusuario) VALUES (?, ?)";
     $comando = mysqli_prepare($conexao, $sql);
     
     mysqli_stmt_bind_param($comando, 's', $telefone);
