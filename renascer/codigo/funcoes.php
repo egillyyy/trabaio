@@ -19,7 +19,7 @@ function salvarServico($conexao, $preco_servico, $tipo_servico) {
     $sql = "INSERT INTO tb_servico (preco_servico, tipo_servico) VALUES (?, ?)";
     $comando = mysqli_prepare($conexao, $sql);
     
-    mysqli_stmt_bind_param($comando, 'ss', $preco_servico, $tipo_servico);
+    mysqli_stmt_bind_param($comando, 'ds', $preco_servico, $tipo_servico);
     
     $funcionou = mysqli_stmt_execute($comando);
     mysqli_stmt_close($comando);
