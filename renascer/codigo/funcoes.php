@@ -4,7 +4,9 @@ function salvarUsuario($conexao, $email, $senha, $tipo, $nome) {
     $sql = "INSERT INTO tb_usuario (email, senha, tipo, nome) VALUES (?, ?, ?, ?)";
     $comando = mysqli_prepare($conexao, $sql);
     
-    mysqli_stmt_bind_param($comando, 'ssss', $email, $senha, $tipo, $nome);
+    $senha_hash = password_hash($senha, PASSWORD_DEFAULT);
+
+    mysqli_stmt_bind_param($comando, 'ssss', $email, $senha_hash, $tipo, $nome);
     
     $funcionou = mysqli_stmt_execute($comando);
     mysqli_stmt_close($comando);
