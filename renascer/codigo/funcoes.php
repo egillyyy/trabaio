@@ -70,11 +70,37 @@ function deletarUsuario($conexao, $idusuario) {
     return $funcionou;
 };
 
-// Pesquisa de clientes pelo ID
-function pesquisarClienteId($conexao, $idcliente) {};
+// Pesquisa de usuario pelo ID
+function pesquisarUsuarioId($conexao, $idusuario) { 
+    $sql = "SELECT * FROM tb_usuario WHERE idusuario = ?";
+    $comando = mysqli_prepare($conexao, $sql);
+
+    mysqli_stmt_bind_param($comando, 'i', $idusuario);
+
+    mysqli_stmt_execute($comando);
+    $resultado = mysqli_stmt_get_result($comando);
+
+    $usuario = mysqli_fetch_assoc($resultado);
+
+    mysqli_stmt_close($comando);
+    return $usuario;
+};
 
 //  Pesquisa de serviço pelo ID
-function pesquisarServicoId($conexao, $id_servico) {};
+function pesquisarServicoId($conexao, $id_servico) {   
+    $sql = "SELECT * FROM tb_servico WHERE idservico = ?";
+    $comando = mysqli_prepare($conexao, $sql);
+
+    mysqli_stmt_bind_param($comando, 'i', $idservico);
+
+    mysqli_stmt_execute($comando);
+    $resultado = mysqli_stmt_get_result($comando);
+
+    $servico = mysqli_fetch_assoc($resultado);
+
+    mysqli_stmt_close($comando);
+    return $servico;
+};
 
 // Editar de serviços
 function editarServico($conexao, $preco_servico, $tipo_servico, $id_servico) {
