@@ -45,12 +45,12 @@ function listarUsuario($conexao) {
     return $lista_usuario;
 };
 
-// Editar de clientes
-function editarCliente($conexao, $telefone, $idcliente) {
-    $sql = "UPDATE tb_cliente SET telefone=? WHERE idcliente=?";
+// Editar de usuario
+function editarUsuario($conexao, $email, $senha, $tipo, $nome, $telefone, $cpf) {
+    $sql = "UPDATE tb_usuario SET email=?, senha=?, tipo=?, nome=?, telefone=?, cpf=? WHERE idusuario=?";
     $comando = mysqli_prepare($conexao, $sql);
     
-    mysqli_stmt_bind_param($comando, 'si', $telefone, $id);
+    mysqli_stmt_bind_param($comando, 'ssssssi', $email, $senha, $tipo, $nome, $telefone, $cpf, $idusuario);
     $funcionou = mysqli_stmt_execute($comando);
 
     mysqli_stmt_close($comando);
