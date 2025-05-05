@@ -103,11 +103,11 @@ function pesquisarServicoId($conexao, $id_servico) {
 };
 
 // Editar de serviços
-function editarServico($conexao, $preco_servico, $tipo_servico, $id_servico) {
-    $sql = "UPDATE tb_servico SET preco_servico=?, tipo_servico=? WHERE id_servico=?";
+function editarServico($conexao, $preco_servico, $tipo_servico, $idservico) {
+    $sql = "UPDATE tb_servico SET preco_servico=?, tipo_servico=? WHERE idservico=?";
     $comando = mysqli_prepare($conexao, $sql);
     
-    mysqli_stmt_bind_param($comando, 'ssi', $preco_servico, $tipo_servico, $id);
+    mysqli_stmt_bind_param($comando, 'ssi', $preco_servico, $tipo_servico, $idservico);
     $funcionou = mysqli_stmt_execute($comando);
 
     mysqli_stmt_close($comando);
@@ -132,11 +132,11 @@ function listarServico($conexao) {
 };
 
 // Deletar de serviços
-function deletarServico($conexao, $id_servico) {
-    $sql = "DELETE FROM tb_servico WHERE id_servico = ?";
+function deletarServico($conexao, $idservico) {
+    $sql = "DELETE FROM tb_servico WHERE idservico = ?";
     $comando = mysqli_prepare($conexao, $sql);
 
-    mysqli_stmt_bind_param($comando, 'i', $id_servico);
+    mysqli_stmt_bind_param($comando, 'i', $idservico);
 
     $funcionou = mysqli_stmt_execute($comando);
     mysqli_stmt_close($comando);
