@@ -27,21 +27,23 @@ function salvarServico($conexao, $preco_servico, $tipo_servico) {
     return $funcionou;
 };
 
-// Cadastro de usuario
-function salvarCliente($conexao, $telefone, $tb_usuario_idusuario) {
-    $sql = "INSERT INTO tb_cliente (telefone, tb_usuario_idusuario) VALUES (?, ?)";
+
+// Listar usuario
+function listarUsuario($conexao) {
+    $sql = "SELECT * FROM tb_usuario";
     $comando = mysqli_prepare($conexao, $sql);
     
-    mysqli_stmt_bind_param($comando, 's', $telefone);
+    mysqli_stmt_execute($comando);
+    $resultados = mysqli_stmt_get_result($comando);
     
-    $funcionou = mysqli_stmt_execute($comando);
+    $lista_usuario = [];
+    while ($usuario = mysqli_fetch_assoc($resultados)) {
+        $lista_usuario[] = $usuario;
+    }
     mysqli_stmt_close($comando);
-    
-    return $funcionou;
-};
 
-// Listagem de clientes
-function listarClientes($conexao) {};
+    return $lista_usuario;
+};
 
 // Editar de clientes
 function editarCliente($conexao, $telefone, $idcliente) {
