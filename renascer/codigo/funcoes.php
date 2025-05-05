@@ -114,7 +114,7 @@ function editarServico($conexao, $preco_servico, $tipo_servico, $idservico) {
     return $funcionou;    
 };
 
-// Listar serviços
+// Listar serviço
 function listarServico($conexao) {
     $sql = "SELECT * FROM tb_servico";
     $comando = mysqli_prepare($conexao, $sql);
