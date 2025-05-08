@@ -9,7 +9,7 @@
     $nome = "aaaa";
     $telefone = "62 99009571";
     $cpf = "000.467.666-00";
-    $idusuario = "1"
+    $idusuario = "1";
 
     editarUsuario($conexao, $email, $senha_hash, $tipo, $nome, $telefone, $cpf, $idusuario);
 
