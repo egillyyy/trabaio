@@ -2,9 +2,11 @@
     require_once "../conexao.php";
     require_once "../funcoes.php";
     
-    $servico = "";
-    $preco = "";
-    $horario_disponivel = "";
+    $preco_servico = "40.00";
+    $tipo_servico = "Cabelo";
+   
 
-    editarServico($conexao, $servico, $preco, $horario_disponivel);
+    editarServico($conexao, $preco_servico, $tipo_servico);
 ?>
+
+
