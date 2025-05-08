@@ -34,10 +34,11 @@ function listarUsuario($conexao) {
 
 // Editar de usuario
 function editarUsuario($conexao, $email, $senha, $tipo, $nome, $telefone, $cpf, $idusuario) {
+    $senha_hash = password_hash($senha, PASSWORD_DEFAULT);
     $sql = "UPDATE tb_usuario SET email=?, senha=?, tipo=?, nome=?, telefone=?, cpf=? WHERE idusuario=?";
     $comando = mysqli_prepare($conexao, $sql);
     
-    mysqli_stmt_bind_param($comando, 'ssssssi', $email, $senha, $tipo, $nome, $telefone, $cpf, $idusuario);
+    mysqli_stmt_bind_param($comando, 'ssssssi', $email, $senha_hash, $tipo, $nome, $telefone, $cpf, $idusuario);
     $funcionou = mysqli_stmt_execute($comando);
 
     mysqli_stmt_close($comando);
@@ -91,7 +92,7 @@ function salvarServico($conexao, $preco_servico, $tipo_servico) {
 
 
 //  Pesquisa de serviço pelo ID
-function pesquisarServicoId($conexao, $id_servico) {   
+function pesquisarServicoId($conexao, $idservico) {   
     $sql = "SELECT * FROM tb_servico WHERE idservico = ?";
     $comando = mysqli_prepare($conexao, $sql);
 
