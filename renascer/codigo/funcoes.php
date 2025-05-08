@@ -92,7 +92,7 @@ function salvarServico($conexao, $preco_servico, $tipo_servico) {
 
 
 //  Pesquisa de serviço pelo ID
-function pesquisarServicoId($conexao, $id_servico) {   
+function pesquisarServicoId($conexao, $idservico) {   
     $sql = "SELECT * FROM tb_servico WHERE idservico = ?";
     $comando = mysqli_prepare($conexao, $sql);
 
