@@ -3,10 +3,13 @@
     require_once "../funcoes.php";
     
 
-    $nome = "Bruna";
-    $cpf = "222.222.999-09";
-    $telefone = "(62) 94567-8970";
-    $idcliente = 1;
-    editarCliente($conexao, $nome, $cpf, $telefone, $idcliente);
+    $email = "fernando@gmail.com";
+    $senha_hash = "4567";
+    $tipo = "1";
+    $nome = "aaaa";
+    $telefone = "62 99009571";
+    $cpf = "000.467.666-00";
+
+    salvarUsuario($conexao, $email, $senha_hash, $tipo, $nome, $telefone, $cpf);
 
 ?>
