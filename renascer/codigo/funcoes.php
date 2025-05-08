@@ -33,7 +33,7 @@ function listarUsuario($conexao) {
 };
 
 // Editar de usuario
-function editarUsuario($conexao, $email, $senha, $tipo, $nome, $telefone, $cpf) {
+function editarUsuario($conexao, $email, $senha, $tipo, $nome, $telefone, $cpf, $idusuario) {
     $sql = "UPDATE tb_usuario SET email=?, senha=?, tipo=?, nome=?, telefone=?, cpf=? WHERE idusuario=?";
     $comando = mysqli_prepare($conexao, $sql);
     
