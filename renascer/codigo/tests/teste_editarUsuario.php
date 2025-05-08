@@ -11,6 +11,6 @@
     $cpf = "000.467.666-00";
     $idusuario = "1"
 
-    salvarUsuario($conexao, $email, $senha_hash, $tipo, $nome, $telefone, $cpf, $idusuario);
+    editarUsuario($conexao, $email, $senha_hash, $tipo, $nome, $telefone, $cpf, $idusuario);
 
 ?>
