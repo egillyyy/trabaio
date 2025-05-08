@@ -14,19 +14,6 @@ function salvarUsuario($conexao, $email, $senha, $tipo, $nome, $telefone, $cpf) 
     return $funcionou;
 };
 
-// Cadastro de serviços
-function salvarServico($conexao, $preco_servico, $tipo_servico) {
-    $sql = "INSERT INTO tb_servico (preco_servico, tipo_servico) VALUES (?, ?)";
-    $comando = mysqli_prepare($conexao, $sql);
-    
-    mysqli_stmt_bind_param($comando, 'ds', $preco_servico, $tipo_servico);
-    
-    $funcionou = mysqli_stmt_execute($comando);
-    mysqli_stmt_close($comando);
-    
-    return $funcionou;
-};
-
 
 // Listar usuario
 function listarUsuario($conexao) {
@@ -85,6 +72,23 @@ function pesquisarUsuarioId($conexao, $idusuario) {
     mysqli_stmt_close($comando);
     return $usuario;
 };
+
+
+// Cadastro de serviços
+function salvarServico($conexao, $preco_servico, $tipo_servico) {
+    $sql = "INSERT INTO tb_servico (preco_servico, tipo_servico) VALUES (?, ?)";
+    $comando = mysqli_prepare($conexao, $sql);
+    
+    mysqli_stmt_bind_param($comando, 'ds', $preco_servico, $tipo_servico);
+    
+    $funcionou = mysqli_stmt_execute($comando);
+    mysqli_stmt_close($comando);
+    
+    return $funcionou;
+};
+
+
+
 
 //  Pesquisa de serviço pelo ID
 function pesquisarServicoId($conexao, $id_servico) {   
@@ -185,46 +189,46 @@ function excluirAgendamento($conexao, $idagendamento) {
     return $funcionou;
 };
 
-// Cadastrar funcionário
-function salvarFuncionario($conexao, $cpf) {
-    $sql = "INSERT INTO tb_funcionario (cpf) VALUES (?)";
-    $comando = mysqli_prepare($conexao, $sql);
+// // Cadastrar funcionário
+// function salvarFuncionario($conexao, $cpf) {
+//     $sql = "INSERT INTO tb_funcionario (cpf) VALUES (?)";
+//     $comando = mysqli_prepare($conexao, $sql);
     
-    mysqli_stmt_bind_param($comando, 's', $cpf);
+//     mysqli_stmt_bind_param($comando, 's', $cpf);
     
-    $funcionou = mysqli_stmt_execute($comando);
-    mysqli_stmt_close($comando);
+//     $funcionou = mysqli_stmt_execute($comando);
+//     mysqli_stmt_close($comando);
     
-    return $funcionou;
-};
+//     return $funcionou;
+// };
 
-// Deletar funcionário
-function excluirFuncionario ($conexao, $idfuncionario) {
-    $sql = "DELETE FROM tb_funcionario WHERE idfuncionario = ?";
-    $comando = mysqli_prepare($conexao, $sql);
+// // Deletar funcionário
+// function excluirFuncionario ($conexao, $idfuncionario) {
+//     $sql = "DELETE FROM tb_funcionario WHERE idfuncionario = ?";
+//     $comando = mysqli_prepare($conexao, $sql);
 
-    mysqli_stmt_bind_param($comando, 'i', $idfuncionario);
+//     mysqli_stmt_bind_param($comando, 'i', $idfuncionario);
 
-    $funcionou = mysqli_stmt_execute($comando);
-    mysqli_stmt_close($comando);
+//     $funcionou = mysqli_stmt_execute($comando);
+//     mysqli_stmt_close($comando);
 
-    return $funcionou;
-};
+//     return $funcionou;
+// };
 
-// Listar funcionários
-function listarFuncionario($conexao){};
+// // Listar funcionários
+// function listarFuncionario($conexao){};
 
-// Editar funcionário 
-function editarFuncionario($conexao, $cpf, $idfuncionario) {
-    $sql = "UPDATE tb_funcionario SET cpf=? WHERE idfuncionario=?";
-    $comando = mysqli_prepare($conexao, $sql);
+// // Editar funcionário 
+// function editarFuncionario($conexao, $cpf, $idfuncionario) {
+//     $sql = "UPDATE tb_funcionario SET cpf=? WHERE idfuncionario=?";
+//     $comando = mysqli_prepare($conexao, $sql);
     
-    mysqli_stmt_bind_param($comando, 'si', $cpf, $id);
-    $funcionou = mysqli_stmt_execute($comando);
+//     mysqli_stmt_bind_param($comando, 'si', $cpf, $id);
+//     $funcionou = mysqli_stmt_execute($comando);
 
-    mysqli_stmt_close($comando);
-    return $funcionou;
-};
+//     mysqli_stmt_close($comando);
+//     return $funcionou;
+// };
 
 // Listar taxas
 function listarTaxa($conexao) {
