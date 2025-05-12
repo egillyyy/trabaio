@@ -3,12 +3,12 @@
     require_once "../funcoes.php";
 
 
-    $email = "inso@gmail.com";
+    $email = "teste2@gmail.com";
     $senha_hash = "321";
-    $tipo = "1";
-    $nome = "aaaa";
-    $telefone = "62 99009571";
-    $cpf = "000.467.666-00";
+    $tipo = "2";
+    $nome = "bbbb";
+    $telefone = "62 99008888";
+    $cpf = "111.467.777-00";
 
     salvarUsuario($conexao, $email, $senha_hash, $tipo, $nome, $telefone, $cpf);
 ?>
