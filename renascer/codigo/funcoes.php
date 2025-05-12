@@ -188,7 +188,7 @@ function editarAgendamento($conexao, $data, $horario, $tb_cliente_idcliente, $tb
 
 // Cadastrar taxa
 function salvarTaxa($conexao, $status, $taxa) {
-    $sql = "INSERT INTO tb_pagamento (status, taxa) VALUES (?, ?)";
+    $sql = "INSERT INTO tb_taxa (status, taxa) VALUES (?, ?)";
     $comando = mysqli_prepare($conexao, $sql);
     
     mysqli_stmt_bind_param($comando, 'ss', $status, $taxa);
