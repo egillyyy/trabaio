@@ -196,10 +196,10 @@ function editarAgendamento($conexao, $data, $horario, $tb_cliente_idcliente, $tb
 
 // Cadastrar taxa
 function salvarTaxa($conexao, $status, $taxa) {
-    $sql = "INSERT INTO tb_taxa (status, taxa) VALUES (?, ?)";
+    $sql = "INSERT INTO tb_pagamento (valor, forma, descricao) VALUES (?, ?)";
     $comando = mysqli_prepare($conexao, $sql);
     
-    mysqli_stmt_bind_param($comando, 'ss', $status, $taxa);
+    mysqli_stmt_bind_param($comando, 'sss', $status, $taxa);
     
     $funcionou = mysqli_stmt_execute($comando);
     mysqli_stmt_close($comando);
@@ -250,12 +250,57 @@ function editarTaxa($conexao, $status, $taxa, $idtaxa) {
 };
 
 // Cadastrar Pagamento
-
+function salvarPagamento($conexao, $valor, $forma, $descricao) {
+    $sql = "INSERT INTO tb_taxa (valor, forma, descricao) VALUES (?, ?, ?)";
+    $comando = mysqli_prepare($conexao, $sql);
+    
+    mysqli_stmt_bind_param($comando, 'sss', $valor, $forma, $descricao);
+    
+    $funcionou = mysqli_stmt_execute($comando);
+    mysqli_stmt_close($comando);
+    
+    return $funcionou;
+};
 
 // Listar Pagamento
+function listarPagamento($conexao) {
+    $sql = "SELECT * FROM tb_pagamento";
+    $comando = mysqli_prepare($conexao, $sql);
+    
+    mysqli_stmt_execute($comando);
+    $resultados = mysqli_stmt_get_result($comando);
+    
+    $lista_pagamento = [];
+    while ($pagamento = mysqli_fetch_assoc($resultados)) {
+        $lista_pagamento[] = $pagamento;
+    }
+    mysqli_stmt_close($comando);
+
+    return $lista_pagamento;
+};
 
 
 // Deletar Pagamento
+function deletarPagamento($conexao, $idpagamento) {
+    $sql = "DELETE FROM tb_pagamento WHERE idpagamento = ?";
+    $comando = mysqli_prepare($conexao, $sql);
 
+    mysqli_stmt_bind_param($comando, 'i', $idpagamento);
+
+    $funcionou = mysqli_stmt_execute($comando);
+    mysqli_stmt_close($comando);
+
+    return $funcionou;
+};
 
 // Editar Pagamento
+function editarPagamento ($conexao, $valor, $forma, $descricao, $idpagamento) {
+    $sql = "UPDATE tb_pagamento SET valor=?,forma=?, descricao=? WHERE idpagamento=?";
+    $comando = mysqli_prepare($conexao, $sql);
+    
+    mysqli_stmt_bind_param($comando, 'sssi', $valor, $forma, $descricao, $id);
+    $funcionou = mysqli_stmt_execute($comando);
+
+    mysqli_stmt_close($comando);
+    return $funcionou;
+};
