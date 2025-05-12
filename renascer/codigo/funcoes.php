@@ -61,7 +61,6 @@ function pesquisarUsuarioId($conexao, $idusuario) {
     return $usuario;
 };
 
-
 // Editar de usuario
 function editarUsuario($conexao, $email, $senha, $tipo, $nome, $telefone, $cpf, $idusuario) {
     $senha_hash = password_hash($senha, PASSWORD_DEFAULT);
@@ -74,8 +73,6 @@ function editarUsuario($conexao, $email, $senha, $tipo, $nome, $telefone, $cpf, 
     mysqli_stmt_close($comando);
     return $funcionou;    
 };
-
-
 
 // Cadastro de serviços
 function salvarServico($conexao, $preco_servico, $tipo_servico) {
@@ -136,8 +133,6 @@ function pesquisarServicoId($conexao, $idservico) {
     return $servico;
 };
 
-
-
 // Editar de serviços
 function editarServico($conexao, $preco_servico, $tipo_servico, $idservico) {
     $sql = "UPDATE tb_servico SET preco_servico=?, tipo_servico=? WHERE idservico=?";
@@ -149,9 +144,6 @@ function editarServico($conexao, $preco_servico, $tipo_servico, $idservico) {
     mysqli_stmt_close($comando);
     return $funcionou;    
 };
-
-
-
 
 // Cadastro de Agendamento
 function salvarAgendamento ($conexao, $data, $horario, $tb_cliente_idcliente, $tb_taxa_idtaxa, $tb_servico_id_servico) {
@@ -169,8 +161,8 @@ function salvarAgendamento ($conexao, $data, $horario, $tb_cliente_idcliente, $t
 // Listagem de Agendamento
 function listarAgendamento($conexao) {};
 
-// Excluir Agendamento
-function excluirAgendamento($conexao, $idagendamento) {
+// Deletar Agendamento
+function deletarAgendamento($conexao, $idagendamento) {
     $sql = "DELETE FROM tb_agendamento WHERE idagendamento = ?";
     $comando = mysqli_prepare($conexao, $sql);
 
@@ -278,7 +270,6 @@ function listarPagamento($conexao) {
 
     return $lista_pagamento;
 };
-
 
 // Deletar Pagamento
 function deletarPagamento($conexao, $idpagamento) {
