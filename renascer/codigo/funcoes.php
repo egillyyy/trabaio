@@ -159,7 +159,21 @@ function salvarAgendamento ($conexao, $data, $horario, $tb_taxa_idtaxa, $tb_serv
 };
 
 // Listagem de Agendamento
-function listarAgendamento($conexao) {};
+function listarAgendamento($conexao) {
+    $sql = "SELECT * FROM tb_agendamento";
+    $comando = mysqli_prepare($conexao, $sql);
+    
+    mysqli_stmt_execute($comando);
+    $resultados = mysqli_stmt_get_result($comando);
+    
+    $lista_agendamento = [];
+    while ($agendamento = mysqli_fetch_assoc($resultados)) {
+        $lista_agendamento[] = $agendamento;
+    }
+    mysqli_stmt_close($comando);
+
+    return $lista_agendamento;
+};
 
 // Deletar Agendamento
 function deletarAgendamento($conexao, $idagendamento) {
