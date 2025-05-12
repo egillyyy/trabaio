@@ -4,7 +4,7 @@
     
     $status = "Sem atraso";
     $taxa = "0.00";
-    $idtaxa = "1";
+    $idtaxa = "2";
 
     editarTaxa($conexao, $status, $taxa, $idtaxa);
 ?>
