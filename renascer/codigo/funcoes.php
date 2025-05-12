@@ -234,7 +234,7 @@ function editarTaxa($conexao, $status, $taxa, $idtaxa) {
     $sql = "UPDATE tb_taxa SET status=?, taxa=? WHERE idtaxa=?";
     $comando = mysqli_prepare($conexao, $sql);
     
-    mysqli_stmt_bind_param($comando, 'ssi', $status, $taxa, $id);
+    mysqli_stmt_bind_param($comando, 'ssi', $status, $taxa, $idtaxa);
     $funcionou = mysqli_stmt_execute($comando);
 
     mysqli_stmt_close($comando);
