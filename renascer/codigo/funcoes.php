@@ -32,19 +32,6 @@ function listarUsuario($conexao) {
     return $lista_usuario;
 };
 
-// Editar de usuario
-function editarUsuario($conexao, $email, $senha, $tipo, $nome, $telefone, $cpf, $idusuario) {
-    $senha_hash = password_hash($senha, PASSWORD_DEFAULT);
-    $sql = "UPDATE tb_usuario SET email=?, senha=?, tipo=?, nome=?, telefone=?, cpf=? WHERE idusuario=?";
-    $comando = mysqli_prepare($conexao, $sql);
-    
-    mysqli_stmt_bind_param($comando, 'ssssssi', $email, $senha_hash, $tipo, $nome, $telefone, $cpf, $idusuario);
-    $funcionou = mysqli_stmt_execute($comando);
-
-    mysqli_stmt_close($comando);
-    return $funcionou;    
-};
-
 // Deletar de Usuario
 function deletarUsuario($conexao, $idusuario) {
     $sql = "DELETE FROM tb_usuario WHERE idusuario = ?";
@@ -75,6 +62,21 @@ function pesquisarUsuarioId($conexao, $idusuario) {
 };
 
 
+// Editar de usuario
+function editarUsuario($conexao, $email, $senha, $tipo, $nome, $telefone, $cpf, $idusuario) {
+    $senha_hash = password_hash($senha, PASSWORD_DEFAULT);
+    $sql = "UPDATE tb_usuario SET email=?, senha=?, tipo=?, nome=?, telefone=?, cpf=? WHERE idusuario=?";
+    $comando = mysqli_prepare($conexao, $sql);
+    
+    mysqli_stmt_bind_param($comando, 'ssssssi', $email, $senha_hash, $tipo, $nome, $telefone, $cpf, $idusuario);
+    $funcionou = mysqli_stmt_execute($comando);
+
+    mysqli_stmt_close($comando);
+    return $funcionou;    
+};
+
+
+
 // Cadastro de serviços
 function salvarServico($conexao, $preco_servico, $tipo_servico) {
     $sql = "INSERT INTO tb_servico (preco_servico, tipo_servico) VALUES (?, ?)";
@@ -86,37 +88,6 @@ function salvarServico($conexao, $preco_servico, $tipo_servico) {
     mysqli_stmt_close($comando);
     
     return $funcionou;
-};
-
-
-
-
-//  Pesquisa de serviço pelo ID
-function pesquisarServicoId($conexao, $idservico) {   
-    $sql = "SELECT * FROM tb_servico WHERE idservico = ?";
-    $comando = mysqli_prepare($conexao, $sql);
-
-    mysqli_stmt_bind_param($comando, 'i', $idservico);
-
-    mysqli_stmt_execute($comando);
-    $resultado = mysqli_stmt_get_result($comando);
-
-    $servico = mysqli_fetch_assoc($resultado);
-
-    mysqli_stmt_close($comando);
-    return $servico;
-};
-
-// Editar de serviços
-function editarServico($conexao, $preco_servico, $tipo_servico, $idservico) {
-    $sql = "UPDATE tb_servico SET preco_servico=?, tipo_servico=? WHERE idservico=?";
-    $comando = mysqli_prepare($conexao, $sql);
-    
-    mysqli_stmt_bind_param($comando, 'ssi', $preco_servico, $tipo_servico, $idservico);
-    $funcionou = mysqli_stmt_execute($comando);
-
-    mysqli_stmt_close($comando);
-    return $funcionou;    
 };
 
 // Listar serviço
@@ -149,6 +120,39 @@ function deletarServico($conexao, $idservico) {
     return $funcionou;
 };
 
+//  Pesquisa de serviço pelo ID
+function pesquisarServicoId($conexao, $idservico) {   
+    $sql = "SELECT * FROM tb_servico WHERE idservico = ?";
+    $comando = mysqli_prepare($conexao, $sql);
+
+    mysqli_stmt_bind_param($comando, 'i', $idservico);
+
+    mysqli_stmt_execute($comando);
+    $resultado = mysqli_stmt_get_result($comando);
+
+    $servico = mysqli_fetch_assoc($resultado);
+
+    mysqli_stmt_close($comando);
+    return $servico;
+};
+
+
+
+// Editar de serviços
+function editarServico($conexao, $preco_servico, $tipo_servico, $idservico) {
+    $sql = "UPDATE tb_servico SET preco_servico=?, tipo_servico=? WHERE idservico=?";
+    $comando = mysqli_prepare($conexao, $sql);
+    
+    mysqli_stmt_bind_param($comando, 'ssi', $preco_servico, $tipo_servico, $idservico);
+    $funcionou = mysqli_stmt_execute($comando);
+
+    mysqli_stmt_close($comando);
+    return $funcionou;    
+};
+
+
+
+
 // Cadastro de Agendamento
 function salvarAgendamento ($conexao, $data, $horario, $tb_cliente_idcliente, $tb_taxa_idtaxa, $tb_servico_id_servico) {
     $sql = "INSERT INTO tb_agendamento (data, horario, tb_cliente_idcliente, tb_taxa_idtaxa, tb_servico_id_servico) VALUES (?, ?, ?, ?, ?)";
@@ -165,18 +169,6 @@ function salvarAgendamento ($conexao, $data, $horario, $tb_cliente_idcliente, $t
 // Listagem de Agendamento
 function listarAgendamento($conexao) {};
 
-// Editar de Agendamento
-function editarAgendamento($conexao, $data, $horario, $tb_cliente_idcliente, $tb_taxa_idtaxa, $tb_servico_id_servico, $idagendamento) {
-    $sql = "UPDATE tb_agendamento SET data=?, horario=?, tb_cliente_idcliente=?, tb_taxa_idtaxa=?, tb_servico_id_servico=? WHERE idagendamento=?";
-    $comando = mysqli_prepare($conexao, $sql);
-    
-    mysqli_stmt_bind_param($comando, 'dsiii', $data, $horario, $tb_cliente_idcliente, $tb_taxa_idtaxa, $tb_servico_id_servico, $id);
-    $funcionou = mysqli_stmt_execute($comando);
-
-    mysqli_stmt_close($comando);
-    return $funcionou;    
-};
-
 // Excluir Agendamento
 function excluirAgendamento($conexao, $idagendamento) {
     $sql = "DELETE FROM tb_agendamento WHERE idagendamento = ?";
@@ -190,46 +182,30 @@ function excluirAgendamento($conexao, $idagendamento) {
     return $funcionou;
 };
 
-// // Cadastrar funcionário
-// function salvarFuncionario($conexao, $cpf) {
-//     $sql = "INSERT INTO tb_funcionario (cpf) VALUES (?)";
-//     $comando = mysqli_prepare($conexao, $sql);
+// Editar de Agendamento
+function editarAgendamento($conexao, $data, $horario, $tb_cliente_idcliente, $tb_taxa_idtaxa, $tb_servico_id_servico, $idagendamento) {
+    $sql = "UPDATE tb_agendamento SET data=?, horario=?, tb_cliente_idcliente=?, tb_taxa_idtaxa=?, tb_servico_id_servico=? WHERE idagendamento=?";
+    $comando = mysqli_prepare($conexao, $sql);
     
-//     mysqli_stmt_bind_param($comando, 's', $cpf);
+    mysqli_stmt_bind_param($comando, 'dsiii', $data, $horario, $tb_cliente_idcliente, $tb_taxa_idtaxa, $tb_servico_id_servico, $id);
+    $funcionou = mysqli_stmt_execute($comando);
+
+    mysqli_stmt_close($comando);
+    return $funcionou;    
+};
+
+// Cadastrar taxa
+function salvarTaxa($conexao, $status, $taxa) {
+    $sql = "INSERT INTO tb_taxa (status, taxa) VALUES (?, ?)";
+    $comando = mysqli_prepare($conexao, $sql);
     
-//     $funcionou = mysqli_stmt_execute($comando);
-//     mysqli_stmt_close($comando);
+    mysqli_stmt_bind_param($comando, 'ss', $status, $taxa);
     
-//     return $funcionou;
-// };
-
-// // Deletar funcionário
-// function excluirFuncionario ($conexao, $idfuncionario) {
-//     $sql = "DELETE FROM tb_funcionario WHERE idfuncionario = ?";
-//     $comando = mysqli_prepare($conexao, $sql);
-
-//     mysqli_stmt_bind_param($comando, 'i', $idfuncionario);
-
-//     $funcionou = mysqli_stmt_execute($comando);
-//     mysqli_stmt_close($comando);
-
-//     return $funcionou;
-// };
-
-// // Listar funcionários
-// function listarFuncionario($conexao){};
-
-// // Editar funcionário 
-// function editarFuncionario($conexao, $cpf, $idfuncionario) {
-//     $sql = "UPDATE tb_funcionario SET cpf=? WHERE idfuncionario=?";
-//     $comando = mysqli_prepare($conexao, $sql);
+    $funcionou = mysqli_stmt_execute($comando);
+    mysqli_stmt_close($comando);
     
-//     mysqli_stmt_bind_param($comando, 'si', $cpf, $id);
-//     $funcionou = mysqli_stmt_execute($comando);
-
-//     mysqli_stmt_close($comando);
-//     return $funcionou;
-// };
+    return $funcionou;
+};
 
 // Listar taxas
 function listarTaxa($conexao) {
@@ -248,18 +224,6 @@ function listarTaxa($conexao) {
     return $lista_taxas;
 };
 
-// Editar taxa
-function editarTaxa($conexao, $status, $taxa, $idtaxa) {
-    $sql = "UPDATE tb_taxa SET status=?, taxa=? WHERE idtaxa=?";
-    $comando = mysqli_prepare($conexao, $sql);
-    
-    mysqli_stmt_bind_param($comando, 'ssi', $status, $taxa, $id);
-    $funcionou = mysqli_stmt_execute($comando);
-
-    mysqli_stmt_close($comando);
-    return $funcionou;
-};
-
 // Deletar taxa
 function deletarTaxa($conexao, $idtaxa) {
     $sql = "DELETE FROM tb_taxa WHERE idtaxa = ?";
@@ -273,15 +237,25 @@ function deletarTaxa($conexao, $idtaxa) {
     return $funcionou;
 };
 
-// Cadastrar taxa
-function salvarTaxa($conexao, $status, $taxa) {
-    $sql = "INSERT INTO tb_taxa (status, taxa) VALUES (?, ?)";
+// Editar taxa
+function editarTaxa($conexao, $status, $taxa, $idtaxa) {
+    $sql = "UPDATE tb_taxa SET status=?, taxa=? WHERE idtaxa=?";
     $comando = mysqli_prepare($conexao, $sql);
     
-    mysqli_stmt_bind_param($comando, 'ss', $status, $taxa);
-    
+    mysqli_stmt_bind_param($comando, 'ssi', $status, $taxa, $id);
     $funcionou = mysqli_stmt_execute($comando);
+
     mysqli_stmt_close($comando);
-    
     return $funcionou;
 };
+
+// Cadastrar Pagamento
+
+
+// Listar Pagamento
+
+
+// Deletar Pagamento
+
+
+// Editar Pagamento
