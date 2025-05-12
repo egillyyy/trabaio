@@ -4,7 +4,7 @@
 
 
     $status = "Sem atraso";
-    $taxa = "0.00";
+    $taxa = "1.00";
 
     salvarTaxa($conexao, $status, $taxa);
 ?>
