@@ -3,8 +3,8 @@
     require_once "../funcoes.php";
 
 
-    $preco_servico = "100";
-    $tipo_servico = "Unha";
+    $preco_servico = "30";
+    $tipo_servico = "maquiagem";
 
     salvarServico($conexao, $preco_servico, $tipo_servico);
 ?>
