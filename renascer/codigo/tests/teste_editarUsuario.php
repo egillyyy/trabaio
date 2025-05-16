@@ -8,9 +8,8 @@
     $tipo = "2";
     $nome = "bbbb";
     $telefone = "62 99008888";
-    $cpf = "111.467.777-00";
     $idusuario = "2";
 
-    editarUsuario($conexao, $email, $senha_hash, $tipo, $nome, $telefone, $cpf, $idusuario);
+    editarUsuario($conexao, $email, $senha_hash, $tipo, $nome, $telefone, $idusuario);
 
 ?>

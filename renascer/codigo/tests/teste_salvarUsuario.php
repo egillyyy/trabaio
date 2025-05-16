@@ -8,7 +8,6 @@
     $tipo = "2";
     $nome = "bbbb";
     $telefone = "62 99008888";
-    $cpf = "111.467.777-00";
 
-    salvarUsuario($conexao, $email, $senha_hash, $tipo, $nome, $telefone, $cpf);
+    salvarUsuario($conexao, $email, $senha_hash, $tipo, $nome, $telefone);
 ?>
