@@ -1,12 +1,12 @@
 <?php
-//  Cadastro de Usuário
-function salvarUsuario($conexao, $email, $senha, $tipo, $nome, $telefone, $cpf) {
-    $sql = "INSERT INTO tb_usuario (email, senha, tipo, nome, telefone, cpf) VALUES (?, ?, ?, ?, ?, ?)";
+// Cadastro de Usuario
+function salvarUsuario($conexao, $email, $senha, $tipo, $nome, $telefone) {
+    $sql = "INSERT INTO tb_usuario (email, senha, tipo, nome, telefone) VALUES (?, ?, ?, ?, ?)";
     $comando = mysqli_prepare($conexao, $sql);
     
     $senha_hash = password_hash($senha, PASSWORD_DEFAULT);
 
-    mysqli_stmt_bind_param($comando, 'ssssss', $email, $senha_hash, $tipo, $nome, $telefone, $cpf);
+    mysqli_stmt_bind_param($comando, 'sssss', $email, $senha_hash, $tipo, $nome, $telefone);
     
     $funcionou = mysqli_stmt_execute($comando);
     mysqli_stmt_close($comando);
@@ -31,6 +31,7 @@ function listarUsuario($conexao) {
 
     return $lista_usuario;
 };
+
 
 // Deletar de Usuario
 function deletarUsuario($conexao, $idusuario) {
@@ -62,17 +63,18 @@ function pesquisarUsuarioId($conexao, $idusuario) {
 };
 
 // Editar de usuario
-function editarUsuario($conexao, $email, $senha, $tipo, $nome, $telefone, $cpf, $idusuario) {
+function editarUsuario($conexao, $email, $senha, $tipo, $nome, $telefone, $idusuario) {
     $senha_hash = password_hash($senha, PASSWORD_DEFAULT);
-    $sql = "UPDATE tb_usuario SET email=?, senha=?, tipo=?, nome=?, telefone=?, cpf=? WHERE idusuario=?";
+    $sql = "UPDATE tb_usuario SET email=?, senha=?, tipo=?, nome=?, telefone=? WHERE idusuario=?";
     $comando = mysqli_prepare($conexao, $sql);
     
-    mysqli_stmt_bind_param($comando, 'ssssssi', $email, $senha_hash, $tipo, $nome, $telefone, $cpf, $idusuario);
+    mysqli_stmt_bind_param($comando, 'sssssi', $email, $senha_hash, $tipo, $nome, $telefone, $idusuario);
     $funcionou = mysqli_stmt_execute($comando);
 
     mysqli_stmt_close($comando);
     return $funcionou;    
 };
+
 
 // Cadastro de serviços
 function salvarServico($conexao, $preco_servico, $tipo_servico) {
