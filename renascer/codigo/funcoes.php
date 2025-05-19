@@ -191,11 +191,11 @@ function deletarAgendamento($conexao, $idagendamento) {
 };
 
 // Editar de Agendamento
-function editarAgendamento($conexao, $data, $horario, $tb_taxa_idtaxa, $tb_servico_id_servico, $idagendamento) {
-    $sql = "UPDATE tb_agendamento SET data=?, horario=?, tb_taxa_idtaxa=?, tb_servico_id_servico=? WHERE idagendamento=?";
+function editarAgendamento($conexao, $data, $horario, $tb_taxa_idtaxa, $tb_servico_id_servico, $tb_pagamento_idpagamento, $idagendamento) {
+    $sql = "UPDATE tb_agendamento SET data=?, horario=?, tb_taxa_idtaxa=?, tb_servico_id_servico=?, tb_pagamento_idpagamento=? WHERE idagendamento=?";
     $comando = mysqli_prepare($conexao, $sql);
     
-    mysqli_stmt_bind_param($comando, 'dsiii', $data, $horario,$tb_taxa_idtaxa, $tb_servico_id_servico, $id);
+    mysqli_stmt_bind_param($comando, 'dsiiii', $data, $horario,$tb_taxa_idtaxa, $tb_servico_id_servico, $tb_pagamento_idpagamento, $idagendamento);
     $funcionou = mysqli_stmt_execute($comando);
 
     mysqli_stmt_close($comando);
