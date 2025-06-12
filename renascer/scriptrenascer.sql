@@ -8,14 +8,6 @@ SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0;
 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION';
 
 -- -----------------------------------------------------
--- Schema mydb
--- -----------------------------------------------------
-
--- -----------------------------------------------------
--- Schema mydb
--- -----------------------------------------------------
-CREATE SCHEMA IF NOT EXISTS `mydb` DEFAULT CHARACTER SET utf8 ;
--- -----------------------------------------------------
 -- Schema renascer
 -- -----------------------------------------------------
 
@@ -23,19 +15,6 @@ CREATE SCHEMA IF NOT EXISTS `mydb` DEFAULT CHARACTER SET utf8 ;
 -- Schema renascer
 -- -----------------------------------------------------
 CREATE SCHEMA IF NOT EXISTS `renascer` DEFAULT CHARACTER SET utf8mb4 ;
-USE `mydb` ;
-
--- -----------------------------------------------------
--- Table `mydb`.`tb_pagamento`
--- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `mydb`.`tb_pagamento` (
-  `idpagamento` INT NOT NULL AUTO_INCREMENT,
-  `valor` DECIMAL(10,2) NOT NULL,
-  `forma` VARCHAR(45) NOT NULL,
-  `descricao` VARCHAR(200) NOT NULL,
-  PRIMARY KEY (`idpagamento`))
-ENGINE = InnoDB;
-
 USE `renascer` ;
 
 -- -----------------------------------------------------
@@ -129,6 +108,19 @@ CREATE TABLE IF NOT EXISTS `renascer`.`tb_agendamento_has_tb_usuario` (
     REFERENCES `renascer`.`tb_usuario` (`idusuario`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8mb4;
+
+
+-- -----------------------------------------------------
+-- Table `renascer`.`tb_pagamento`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `renascer`.`tb_pagamento` (
+  `idpagamento` INT NOT NULL AUTO_INCREMENT,
+  `valor` DECIMAL(10,2) NOT NULL,
+  `forma` VARCHAR(45) NOT NULL,
+  `descricao` VARCHAR(200) NOT NULL,
+  PRIMARY KEY (`idpagamento`))
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8mb4;
 
