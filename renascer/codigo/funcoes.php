@@ -177,6 +177,22 @@ function listarAgendamento($conexao) {
     return $lista_agendamento;
 };
 
+// Pesquisa de usuario pelo ID
+function pesquisarAgebdamentoId($conexao, $idagendamento) { 
+    $sql = "SELECT * FROM tb_agendamento WHERE idagendamento = ?";
+    $comando = mysqli_prepare($conexao, $sql);
+
+    mysqli_stmt_bind_param($comando, 'i', $idagendamento);
+
+    mysqli_stmt_execute($comando);
+    $resultado = mysqli_stmt_get_result($comando);
+
+    $usuario = mysqli_fetch_assoc($resultado);
+
+    mysqli_stmt_close($comando);
+    return $usuario;
+};
+
 // Deletar Agendamento
 function deletarAgendamento($conexao, $idagendamento) {
     $sql = "DELETE FROM tb_agendamento WHERE idagendamento = ?";
@@ -191,11 +207,11 @@ function deletarAgendamento($conexao, $idagendamento) {
 };
 
 // Editar de Agendamento
-function editarAgendamento($conexao, $data, $horario, $tb_taxa_idtaxa, $tb_servico_id_servico, $tb_pagamento_idpagamento, $idagendamento) {
-    $sql = "UPDATE tb_agendamento SET data=?, horario=?, tb_taxa_idtaxa=?, tb_servico_id_servico=?, tb_pagamento_idpagamento=? WHERE idagendamento=?";
+function editarAgendamento($conexao, $data, $horario, $tb_servico_id_servico, $tb_usuario_idusuario_cliente, $tb_usuario_idusuario_funcionario, $idagendamento) {
+    $sql = "UPDATE tb_agendamento SET data=?, horario=?, tb_servico_id_servico=?, tb_usuario_idusuario_cliente=?, tb_usuario_idusuario_funcionario=? WHERE idagendamento=?";
     $comando = mysqli_prepare($conexao, $sql);
     
-    mysqli_stmt_bind_param($comando, 'dsiiii', $data, $horario,$tb_taxa_idtaxa, $tb_servico_id_servico, $tb_pagamento_idpagamento, $idagendamento);
+    mysqli_stmt_bind_param($comando, 'dsiii', $data, $horario, $tb_servico_id_servico, $tb_usuario_idusuario_cliente, $tb_usuario_idusuario_funcionario, $idagendamento);
     $funcionou = mysqli_stmt_execute($comando);
 
     mysqli_stmt_close($comando);
