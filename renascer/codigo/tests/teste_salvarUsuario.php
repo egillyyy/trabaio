@@ -2,12 +2,6 @@
     require_once "../conexao.php";
     require_once "../funcoes.php";
 
-
-    <?php
-    require_once "../conexao.php";
-    require_once "../funcoes.php";
-
-
     // Usuário 1
     $email = "ana.silva@gmail.com";
     $senha_hash = "senha123";
@@ -48,7 +42,4 @@
     $telefone = "51 955555555";
     salvarUsuario($conexao, $email, $senha_hash, $tipo, $nome, $telefone);
 
-?>
-
-    salvarUsuario($conexao, $email, $senha_hash, $tipo, $nome, $telefone);
 ?>
