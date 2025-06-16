@@ -262,7 +262,7 @@ function deletarTaxa($conexao, $idtaxa) {
 };
 
 // Editar taxa
-function editarTaxa($conexao, $status, $taxa, $idtaxa) {
+function editarTaxa($conexao, $status, $taxa, $tb_agendamento_idagendamento, $idtaxa) {
     $sql = "UPDATE tb_taxa SET status=?, taxa=?, tb_agendamento_idagendamento=? WHERE idtaxa=?";
     $comando = mysqli_prepare($conexao, $sql);
     
