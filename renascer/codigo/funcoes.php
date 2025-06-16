@@ -321,7 +321,7 @@ function editarPagamento ($conexao, $valor, $forma, $descricao, $tb_agendamento_
     $sql = "UPDATE tb_pagamento SET valor=?,forma=?, descricao=?, tb_agendamento_idagendamento=? WHERE idpagamento=?";
     $comando = mysqli_prepare($conexao, $sql);
     
-    mysqli_stmt_bind_param($comando, 'sssi', $valor, $forma, $descricao, $tb_agendamento_idagendamento, $idpagamento);
+    mysqli_stmt_bind_param($comando, 'ssssi', $valor, $forma, $descricao, $tb_agendamento_idagendamento, $idpagamento);
     $funcionou = mysqli_stmt_execute($comando);
 
     mysqli_stmt_close($comando);
