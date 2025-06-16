@@ -219,11 +219,11 @@ function editarAgendamento($conexao, $data, $horario, $tb_servico_id_servico, $t
 };
 
 // Cadastrar taxa
-function salvarTaxa($conexao, $status, $taxa) {
-    $sql = "INSERT INTO tb_taxa (status, taxa) VALUES (?, ?)";
+function salvarTaxa($conexao, $status, $taxa, $tb_agendamento_idagendamento) {
+    $sql = "INSERT INTO tb_taxa (status, taxa, tb_agendamento_idagendamento) VALUES (?, ?, ?)";
     $comando = mysqli_prepare($conexao, $sql);
     
-    mysqli_stmt_bind_param($comando, 'ss', $status, $taxa);
+    mysqli_stmt_bind_param($comando, 'ssi', $status, $taxa, $tb_agendamento_idagendamento);
     
     $funcionou = mysqli_stmt_execute($comando);
     mysqli_stmt_close($comando);
@@ -262,11 +262,11 @@ function deletarTaxa($conexao, $idtaxa) {
 };
 
 // Editar taxa
-function editarTaxa($conexao, $status, $taxa, $idtaxa) {
-    $sql = "UPDATE tb_taxa SET status=?, taxa=? WHERE idtaxa=?";
+function editarTaxa($conexao, $status, $taxa, $tb_agendamento_idagendamento, $idtaxa) {
+    $sql = "UPDATE tb_taxa SET status=?, taxa=?, tb_agendamento_idagendamento=? WHERE idtaxa=?";
     $comando = mysqli_prepare($conexao, $sql);
     
-    mysqli_stmt_bind_param($comando, 'ssi', $status, $taxa, $idtaxa);
+    mysqli_stmt_bind_param($comando, 'ssii', $status, $taxa, $tb_agendamento_idagendamento, $idtaxa);
     $funcionou = mysqli_stmt_execute($comando);
 
     mysqli_stmt_close($comando);
@@ -274,11 +274,11 @@ function editarTaxa($conexao, $status, $taxa, $idtaxa) {
 };
 
 // Cadastrar Pagamento
-function salvarPagamento($conexao, $valor, $forma, $descricao) {
-    $sql = "INSERT INTO tb_taxa (valor, forma, descricao) VALUES (?, ?, ?)";
+function salvarPagamento($conexao, $valor, $forma, $descricao, $tb_agendamento_idagendamento) {
+    $sql = "INSERT INTO tb_taxa (valor, forma, descricao) VALUES (?, ?, ?, ?)";
     $comando = mysqli_prepare($conexao, $sql);
     
-    mysqli_stmt_bind_param($comando, 'sss', $valor, $forma, $descricao);
+    mysqli_stmt_bind_param($comando, 'sssi', $valor, $forma, $descricao, $tb_agendamento_idagendamento);
     
     $funcionou = mysqli_stmt_execute($comando);
     mysqli_stmt_close($comando);
@@ -317,11 +317,11 @@ function deletarPagamento($conexao, $idpagamento) {
 };
 
 // Editar Pagamento
-function editarPagamento ($conexao, $valor, $forma, $descricao, $idpagamento) {
-    $sql = "UPDATE tb_pagamento SET valor=?,forma=?, descricao=? WHERE idpagamento=?";
+function editarPagamento ($conexao, $valor, $forma, $descricao, $tb_agendamento_idagendamento, $idpagamento) {
+    $sql = "UPDATE tb_pagamento SET valor=?,forma=?, descricao=?, tb_agendamento_idagendamento=? WHERE idpagamento=?";
     $comando = mysqli_prepare($conexao, $sql);
     
-    mysqli_stmt_bind_param($comando, 'sssi', $valor, $forma, $descricao, $id);
+    mysqli_stmt_bind_param($comando, 'sssi', $valor, $forma, $descricao, $tb_agendamento_idagendamento, $idpagamento);
     $funcionou = mysqli_stmt_execute($comando);
 
     mysqli_stmt_close($comando);
