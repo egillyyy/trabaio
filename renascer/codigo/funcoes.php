@@ -275,7 +275,7 @@ function editarTaxa($conexao, $status, $taxa, $tb_agendamento_idagendamento, $id
 
 // Cadastrar Pagamento
 function salvarPagamento($conexao, $valor, $forma, $descricao, $tb_agendamento_idagendamento) {
-    $sql = "INSERT INTO tb_taxa (valor, forma, descricao) VALUES (?, ?, ?, ?)";
+    $sql = "INSERT INTO tb_taxa (valor, forma, descricao, tb_agendamento_idagendamento) VALUES (?, ?, ?, ?)";
     $comando = mysqli_prepare($conexao, $sql);
     
     mysqli_stmt_bind_param($comando, 'sssi', $valor, $forma, $descricao, $tb_agendamento_idagendamento);
