@@ -211,7 +211,7 @@ function editarAgendamento($conexao, $data, $horario, $tb_servico_id_servico, $t
     $sql = "UPDATE tb_agendamento SET data=?, horario=?, tb_servico_id_servico=?, tb_usuario_idusuario_cliente=?, tb_usuario_idusuario_funcionario=? WHERE idagendamento=?";
     $comando = mysqli_prepare($conexao, $sql);
     
-    mysqli_stmt_bind_param($comando, 'dsiii', $data, $horario, $tb_servico_id_servico, $tb_usuario_idusuario_cliente, $tb_usuario_idusuario_funcionario, $idagendamento);
+    mysqli_stmt_bind_param($comando, 'ssiiii', $data, $horario, $tb_servico_id_servico, $tb_usuario_idusuario_cliente, $tb_usuario_idusuario_funcionario, $idagendamento);
     $funcionou = mysqli_stmt_execute($comando);
 
     mysqli_stmt_close($comando);
