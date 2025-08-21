@@ -7,6 +7,11 @@
     <title>index</title>
 </head>
 <body>
-    
+    <a href="formAgendamento.php">Formulário de Agendamento</a> <br><br>
+    <a href="formCliente.php">Formulário de Cliente</a> <br><br>
+    <a href="formFuncionario.php">Formulário de Funcionário</a> <br><br>
+    <a href="formPagamento.php">Formulário de Pagamento</a> <br><br>
+    <a href="formSevico.php">Formulário de Serviço</a> <br><br>
+    <a href="formUsuario.php">Formulário de Usuário</a> <br><br>
 </body>
 </html>
