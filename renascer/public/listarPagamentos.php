@@ -25,7 +25,7 @@
                 <th>Valor</th>
                 <th>Forma</th>
                 <th>Descrição</th>
-                <th>ID Agendamento</th>
+                <th>ID agendamento</th>
                 <th colspan="2">Ações</th>
             </tr>
             <?php
