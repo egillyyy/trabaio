@@ -24,9 +24,14 @@
 
         
         <!-- aqui vai ter q ter uma estrutura de repetiçÃO -->
-        Cliente: <br> <br>
+        Cliente: <br> 
         <select name="Clientes" id="">
             <option value="Cliente">Égilly</option> 
+        </select> <br> <br>
+
+        Funcionário : <br> 
+        <select name="funcionarios" id="">
+            <option value="funcionario">funcionarios</option>
         </select>
 
 
