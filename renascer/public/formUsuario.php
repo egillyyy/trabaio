@@ -11,7 +11,7 @@
 
         $id = $_GET['id'];
         
-        $usuario = salvarUsuario($conexao, $email, $senha, $tipo, $nome, $telefone);
+        $usuario = pesquisarUsuarioId($conexao, $idusuario);
         $email = $usuario['email'];
         $senha_hash = $usuario['senha'];
         $nome = $usuario['nome'];
