@@ -1,3 +1,32 @@
+<?php
+    if (isset($_GET['id'])) {
+        // echo "editar";
+
+        require_once "../codigo/conexao.php";
+        require_once "../codigo/funcoes.php";
+
+        $id = $_GET['id'];
+        
+        $pagamento = salvarPagamento($conexao, $valor, $forma, $descricao, $tb_agendamento_idagendamento);
+        $valor = $pagamento['valor'];
+        $forma = $pagamento['forma'];
+        $descricao = $pagamento['descricao'];
+        $tb_agendamento_idagendamento = $pagamento['tb_agendamento_idagendamento'];
+
+        $botao = "Atualizar";
+    }
+    else {
+        // echo "novo";
+        $id = 0;
+        $valor = "";
+        $forma = "";
+        $descricao = "";
+        $tb_agendamento_idagendamento = "";
+
+        $botao = "Cadastrar";
+    }
+?> 
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -21,6 +50,8 @@
 
         Descrição:<br>
         <textarea name="descricao" placeholder="Escreva sua mensagem aqui..."></textarea>
+        <br><br>
+        <button type="submit"> <a href="index.php">Fazer pagamento</a></button>
     </form>
 </body>
 </html>

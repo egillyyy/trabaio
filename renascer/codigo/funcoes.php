@@ -316,6 +316,22 @@ function deletarPagamento($conexao, $idpagamento) {
     return $funcionou;
 };
 
+// Pesquisa de Pagamento pelo ID
+function pesquisarPagamentoId($conexao, $idpagamento) { 
+    $sql = "SELECT * FROM tb_pagamento WHERE idpagamento = ?";
+    $comando = mysqli_prepare($conexao, $sql);
+
+    mysqli_stmt_bind_param($comando, 'i', $idpagamento);
+
+    mysqli_stmt_execute($comando);
+    $resultado = mysqli_stmt_get_result($comando);
+
+    $pagamento = mysqli_fetch_assoc($resultado);
+
+    mysqli_stmt_close($comando);
+    return $pagamento;
+};
+
 // Editar Pagamento
 function editarPagamento ($conexao, $valor, $forma, $descricao, $tb_agendamento_idagendamento, $idpagamento) {
     $sql = "UPDATE tb_pagamento SET valor=?,forma=?, descricao=?, tb_agendamento_idagendamento=? WHERE idpagamento=?";
