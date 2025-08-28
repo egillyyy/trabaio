@@ -119,3 +119,43 @@ SET SQL_MODE=@OLD_SQL_MODE;
 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
 
+USE renascer;
+
+-- tb_servico
+INSERT INTO tb_servico (preco_servico, tipo_servico) VALUES (30, 'maquiagem');
+INSERT INTO tb_servico (preco_servico, tipo_servico) VALUES (50, 'corte de cabelo');
+INSERT INTO tb_servico (preco_servico, tipo_servico) VALUES (80, 'penteado');
+INSERT INTO tb_servico (preco_servico, tipo_servico) VALUES (25, 'sobrancelha');
+INSERT INTO tb_servico (preco_servico, tipo_servico) VALUES (100, 'hidratação capilar');
+INSERT INTO tb_servico (preco_servico, tipo_servico) VALUES (120, 'progressiva');
+INSERT INTO tb_servico (preco_servico, tipo_servico) VALUES (60, 'barba completa');
+
+-- usuario
+INSERT INTO usuario (email, senha, tipo, nome, telefone) VALUES ('teste.silva@gmail.com', 'senha123', 'g', 'teste Silva', '11 999999999');
+INSERT INTO usuario (email, senha, tipo, nome, telefone) VALUES ('lucas.moura@gmail.com', 'abc321', 'c', 'Lucas Moura', '21 988888888');
+INSERT INTO usuario (email, senha, tipo, nome, telefone) VALUES ('carla.oliveira@gmail.com', '123456', 'c', 'Carla Oliveira', '31 977777777');
+INSERT INTO usuario (email, senha, tipo, nome, telefone) VALUES ('ricardo.souza@gmail.com', 'teste321', 'c', 'Ricardo Souza', '41 966666666');
+INSERT INTO usuario (email, senha, tipo, nome, telefone) VALUES ('maria.lima@gmail.com', 'maria321', 'c', 'Maria Lima', '51 955555555');
+
+-- tb_agendamento
+INSERT INTO tb_agendamento (data, horario, tb_servico_id_servico, tb_usuario_idusuario_cliente, tb_usuario_idusuario_funcionario) VALUES ('2025-06-15', '10:15:00', 1, 1, 2);
+INSERT INTO tb_agendamento (data, horario, tb_servico_id_servico, tb_usuario_idusuario_cliente, tb_usuario_idusuario_funcionario) VALUES ('2025-06-16', '11:30:00', 2, 1, 2);
+INSERT INTO tb_agendamento (data, horario, tb_servico_id_servico, tb_usuario_idusuario_cliente, tb_usuario_idusuario_funcionario) VALUES ('2025-06-17', '14:00:00', 1, 1, 3);
+INSERT INTO tb_agendamento (data, horario, tb_servico_id_servico, tb_usuario_idusuario_cliente, tb_usuario_idusuario_funcionario) VALUES ('2025-06-18', '09:00:00', 3, 1, 2);
+INSERT INTO tb_agendamento (data, horario, tb_servico_id_servico, tb_usuario_idusuario_cliente, tb_usuario_idusuario_funcionario) VALUES ('2025-06-19', '15:30:00', 2, 1, 3);
+
+-- tb_taxa
+INSERT INTO tb_taxa (status, taxa, tb_agendamento_idagendamento) VALUES ('Sem atraso', 0.00, 1);
+INSERT INTO tb_taxa (status, taxa, tb_agendamento_idagendamento) VALUES ('Sem atraso', 0.00, 1);
+INSERT INTO tb_taxa (status, taxa, tb_agendamento_idagendamento) VALUES ('Atrasado', 100.00, 2);
+INSERT INTO tb_taxa (status, taxa, tb_agendamento_idagendamento) VALUES ('Sem atraso', 0.00, 3);
+INSERT INTO tb_taxa (status, taxa, tb_agendamento_idagendamento) VALUES ('Atrasado', 100.00, 4);
+
+-- tb_pagamento
+INSERT INTO tb_pagamento (valor, forma, descricao, tb_agendamento_idagendamento) VALUES (100.00, 'Pix', 'Feito pela cliente Ana', 1);
+INSERT INTO tb_pagamento (valor, forma, descricao, tb_agendamento_idagendamento) VALUES (150.00, 'Dinheiro', 'Pagamento adiantado do cliente João', 2);
+INSERT INTO tb_pagamento (valor, forma, descricao, tb_agendamento_idagendamento) VALUES (200.50, 'Cartão de Crédito', 'Cliente Marina pagou no crédito', 3);
+INSERT INTO tb_pagamento (valor, forma, descricao, tb_agendamento_idagendamento) VALUES (80.00, 'Cartão de Débito', 'Serviço rápido pago pela cliente Carla', 4);
+INSERT INTO tb_pagamento (valor, forma, descricao, tb_agendamento_idagendamento) VALUES (100.00, 'Pix', 'Feito pela cliente Ana', 5);
+
+

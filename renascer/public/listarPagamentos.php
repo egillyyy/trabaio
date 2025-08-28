@@ -19,7 +19,7 @@
         echo "Não existem pagamentos cadastrados.";
     } else {
     ?>
-        <table>
+        <table border ="1">
             <tr>
                 <th>ID</th>
                 <th>Valor</th>
