@@ -1,14 +1,11 @@
 <?php
-<<<<<<< Updated upstream
-    require_once "../codigo/conexao.php";
-    require_once "../codigo/funcoes.php";
 
 //    salvarUsuario($conexao, $email, $senha, $tipo, $nome, $telefone);
     if (isset($_GET['id'])) {
         // echo "editar";
 
-        require_once "conexao.php";
-        require_once "funcoes.php";
+        require_once "../codigo/conexao.php";
+        require_once "../codigo/funcoes.php";
 
         $id = $_GET['id'];
         
@@ -37,13 +34,6 @@
         $botao = "Cadastrar";
     }
 ?> 
-=======
-require_once "../conexao.php";
-require_once "../funcoes.php";
-
-salvarUsuario($conexao, $email, $senha, $tipo, $nome, $telefone);
-?>
->>>>>>> Stashed changes
 
 <!DOCTYPE html>
 <html lang="en">
@@ -53,7 +43,6 @@ salvarUsuario($conexao, $email, $senha, $tipo, $nome, $telefone);
     <title>Formulário de Usuário</title>
 </head>
 <body>
-<<<<<<< Updated upstream
     <form action="salvarUsuario.php?id=<?php echo $id; ?>" method="post">
         <h1>Criar conta</h1>
 
@@ -78,7 +67,6 @@ salvarUsuario($conexao, $email, $senha, $tipo, $nome, $telefone);
     // salvarUsuario($conexao, $email, $senha, $tipo, $nome, $telefone);
 ?>  -->
 
-=======
     <form action="" method="post">
         <h1>Acessar sistema</h1>
 
@@ -93,7 +81,6 @@ salvarUsuario($conexao, $email, $senha, $tipo, $nome, $telefone);
     <br>
     <!-- <a href="formUsuario.html">Cadastrar Usuário</a> -->
     <button type="submit"> <a href="formUsuario.html">Cadastrar Usuário</a></button>
->>>>>>> Stashed changes
     
 </body>
 </html>
