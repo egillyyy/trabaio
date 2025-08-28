@@ -6,12 +6,12 @@
     <title>index</title>
 </head>
 <body>
-    <a href="formAgendamento.html">Formulário de Agendamento</a> <br><br>
-    <a href="formCliente.html">Formulário de Cliente</a> <br><br>
-    <a href="formFuncionario.html">Formulário de Funcionário</a> <br><br>
-    <a href="formPagamento.html">Formulário de Pagamento</a> <br><br>
-    <a href="formServico.html">Formulário de Serviço</a> <br><br>
-    <a href="formUsuario.html">Formulário de Usuário</a> <br><br>
+    <a href="formAgendamento.php">Formulário de Agendamento</a> <br><br>
+    <a href="formCliente.php">Formulário de Cliente</a> <br><br>
+    <a href="formFuncionario.php">Formulário de Funcionário</a> <br><br>
+    <a href="formPagamento.php">Formulário de Pagamento</a> <br><br>
+    <a href="formServico.php">Formulário de Serviço</a> <br><br>
+    <a href="formUsuario.php">Formulário de Usuário</a> <br><br>
     <a href="home.html">Ir pra Home</a>
 </body>
 </html>
