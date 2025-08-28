@@ -6,6 +6,17 @@
     <title>Formulário de Agendamento</title>
 </head>
 <body>
+
+    <?php
+    require_once "../codigo/conexao.php";
+    require_once "../codigo/funcoes.php";
+
+    $agendar = salvarAgendamento($conexao)
+
+
+
+    ?>
+
     <form action="">
         Data: <br>
         <input type="text" name="data" id=""> <br> <br>
