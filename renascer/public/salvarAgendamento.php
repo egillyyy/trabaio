@@ -7,7 +7,11 @@
     <title> salvar Agendamento</title>
 </head>
 <body>
-    <h1>Salvar Agendamento</h1>
-    
+  <h2>Cadastro de Agendamento</h2>
+    <form action="salvarAgendamento.php" method="get">
+        
+        Cliente: <br>
+
+        </select>
 </body>
 </html>
