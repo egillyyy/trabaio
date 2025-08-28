@@ -11,30 +11,22 @@
     require_once "../codigo/conexao.php";
     require_once "../codigo/funcoes.php";
 
-    $agendar = salvarAgendamento($conexao)
-
-
-
+    $agendar = salvarAgendamento ($conexao, $data, $horario, $tb_servico_id_servico, $tb_usuario_idusuario_cliente, $tb_usuario_idusuario_funcionario);
     ?>
 
     <form action="">
         Data: <br>
         <input type="text" name="data" id=""> <br> <br>
-        
 
         Horário: <br>
         <input type="text" name="Horário" id=""> <br> <br>
 
-
-        <!-- aqui vai ter q ter uma estrutura de repetiçÃO -->
         Serviço: <br> 
         <select name="Tipo_Servico" id="">
             <option value="Serviço">Aqui vai ter os tipos de serviço</option> 
 
         </select> <br> <br>
 
-        
-        <!-- aqui vai ter q ter uma estrutura de repetiçÃO -->
         Cliente: <br> 
         <select name="Clientes" id="">
             <option value="Cliente">Égilly</option> 
