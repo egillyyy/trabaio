@@ -20,7 +20,7 @@
         $preco_servico = $servico['preco_servico'];
         $tipo_servico  = $servico['tipo_servico'];
 
-    // Salva o serviço novamente no banco (ou registra de acordo com sua lógica)
+    // Salva o serviço novamente no banco 
         $funcionou = salvarServico($conexao, $preco_servico, $tipo_servico);
 
         if ($funcionou) {
