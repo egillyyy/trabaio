@@ -1,4 +1,5 @@
 <?php
+<<<<<<< Updated upstream
     require_once "../codigo/conexao.php";
     require_once "../codigo/funcoes.php";
 
@@ -36,6 +37,13 @@
         $botao = "Cadastrar";
     }
 ?> 
+=======
+require_once "../conexao.php";
+require_once "../funcoes.php";
+
+salvarUsuario($conexao, $email, $senha, $tipo, $nome, $telefone);
+?>
+>>>>>>> Stashed changes
 
 <!DOCTYPE html>
 <html lang="en">
@@ -45,6 +53,7 @@
     <title>Formulário de Usuário</title>
 </head>
 <body>
+<<<<<<< Updated upstream
     <form action="salvarUsuario.php?id=<?php echo $id; ?>" method="post">
         <h1>Criar conta</h1>
 
@@ -69,6 +78,22 @@
     // salvarUsuario($conexao, $email, $senha, $tipo, $nome, $telefone);
 ?>  -->
 
+=======
+    <form action="" method="post">
+        <h1>Acessar sistema</h1>
+
+        Login: <br>
+        <input type="text" name="login"> <br><br>
+
+        Senha: <br>
+        <input type="password" name="senha"> <br><br>
+
+        <input type="submit" value="Acessar">
+    </form>
+    <br>
+    <!-- <a href="formUsuario.html">Cadastrar Usuário</a> -->
+    <button type="submit"> <a href="formUsuario.html">Cadastrar Usuário</a></button>
+>>>>>>> Stashed changes
     
 </body>
 </html>
