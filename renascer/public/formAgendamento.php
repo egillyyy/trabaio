@@ -1,44 +1,61 @@
+<?php
+require_once "../codigo/conexao.php";
+require_once "../codigo/funcoes.php";
+
+$servicos = listarServico($conexao);
+$usuarios = listarUsuario($conexao);
+?>
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulário de Agendamento</title>
+    <title>Agendamento</title>
 </head>
 <body>
+    <h1>Agendar Serviço</h1>
+    <form action="salvarAgendamento.php" method="post">
+        Data: <input type="date" name="data"><br><br>
+        Horário: <input type="text" name="horario"><br><br>
 
-    <?php
-    require_once "../codigo/conexao.php";
-    require_once "../codigo/funcoes.php";
-
-    $agendar = salvarAgendamento ($conexao, $data, $horario, $tb_servico_id_servico, $tb_usuario_idusuario_cliente, $tb_usuario_idusuario_funcionario);
-    ?>
-
-    <form action="">
-        Data: <br>
-        <input type="text" name="data" id=""> <br> <br>
-
-        Horário: <br>
-        <input type="text" name="Horário" id=""> <br> <br>
-
-        Serviço: <br> 
-        <select name="Tipo_Servico" id="">
-            <option value="Serviço">Aqui vai ter os tipos de serviço</option> 
-
-        </select> <br> <br>
-
-        Cliente: <br> 
-        <select name="Clientes" id="">
-            <option value="Cliente">Égilly</option> 
-        </select> <br> <br>
-
-        Funcionário : <br> 
-        <select name="funcionarios" id="">
-            <option value="funcionario">funcionarios</option>
+        Serviço: 
+        <select name="idservico">
+            <option value="">Selecione</option>
+            <?php
+            foreach ($servicos as $servico) {
+                echo "<option value='".$servico['idservico']."'>".$servico['tipo_servico']." - R$ ".$servico['preco_servico']."</option>";
+            }
+            ?>
         </select>
+        <br><br>
 
+        Cliente: 
+        <select name="idcliente">
+            <option value="">Selecione</option>
+            <?php
+            foreach ($usuarios as $usuario) {
+                if ($usuario['tipo'] == "c") {
+                    echo "<option value='".$usuario['idusuario']."'>".$usuario['nome']."</option>";
+                }
+            }
+            ?>
+        </select>
+        <br><br>
 
+        Funcionário (Gerente): 
+        <select name="idfuncionario">
+            <option value="">Selecione</option>
+            <?php
+            foreach ($usuarios as $usuario) {
+                if ($usuario['tipo'] == "g") {
+                    echo "<option value='".$usuario['idusuario']."'>".$usuario['nome']."</option>";
+                }
+            }
+            ?>
+        </select>
+        <br><br>
+
+        <input type="submit" value="Salvar">
     </form>
-    
 </body>
 </html>

@@ -1,17 +1,14 @@
+<?php
+require_once "../codigo/conexao.php";
+require_once "../codigo/funcoes.php";
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> salvar Agendamento</title>
-</head>
-<body>
-  <h2>Cadastro de Agendamento</h2>
-    <form action="salvarAgendamento.php" method="get">
-        
-        Cliente: <br>
+$data = $_POST['data'];
+$horario = $_POST['horario'];
+$idservico = $_POST['idservico'];
+$idcliente = $_POST['idcliente'];
+$idfuncionario = $_POST['idfuncionario'];
 
-        </select>
-</body>
-</html>
+salvarAgendamento($conexao, $data, $horario, $idservico, $idcliente, $idfuncionario);
+
+header("Location: listarAgendamento.php");
+?>
