@@ -1,6 +1,6 @@
 <?php
-require_once "conexao.php";
-require_once "funcoes.php";
+require_once "../codigo/conexao.php";
+require_once "../codigo/funcoes.php";
 
 $id = $_GET['id'];
 $email = $usuario['email'];
