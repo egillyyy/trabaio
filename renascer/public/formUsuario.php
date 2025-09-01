@@ -1,40 +1,3 @@
-<?php
-
-//    salvarUsuario($conexao, $email, $senha, $tipo, $nome, $telefone);
-    if (isset($_GET['id'])) {
-        // echo "editar";
-
-        require_once "../codigo/conexao.php";
-        require_once "../codigo/funcoes.php";
-
-        $id = $_GET['id'];
-        
-        $usuario = pesquisarUsuarioId($conexao, $idusuario);
-        $email = $usuario['email'];
-        $senha_hash = $usuario['senha'];
-        $nome = $usuario['nome'];
-        $telefone = $usuario['telefone'];
-        // $nome = $usuario['nome'];
-        // $cpf = $usuario['cpf'];
-        // $endereco = $usuario['endereco'];
-
-        $botao = "Atualizar";
-    }
-    else {
-        // echo "novo";
-        $id = 0;
-        $email = "";
-        $senha_hash = "";
-        $nome = "";
-        $telefone = "";
-        // $nome = "";
-        // $cpf = "";
-        // $endereco = "";
-
-        $botao = "Cadastrar";
-    }
-?> 
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -47,7 +10,7 @@
         <h1>Criar conta</h1>
 
         Nome: <br>
-        <input type="text" name="login"> <br><br>
+        <input type="text" name="nome"> <br><br>
 
         Telefone: <br>
         <input type="text" name="telefone"> <br><br>
@@ -58,7 +21,11 @@
         Senha: <br>
         <input type="password" name="senha"> <br><br>
 
-    <button type="submit"> <a href="index.php">Criar conta</a></button>
+        <!-- Tipo de usuário (cliente) -->
+        <input type="hidden" name="c" value="usuario">
+
+        <!-- <button type="submit"> <a href="index.php">Criar conta</a></button> -->
+        <button type="submit">Criar conta</button>
     </form>
     <br>
     <!-- <a href="formUsuario.html">Cadastrar Usuário</a> -->
