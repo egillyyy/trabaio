@@ -52,6 +52,38 @@
         <textarea name="descricao" placeholder="Escreva sua mensagem aqui..."></textarea>
         <br><br>
         <button type="submit"> <a href="index.php">Fazer pagamento</a></button>
+
+
+<!-- 
+        <!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Novo Pagamento</title>
+</head>
+<body>
+
+    <h1>Cadastrar Pagamento</h1>
+
+    <form action="SalvarPagamento.php" method="post">
+        Valor:
+        <input type="text" name="valor" required><br><br>
+
+        Forma:
+        <input type="text" name="forma" required><br><br>
+
+        Descrição:
+        <input type="text" name="descricao"><br><br>
+
+        ID Agendamento: 
+        <input type="number" name="idagendamento" required><br><br>
+
+        <input type="submit" value="Salvar">
+    </form> -->
+
+</body>
+</html>
     </form>
 </body>
 </html>
