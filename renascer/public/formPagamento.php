@@ -6,7 +6,20 @@
     <title>Formulário de Pagamento</title>
 </head>
 <body>
-    <form>
+    <form action="salvarPagamento.php?id=<?php echo $id; ?>" method="post">
+        Cliente:
+        <select name="idcliente">
+            <option value="">Selecione</option>
+            <?php
+           foreach ($usuarios as $usuario) {
+                if ($usuario['tipo'] == "c") {
+                    echo "<option value='".$usuario['idusuario']."'>".$usuario['nome']."</option>";
+                }
+            }
+            ?>
+
+        <br><br>
+    
         Valor: <br>
         <input type="text" name="valor">
         <br><br>
