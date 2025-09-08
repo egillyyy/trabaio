@@ -8,14 +8,14 @@
 <body>
     <form action="salvarPagamento.php?id=<?php echo $id; ?>" method="post">
         Cliente: <br>
-        <select name="idcliente">
+        <select name="idusuario">
             <option value="">Selecione</option>
             <?php
-                foreach ($usuarios as $usuario) {
-                    if ($usuario['tipo'] == "c") {
-                        echo "<option value='".$usuario['idusuario']."'>".$usuario['nome']."</option>";
-                    }
+            foreach ($usuarios as $usuario) {
+                if ($usuario['tipo'] == "c") {
+                    echo "<option value='".$usuario['idusuario']."'>".$usuario['nome']."</option>";
                 }
+            }
             ?>
         </select>
 
