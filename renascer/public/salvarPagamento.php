@@ -2,7 +2,6 @@
 require_once "../codigo/conexao.php";
 require_once "../codigo/funcoes.php";
 
-$
 $valor = $_POST['valor'];
 $forma = $_POST['forma'];
 $descricao = $_POST['descricao'];

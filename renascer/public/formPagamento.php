@@ -7,21 +7,22 @@
 </head>
 <body>
     <form action="salvarPagamento.php?id=<?php echo $id; ?>" method="post">
-        Cliente:
+        Cliente: <br>
         <select name="idcliente">
             <option value="">Selecione</option>
             <?php
-           foreach ($usuarios as $usuario) {
-                if ($usuario['tipo'] == "c") {
-                    echo "<option value='".$usuario['idusuario']."'>".$usuario['nome']."</option>";
+                foreach ($usuarios as $usuario) {
+                    if ($usuario['tipo'] == "c") {
+                        echo "<option value='".$usuario['idusuario']."'>".$usuario['nome']."</option>";
+                    }
                 }
-            }
             ?>
+        </select>
 
         <br><br>
-    
+
         Valor: <br>
-        <input type="text" name="valor">
+        <input type="text" name="valor"> 
         <br><br>
 
         Forma: <br>
