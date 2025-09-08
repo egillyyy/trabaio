@@ -6,6 +6,6 @@ require_once "../funcoes.php";
 $idagendamento = 2;
 
 echo "<pre>";
-print_r(pesquisarServicoId($conexao, $idagendamento));
+print_r(pesquisarAgendamentoId($conexao, $idagendamento));
 echo "</pre>";
 ?>

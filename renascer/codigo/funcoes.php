@@ -178,7 +178,7 @@ function listarAgendamento($conexao) {
 };
 
 // Pesquisa de usuario pelo ID
-function pesquisarAgebdamentoId($conexao, $idagendamento) { 
+function pesquisarAgendamentoId($conexao, $idagendamento) { 
     $sql = "SELECT * FROM tb_agendamento WHERE idagendamento = ?";
     $comando = mysqli_prepare($conexao, $sql);
 
