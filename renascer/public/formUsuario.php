@@ -6,7 +6,7 @@
     <title>Formulário de Usuário</title>
 </head>
 <body>
-    <form action="salvarUsuario.php?id=<?php echo $id; ?>" method="post">
+    <form action="salvarUsuario.php" method="post">
         <h1>Criar conta</h1>
 
         Nome: <br>

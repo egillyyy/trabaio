@@ -2,7 +2,7 @@
 require_once "../codigo/conexao.php";
 require_once "../codigo/funcoes.php";
 
-$id = $_GET['id'];
+// $id = $_GET['id'];
 $email = $_POST['email'];
 $senha = $_POST['senha'];
 $tipo = $_POST['c'];
