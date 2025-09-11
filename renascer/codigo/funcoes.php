@@ -1,5 +1,19 @@
 <?php
-// Cadastro de Usuario
+/**
+ * Cadastra o usuário no Banco de Dados
+ * 
+ * Salva um usuário caso não tenha
+ * 
+ * @param mysqli $conexao Uma conexão com o banco.
+ * @param string $email O e-mail informado pelo usuário.
+ * @param string $senha A senha informada pelo usuário.
+ * @param string $tipo O tipo informado pelo usuário.
+ * @param string $nome O nome informada pelo usuário.
+ * @param string $telefone O telefone informada pelo usuário.
+ * @return int ID do usuário.
+ * @throws 0 caso não encontre nenhum usuário.
+ * 
+ **/
 function salvarUsuario($conexao, $email, $senha, $tipo, $nome, $telefone) {
     $sql = "INSERT INTO tb_usuario (email, senha, tipo, nome, telefone) VALUES (?, ?, ?, ?, ?)";
     $comando = mysqli_prepare($conexao, $sql);
@@ -75,9 +89,20 @@ function editarUsuario($conexao, $email, $senha, $tipo, $nome, $telefone, $idusu
     return $funcionou;    
 };
 
-
-
-// Cadastro de serviços
+/**
+ * Cadastra o serviço no Banco de Dados
+ * 
+ * Salva um serviço caso não tenha
+ * 
+ * @param mysqli $conexao Uma conexão com o banco.
+ * @param string $preco_servico O preço de serviço informado pelo usuário.
+ * @param string $tipo_servico O tipo de serviço informado pelo usuário.
+ * @param string $descricao_servico A descrição do serviço informado pelo usuário.
+ * @param string $foto A foto informada pelo usuário.
+ * @return int ID do usuário.
+ * @throws 0 caso não encontre nenhum usuário.
+ * 
+ **/
 function salvarServico($conexao, $preco_servico, $tipo_servico, $descricao_servico, $foto) {
     $sql = "INSERT INTO tb_servico (preco_servico, tipo_servico, descricao_servico, foto) VALUES (?, ?, ?, ?)";
     $comando = mysqli_prepare($conexao, $sql);
@@ -148,7 +173,21 @@ function editarServico($conexao, $preco_servico, $tipo_servico, $descricao_servi
     return $funcionou;    
 };
 
-// Cadastro de Agendamento
+/**
+ * Cadastra o agendamento no Banco de Dados
+ * 
+ * Salva um agendamento caso não tenha
+ * 
+ * @param mysqli $conexao Uma conexão com o banco.
+ * @param string $data A data de agendamento informada pelo usuário.
+ * @param string $horario O horário de agendamento informado pelo usuário.
+ * @param string $tb_servico_id_servico O serviço vindo da tabela serviço.
+ * @param string $tb_usuario_idusuario_cliente O usuário.
+ * @param string $tb_usuario_idusuario_funcionario O tipo de agendamento informado pelo usuário.
+ * @return int ID do usuário.
+ * @throws 0 caso não encontre nenhum usuário.
+ * 
+ **/
 function salvarAgendamento ($conexao, $data, $horario, $tb_servico_id_servico, $tb_usuario_idusuario_cliente, $tb_usuario_idusuario_funcionario) {
     $sql = "INSERT INTO tb_agendamento (data, horario, tb_servico_id_servico, tb_usuario_idusuario_cliente, tb_usuario_idusuario_funcionario) VALUES (?, ?, ?, ?, ?)";
     $comando = mysqli_prepare($conexao, $sql);
