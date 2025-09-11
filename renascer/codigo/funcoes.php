@@ -1,4 +1,15 @@
 <?php
+
+/**
+ * Função que salva um usuário no banco de dados.
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ **/
+
 // Cadastro de Usuario
 function salvarUsuario($conexao, $email, $senha, $tipo, $nome, $telefone) {
     $sql = "INSERT INTO tb_usuario (email, senha, tipo, nome, telefone) VALUES (?, ?, ?, ?, ?)";

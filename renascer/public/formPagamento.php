@@ -1,3 +1,12 @@
+<?php
+require_once "../codigo/conexao.php";
+require_once "../codigo/funcoes.php";
+
+$usuarios = listarUsuario($conexao);
+$ca
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
