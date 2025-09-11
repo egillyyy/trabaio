@@ -3,7 +3,6 @@ require_once "../codigo/conexao.php";
 require_once "../codigo/funcoes.php";
 
 $usuarios = listarUsuario($conexao);
-$ca
 
 ?>
 
