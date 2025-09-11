@@ -7,7 +7,7 @@
     $idservico = "8";
    
 
-    editarServico($conexao, $preco_servico, $tipo_servico, $idservico);
+    editarServico($conexao, $preco_servico, $tipo_servico, $descricao_servico, $foto);
 ?>
 
 
