@@ -87,12 +87,13 @@ function editarUsuario($conexao, $email, $senha, $tipo, $nome, $telefone, $idusu
 };
 
 
+
 // Cadastro de serviços
-function salvarServico($conexao, $preco_servico, $tipo_servico) {
-    $sql = "INSERT INTO tb_servico (preco_servico, tipo_servico) VALUES (?, ?)";
+function salvarServico($conexao, $preco_servico, $tipo_servico, $descricao_servico, $foto) {
+    $sql = "INSERT INTO tb_servico (preco_servico, tipo_servico, descricao_servico, foto) VALUES (?, ?, ?, ?)";
     $comando = mysqli_prepare($conexao, $sql);
     
-    mysqli_stmt_bind_param($comando, 'ds', $preco_servico, $tipo_servico);
+    mysqli_stmt_bind_param($comando, 'dsss', $preco_servico, $tipo_servico, $descricao_servico, $foto);
     
     $funcionou = mysqli_stmt_execute($comando);
     mysqli_stmt_close($comando);
@@ -147,11 +148,11 @@ function pesquisarServicoId($conexao, $idservico) {
 };
 
 // Editar de serviços
-function editarServico($conexao, $preco_servico, $tipo_servico, $idservico) {
-    $sql = "UPDATE tb_servico SET preco_servico=?, tipo_servico=? WHERE idservico=?";
+function editarServico($conexao, $preco_servico, $tipo_servico, $descricao_servico, $foto) {
+    $sql = "UPDATE tb_servico SET preco_servico=?, tipo_servico=?, descricao_servico=?, foto=? WHERE idservico=?";
     $comando = mysqli_prepare($conexao, $sql);
     
-    mysqli_stmt_bind_param($comando, 'ssi', $preco_servico, $tipo_servico, $idservico);
+    mysqli_stmt_bind_param($comando, 'dsss',$preco_servico, $tipo_servico, $descricao_servico, $foto);
     $funcionou = mysqli_stmt_execute($comando);
 
     mysqli_stmt_close($comando);
