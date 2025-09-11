@@ -24,6 +24,7 @@
                 <th>ID</th>
                 <th>Email</th>
                 <th>Nome</th>
+                <th>Telefone</th>
                 <th colspan="2">Ações</th>
             </tr>
             <?php
@@ -31,11 +32,13 @@
                 $id = $usuario['idusuario'];
                 $email = $usuario['email'];
                 $nome = $usuario['nome'];
+                $telefone = $usuario['telefone'];
 
                 echo "<tr>";
                 echo "<td>$id</td>";
                 echo "<td>$email</td>";
                 echo "<td>$nome</td>";
+                echo "<td>$telefone</td>";
                 echo "<td><a href='deletarusuario.php?id=$id'>Excluir</a></td>";
                 echo "<td><a href='formUsuario.php?id=$id'>Editar</a></td>";
                 echo "</tr>";
