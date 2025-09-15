@@ -99,7 +99,7 @@ function editarUsuario($conexao, $email, $senha, $tipo, $nome, $telefone, $idusu
  * @param string $tipo_servico O tipo de serviço informado pelo usuário.
  * @param string $descricao_servico A descrição do serviço informado pelo usuário.
  * @param string $foto A foto informada pelo usuário.
- * @return int ID do usuário.
+ * @return int ID do serviço.
  * @throws 0 caso não encontre nenhum usuário.
  * 
  **/
@@ -183,8 +183,8 @@ function editarServico($conexao, $preco_servico, $tipo_servico, $descricao_servi
  * @param string $horario O horário de agendamento informado pelo usuário.
  * @param string $tb_servico_id_servico O serviço vindo da tabela serviço.
  * @param string $tb_usuario_idusuario_cliente O usuário.
- * @param string $tb_usuario_idusuario_funcionario O tipo de agendamento informado pelo usuário.
- * @return int ID do usuário.
+ * @param string $tb_usuario_idusuario_funcionario O tipo de funcionário informado pelo usuário.
+ * @return int ID do agendamento.
  * @throws 0 caso não encontre nenhum usuário.
  * 
  **/
@@ -258,7 +258,20 @@ function editarAgendamento($conexao, $data, $horario, $tb_servico_id_servico, $t
     return $funcionou;    
 };
 
-// Cadastrar taxa
+/**
+ * Cadastra a taxa no Banco de Dados
+ * 
+ * Salva uma taxa caso não tenha
+ * 
+ * @param mysqli $conexao Uma conexão com o banco.
+ * @param string $status O status de taxa informada pelo usuário.
+ * @param string $taxa A taxa de taxa informado pelo usuário.
+ * @param string $tb_servico_id_servico O serviço vindo da tabela serviço.
+ * @param string $tb_agendamento_idagendamento O id do agendamento.
+ * @return int ID da taxa.
+ * @throws 0 caso não encontre nenhum usuário.
+ * 
+ **/
 function salvarTaxa($conexao, $status, $taxa, $tb_agendamento_idagendamento) {
     $sql = "INSERT INTO tb_taxa (status, taxa, tb_agendamento_idagendamento) VALUES (?, ?, ?)";
     $comando = mysqli_prepare($conexao, $sql);
@@ -313,7 +326,20 @@ function editarTaxa($conexao, $status, $taxa, $tb_agendamento_idagendamento, $id
     return $funcionou;
 };
 
-// Cadastrar Pagamento
+/**
+ * Cadastra o pagamento no Banco de Dados
+ * 
+ * Salva uma pagamento caso não tenha
+ * 
+ * @param mysqli $conexao Uma conexão com o banco.
+ * @param string $valor O valor do pagamento informada pelo usuário.
+ * @param string $forma A forma de pagamento informada pelo usuário.
+ * @param string $descricao A descrição informada pelo usuário.
+ * @param string $tb_agendamento_idagendamento O id do agendamento.
+ * @return int ID da pagamento.
+ * @throws 0 caso não encontre nenhum usuário.
+ * 
+ **/
 function salvarPagamento($conexao, $valor, $forma, $descricao, $tb_agendamento_idagendamento) {
     $sql = "INSERT INTO tb_pagamento (valor, forma, descricao, tb_agendamento_idagendamento) VALUES (?, ?, ?, ?)";
     $comando = mysqli_prepare($conexao, $sql);
