@@ -28,8 +28,21 @@ function salvarUsuario($conexao, $email, $senha, $tipo, $nome, $telefone) {
     return $funcionou;
 };
 
-
-// Listar usuario
+/**
+ * Lista todos os usuários cadastrados no Banco de Dados
+ * 
+ * Retorna uma lista de todos os usuários registrados na tabela `tb_usuario`.
+ * 
+ * @param mysqli $conexao Uma conexão com o banco.
+ * @return array Lista de usuários, onde cada usuário é representado por um array com as chaves:
+ *     - 'idusuario' : ID do usuário.
+ *     - 'email' : E-mail do usuário.
+ *     - 'senha' : Senha do usuário (geralmente criptografada).
+ *     - 'tipo' : Tipo de usuário (ex: "admin", "cliente").
+ *     - 'nome' : Nome do usuário.
+ *     - 'telefone' : Telefone do usuário.
+ * @throws Exception Caso ocorra algum erro na execução da consulta SQL.
+ */
 function listarUsuario($conexao) {
     $sql = "SELECT * FROM tb_usuario";
     $comando = mysqli_prepare($conexao, $sql);
@@ -46,8 +59,15 @@ function listarUsuario($conexao) {
     return $lista_usuario;
 };
 
-
-// Deletar de Usuario
+/**
+ * Deleta um usuário do Banco de Dados
+ * 
+ * Remove um usuário da tabela tb_usuario com base no ID fornecido.
+ * 
+ * @param mysqli $conexao Uma conexão com o banco.
+ * @param int $idusuario O ID do usuário a ser deletado.
+ * @throws Exception Caso ocorra algum erro na execução da consulta SQL.
+ */
 function deletarUsuario($conexao, $idusuario) {
     $sql = "DELETE FROM tb_usuario WHERE idusuario = ?";
     $comando = mysqli_prepare($conexao, $sql);
@@ -60,7 +80,16 @@ function deletarUsuario($conexao, $idusuario) {
     return $funcionou;
 };
 
-// Pesquisa de usuario pelo ID
+/**
+ * Retorna os dados de um usuário a partir do ID.
+ *
+ * Retorna nome e tipo do usuário a partir do ID informado.
+ *
+ * @param mysqli $conexao Conexão com o banco.
+ * @param int $idusuario ID de um usuário existente.
+ * @return array $usuario['email', 'senha', 'tipo', 'nome', 'telefone']
+ * @throws 0 Caso não encontrar o ID informado.
+ **/
 function pesquisarUsuarioId($conexao, $idusuario) { 
     $sql = "SELECT * FROM tb_usuario WHERE idusuario = ?";
     $comando = mysqli_prepare($conexao, $sql);
@@ -76,7 +105,21 @@ function pesquisarUsuarioId($conexao, $idusuario) {
     return $usuario;
 };
 
-// Editar de usuario
+/**
+ * Edita os dados de um usuário no Banco de Dados
+ * 
+ * Altera as informações de um usuário na tabela tb_usuario com base no ID fornecido.
+ * A senha será atualizada com um novo hash gerado usando password_hash.
+ * 
+ * @param mysqli $conexao Uma conexão com o banco.
+ * @param string $email O novo e-mail do usuário.
+ * @param string $senha A nova senha do usuário.
+ * @param string $tipo O novo tipo de usuário (ex: "f", "c").
+ * @param string $nome O novo nome do usuário.
+ * @param string $telefone O novo telefone do usuário.
+ * @param int $idusuario O ID do usuário a ser atualizado.
+ * @throws Exception Caso ocorra algum erro na execução da consulta SQL.
+ */
 function editarUsuario($conexao, $email, $senha, $tipo, $nome, $telefone, $idusuario) {
     $senha_hash = password_hash($senha, PASSWORD_DEFAULT);
     $sql = "UPDATE tb_usuario SET email=?, senha=?, tipo=?, nome=?, telefone=? WHERE idusuario=?";
@@ -115,7 +158,20 @@ function salvarServico($conexao, $preco_servico, $tipo_servico, $descricao_servi
     return $funcionou;
 };
 
-// Listar serviço
+/**
+ * Lista todos os serviços cadastrados no Banco de Dados
+ * 
+ * Retorna uma lista de todos os serviços registrados na tabela tb_servico.
+ * 
+ * @param mysqli $conexao Uma conexão com o banco.
+ * @return array Lista de serviços, onde cada serviço é representado por um array com as chaves:
+ *     - 'idservico' : ID do serviço.
+ *     - 'preco_servico' : Preço do serviço.
+ *     - 'tipo_servico' : Tipo do serviço (por exemplo, "consultoria", "manutenção", etc.).
+ *     - 'descricao_servico' : Descrição do serviço.
+ *     - 'foto' : URL ou caminho da foto do serviço.
+ * @throws Exception Caso ocorra algum erro na execução da consulta SQL.
+ */
 function listarServico($conexao) {
     $sql = "SELECT * FROM tb_servico";
     $comando = mysqli_prepare($conexao, $sql);
@@ -132,7 +188,15 @@ function listarServico($conexao) {
     return $lista_servicos;
 };
 
-// Deletar de serviços
+/**
+ * Deleta um serviço do Banco de Dados
+ * 
+ * Remove um serviço da tabela tb_servico com base no ID fornecido.
+ * 
+ * @param mysqli $conexao Uma conexão com o banco.
+ * @param int $idservico O ID do serviço a ser deletado.
+ * @throws Exception Caso ocorra algum erro na execução da consulta SQL.
+ */
 function deletarServico($conexao, $idservico) {
     $sql = "DELETE FROM tb_servico WHERE idservico = ?";
     $comando = mysqli_prepare($conexao, $sql);
@@ -145,7 +209,16 @@ function deletarServico($conexao, $idservico) {
     return $funcionou;
 };
 
-//  Pesquisa de serviço pelo ID
+/**
+ * Retorna os dados de um serviço a partir do ID.
+ *
+ * Retorna as informações completas de um serviço com base no ID informado.
+ *
+ * @param mysqli $conexao Conexão com o banco.
+ * @param int $idservico ID de um serviço existente.
+ * @return array $servico['preco_servico', 'tipo_servico', 'descricao_servico', 'foto']
+ * @throws 0 Caso não encontrar o ID informado.
+ **/
 function pesquisarServicoId($conexao, $idservico) {   
     $sql = "SELECT * FROM tb_servico WHERE idservico = ?";
     $comando = mysqli_prepare($conexao, $sql);
@@ -161,7 +234,19 @@ function pesquisarServicoId($conexao, $idservico) {
     return $servico;
 };
 
-// Editar de serviços
+/**
+ * Atualiza os dados de um serviço no Banco de Dados
+ *
+ * Altera as informações de um serviço na tabela `tb_servico` com base no ID fornecido.
+ * Os campos atualizados incluem o preço, tipo, descrição e foto do serviço.
+ *
+ * @param mysqli $conexao Conexão com o banco de dados.
+ * @param float $preco_servico Novo preço do serviço.
+ * @param string $tipo_servico Novo tipo do serviço.
+ * @param string $descricao_servico Nova descrição do serviço.
+ * @param string $foto Nova URL ou caminho da foto do serviço.
+ * @throws Exception Caso ocorra algum erro na execução da consulta SQL.
+ **/
 function editarServico($conexao, $preco_servico, $tipo_servico, $descricao_servico, $foto) {
     $sql = "UPDATE tb_servico SET preco_servico=?, tipo_servico=?, descricao_servico=?, foto=? WHERE idservico=?";
     $comando = mysqli_prepare($conexao, $sql);
@@ -200,7 +285,21 @@ function salvarAgendamento ($conexao, $data, $horario, $tb_servico_id_servico, $
     return $funcionou;
 };
 
-// Listagem de Agendamento
+/**
+ * Lista todos os agendamentos cadastrados no Banco de Dados
+ *
+ * Retorna uma lista de todos os agendamentos registrados na tabela tb_agendamento.
+ *
+ * @param mysqli $conexao Conexão com o banco de dados.
+ * @return array Lista de agendamentos, onde cada agendamento é representado por um array com as chaves:
+ *     - 'idagendamento' : ID do agendamento.
+ *     - 'data' : Data do agendamento.
+ *     - 'horario' : Horário do agendamento.
+ *     - 'tb_servico_id_servico' : ID do serviço agendado.
+ *     - 'tb_usuario_idusuario_cliente' : ID do usuário cliente que fez o agendamento.
+ *     - 'tb_usuario_idusuario_funcionario' : ID do funcionário designado ao serviço.
+ * @throws Exception Caso ocorra algum erro na execução da consulta SQL.
+ **/
 function listarAgendamento($conexao) {
     $sql = "SELECT * FROM tb_agendamento";
     $comando = mysqli_prepare($conexao, $sql);
@@ -217,7 +316,16 @@ function listarAgendamento($conexao) {
     return $lista_agendamento;
 };
 
-// Pesquisa de usuario pelo ID
+/**
+ * Retorna os dados de um agendamento a partir do ID.
+ *
+ * Retorna as informações de um agendamento específico, com base no ID informado.
+ *
+ * @param mysqli $conexao Conexão com o banco de dados.
+ * @param int $idagendamento ID de um agendamento existente.
+ * @return array $agendamento['idagendamento', 'data', 'horario', 'tb_servico_id_servico', 'tb_usuario_idusuario_cliente', 'tb_usuario_idusuario_funcionario']
+ * @throws 0 Caso não encontre o ID informado.
+ **/
 function pesquisarAgendamentoId($conexao, $idagendamento) { 
     $sql = "SELECT * FROM tb_agendamento WHERE idagendamento = ?";
     $comando = mysqli_prepare($conexao, $sql);
@@ -233,7 +341,15 @@ function pesquisarAgendamentoId($conexao, $idagendamento) {
     return $usuario;
 };
 
-// Deletar Agendamento
+/**
+ * Deleta um agendamento do Banco de Dados
+ *
+ * Remove um agendamento da tabela `tb_agendamento` com base no ID fornecido.
+ *
+ * @param mysqli $conexao Conexão com o banco de dados.
+ * @param int $idagendamento ID do agendamento a ser deletado.
+ * @throws Exception Caso ocorra algum erro na execução da consulta SQL.
+ **/
 function deletarAgendamento($conexao, $idagendamento) {
     $sql = "DELETE FROM tb_agendamento WHERE idagendamento = ?";
     $comando = mysqli_prepare($conexao, $sql);
@@ -246,7 +362,20 @@ function deletarAgendamento($conexao, $idagendamento) {
     return $funcionou;
 };
 
-// Editar de Agendamento
+/**
+ * Atualiza os dados de um agendamento no Banco de Dados
+ *
+ * Altera as informações de um agendamento na tabela tb_agendamento com base no ID fornecido.
+ *
+ * @param mysqli $conexao Conexão com o banco de dados.
+ * @param string $data Nova data do agendamento.
+ * @param string $horario Novo horário do agendamento.
+ * @param int $tb_servico_id_servico Novo ID do serviço agendado.
+ * @param int $tb_usuario_idusuario_cliente Novo ID do cliente associado ao agendamento.
+ * @param int $tb_usuario_idusuario_funcionario Novo ID do funcionário designado ao serviço.
+ * @param int $idagendamento ID do agendamento a ser atualizado.
+ * @throws Exception Caso ocorra algum erro na execução da consulta SQL.
+ **/
 function editarAgendamento($conexao, $data, $horario, $tb_servico_id_servico, $tb_usuario_idusuario_cliente, $tb_usuario_idusuario_funcionario, $idagendamento) {
     $sql = "UPDATE tb_agendamento SET data=?, horario=?, tb_servico_id_servico=?, tb_usuario_idusuario_cliente=?, tb_usuario_idusuario_funcionario=? WHERE idagendamento=?";
     $comando = mysqli_prepare($conexao, $sql);
@@ -284,7 +413,19 @@ function salvarTaxa($conexao, $status, $taxa, $tb_agendamento_idagendamento) {
     return $funcionou;
 };
 
-// Listar taxas
+/**
+ * Lista todas as taxas cadastradas no Banco de Dados
+ *
+ * Retorna uma lista de todas as taxas registradas na tabela tb_taxa.
+ *
+ * @param mysqli $conexao Conexão com o banco de dados.
+ * @return array Lista de taxas, onde cada taxa é representada por um array com as chaves:
+ *     - 'idtaxa' : ID da taxa.
+ *     - 'status' : Status da taxa (ex: "ativa", "inativa").
+ *     - 'taxa' : Valor da taxa aplicada.
+ *     - 'tb_agendamento_idagendamento' : ID do agendamento relacionado à taxa.
+ * @throws Exception Caso ocorra algum erro na execução da consulta SQL.
+ **/
 function listarTaxa($conexao) {
     $sql = "SELECT * FROM tb_taxa";
     $comando = mysqli_prepare($conexao, $sql);
@@ -301,7 +442,15 @@ function listarTaxa($conexao) {
     return $lista_taxas;
 };
 
-// Deletar taxa
+/**
+ * Deleta uma taxa cadastrada no Banco de Dados.
+ *
+ * Remove da tabela tb_taxa o registro correspondente ao ID informado.
+ *
+ * @param mysqli $conexao Conexão com o banco de dados.
+ * @param int $idtaxa ID da taxa que será excluída.
+ * @throws Exception Caso ocorra algum erro na execução da consulta SQL.
+ **/
 function deletarTaxa($conexao, $idtaxa) {
     $sql = "DELETE FROM tb_taxa WHERE idtaxa = ?";
     $comando = mysqli_prepare($conexao, $sql);
@@ -314,7 +463,19 @@ function deletarTaxa($conexao, $idtaxa) {
     return $funcionou;
 };
 
-// Editar taxa
+/**
+ * Edita os dados de uma taxa cadastrada no Banco de Dados.
+ *
+ * Altera as informações de uma taxa na tabela tb_taxa com base no ID fornecido.
+ *
+ * @param mysqli $conexao Conexão com o banco de dados.
+ * @param string $status Novo status da taxa (ex: "ativa", "inativa").
+ * @param string|float $taxa Novo valor da taxa aplicada.
+ * @param int $tb_agendamento_idagendamento ID do agendamento relacionado à taxa.
+ * @param int $idtaxa ID da taxa que será atualizada.
+ * @return bool Retorna true se a atualização for bem-sucedida, ou false em caso de falha.
+ * @throws Exception Caso ocorra algum erro na execução da consulta SQL.
+ **/
 function editarTaxa($conexao, $status, $taxa, $tb_agendamento_idagendamento, $idtaxa) {
     $sql = "UPDATE tb_taxa SET status=?, taxa=?, tb_agendamento_idagendamento=? WHERE idtaxa=?";
     $comando = mysqli_prepare($conexao, $sql);
@@ -352,7 +513,20 @@ function salvarPagamento($conexao, $valor, $forma, $descricao, $tb_agendamento_i
     return $funcionou;
 };
 
-// Listar Pagamento
+/**
+ * Lista todos os pagamentos cadastrados no Banco de Dados
+ *
+ * Retorna uma lista de todos os pagamentos registrados na tabela tb_pagamento.
+ *
+ * @param mysqli $conexao Conexão com o banco de dados.
+ * @return array Lista de pagamentos, onde cada pagamento é representado por um array com as chaves:
+ *     - 'idpagamento' : ID do pagamento.
+ *     - 'valor' : Valor do pagamento realizado.
+ *     - 'forma' : Forma utilizada para o pagamento (ex: "cartão", "boleto", "pix").
+ *     - 'descricao' : Descrição ou observação sobre o pagamento.
+ *     - 'tb_agendamento_idagendamento' : ID do agendamento relacionado ao pagamento.
+ * @throws Exception Caso ocorra algum erro na execução da consulta SQL.
+ **/
 function listarPagamento($conexao) {
     $sql = "SELECT * FROM tb_pagamento";
     $comando = mysqli_prepare($conexao, $sql);
@@ -369,7 +543,15 @@ function listarPagamento($conexao) {
     return $lista_pagamento;
 };
 
-// Deletar Pagamento
+/**
+ * Deleta um pagamento cadastrado no Banco de Dados
+ *
+ * Remove da tabela tb_pagamento o registro correspondente ao ID informado.
+ *
+ * @param mysqli $conexao Conexão com o banco de dados.
+ * @param int $idpagamento ID do pagamento que será excluído.
+ * @throws Exception Caso ocorra algum erro na execução da consulta SQL.
+ **/
 function deletarPagamento($conexao, $idpagamento) {
     $sql = "DELETE FROM tb_pagamento WHERE idpagamento = ?";
     $comando = mysqli_prepare($conexao, $sql);
@@ -382,7 +564,22 @@ function deletarPagamento($conexao, $idpagamento) {
     return $funcionou;
 };
 
-// Pesquisa de Pagamento pelo ID
+/**
+ * Pesquisa um pagamento específico no Banco de Dados pelo seu ID
+ *
+ * Retorna os dados de um pagamento registrado na tabela tb_pagamento com base no ID informado.
+ *
+ * @param mysqli $conexao Conexão com o banco de dados.
+ * @param int $idpagamento ID do pagamento que será pesquisado.
+ * @return array|null Retorna um array associativo com as chaves:
+ *     - 'idpagamento' : ID do pagamento.
+ *     - 'valor' : Valor do pagamento realizado.
+ *     - 'forma' : Forma utilizada para o pagamento (ex: "cartão", "boleto", "pix").
+ *     - 'descricao' : Descrição ou observação sobre o pagamento.
+ *     - 'tb_agendamento_idagendamento' : ID do agendamento relacionado ao pagamento.
+ *     Retorna null caso não seja encontrado nenhum registro.
+ * @throws Exception Caso ocorra algum erro na execução da consulta SQL.
+ **/
 function pesquisarPagamentoId($conexao, $idpagamento) { 
     $sql = "SELECT * FROM tb_pagamento WHERE idpagamento = ?";
     $comando = mysqli_prepare($conexao, $sql);
@@ -398,7 +595,20 @@ function pesquisarPagamentoId($conexao, $idpagamento) {
     return $pagamento;
 };
 
-// Editar Pagamento
+/**
+ * Edita os dados de um pagamento cadastrado no Banco de Dados
+ *
+ * Atualiza os campos 'valor', 'forma', 'descricao' e 'tb_agendamento_idagendamento'
+ * de um registro na tabela tb_pagamento com base no ID informado.
+ *
+ * @param mysqli $conexao Conexão com o banco de dados.
+ * @param string|float $valor Novo valor do pagamento.
+ * @param string $forma Nova forma de pagamento (ex: "cartão", "boleto", "pix").
+ * @param string $descricao Nova descrição ou observação sobre o pagamento.
+ * @param int $tb_agendamento_idagendamento ID do agendamento relacionado ao pagamento.
+ * @param int $idpagamento ID do pagamento que será atualizado.
+ * @throws Exception Caso ocorra algum erro na execução da consulta SQL.
+ **/
 function editarPagamento ($conexao, $valor, $forma, $descricao, $tb_agendamento_idagendamento, $idpagamento) {
     $sql = "UPDATE tb_pagamento SET valor=?,forma=?, descricao=?, tb_agendamento_idagendamento=? WHERE idpagamento=?";
     $comando = mysqli_prepare($conexao, $sql);
