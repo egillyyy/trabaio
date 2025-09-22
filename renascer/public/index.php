@@ -15,5 +15,8 @@
     <a href="listarPagamentos.php">listar pagamentos</a> <br> <br>
     <a href="listarServicos.php">listar serviços</a> <br> <br>
     <a href="listarUsuarios.php">listar usuarios</a> <br> <br>
+
+    <a href="suscesso.html">Suscesso</a> <br> <br>
+
 </body>
 </html>

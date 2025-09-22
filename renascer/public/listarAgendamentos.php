@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="css/style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>agendamento</title>
@@ -20,16 +21,17 @@
         echo "Não existem agendamentos cadastrados.";
     } else {
     ?>
-        <table border="1">
-            <tr>
-                <th>ID</th>
-                <th>Data</th>
-                <th>Horário</th>
-                <th>ID Serviço</th>
-                <th>ID Cliente</th>
-                <th>ID Funcionário</th>
+        <table class="table">
+            <thead>
+                <th scope="col">ID</th>
+                <th scope="col">Data</th>
+                <th scope="col">Horário</th>
+                <th scope="col">ID Serviço</th>
+                <th scope="col">ID Cliente</th>
+                <th scope="col">ID Funcionário</th>
                 <th colspan="2">Ações</th>
             </tr>
+
             <?php
             foreach ($lista_agendamento as $agendamento) {
                 $id = $agendamento['idagendamento'];
@@ -39,6 +41,7 @@
                 $idcliente = $agendamento['tb_usuario_idusuario_cliente'];
                 $idfuncionario = $agendamento['tb_usuario_idusuario_funcionario'];
 
+            echo "<tbody>";    
                 echo "<tr>";
                 echo "<td>$id</td>";
                 echo "<td>$data</td>";
@@ -49,6 +52,7 @@
                 echo "<td><a href='deletarAgendamento.php?id=$id'>Excluir</a></td>";
                 echo "<td><a href='formAgendamento.php?id=$id'>Editar</a></td>";
                 echo "</tr>";
+            echo "</tbody>";
             }
             ?>
         </table>

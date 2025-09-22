@@ -4,3 +4,78 @@
     font-weight: normal;
     font-style: normal;
 }
+
+.tela {
+    background-color: #556b2f;
+}
+
+
+
+
+
+
+
+
+
+/* Resetando alguns estilos padrão do navegador */
+* {
+  margin: 0; /* Remove a margem padrão de todos os elementos */
+  padding: 0; /* Remove o espaçamento interno padrão */
+  box-sizing: border-box; /* Inclui bordas e paddings no cálculo de largura/altura */
+  font-family: Arial, sans-serif; /* Fonte padrão simples e legível */
+}
+
+/* Estilo do corpo da página */
+body {
+  background-color: #fdf9f4; /* Fundo bege claro parecido com a imagem */
+  display: flex; /* Usa flexbox para centralizar */
+  justify-content: center; /* Centraliza horizontalmente */
+  align-items: center; /* Centraliza verticalmente */
+  height: 100vh; /* Faz o body ocupar toda a altura da tela */
+}
+
+/* Estilo do "card" central */
+.card {
+  background-color: #ffffff; /* Fundo branco para destacar */
+  border-radius: 20px; /* Deixa as bordas arredondadas */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* Sombra suave para dar destaque */
+  width: 350px; /* Largura fixa do card */
+  text-align: center; /* Centraliza todo o texto */
+  overflow: hidden; /* Faz com que o topo arredondado apareça certo */
+  border: 2px solid #556b2f; /* Borda verde para dar acabamento */
+}
+
+/* Cabeçalho verde do card */
+.card-header {
+  background-color: #556b2f; /* Verde escuro do topo */
+  color: #fff; /* Texto branco */
+  padding: 20px; /* Espaçamento interno */
+  border-top-left-radius: 18px; /* Mantém arredondado igual ao card */
+  border-top-right-radius: 18px;
+}
+
+/* Mensagem de agendamento */
+.card-header h2 {
+  font-size: 18px; /* Tamanho médio do texto */
+  margin-top: 10px; /* Espaço acima do título */
+}
+
+/* Corpo do card */
+.card-body {
+  padding: 20px; /* Espaçamento interno */
+  color: #333; /* Cor do texto em cinza escuro */
+  font-size: 15px; /* Tamanho confortável de leitura */
+  line-height: 1.5; /* Espaçamento entre linhas */
+}
+
+/* Botão de voltar */
+button {
+  background-color: #556b2f; /* Fundo verde */
+  color: white; /* Texto branco */
+  border: none; /* Remove a borda padrão */
+  padding: 10px 20px; /* Espaçamento interno */
+  border-radius: 25px; /* Borda arredondada estilo "pill" */
+  font-size: 14px; /* Texto médio */
+  margin-top: 15px; /* Espaço acima do botão */
+}
+
