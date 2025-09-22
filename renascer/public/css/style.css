@@ -79,3 +79,246 @@ button {
   margin-top: 15px; /* Espaço acima do botão */
 }
 
+/* Link sem linha */
+.linkBranco{
+    text-decoration: none;
+    color: white; /* Texto branco */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Define o estilo geral do rodapé */
+footer {
+    background-color: #556b2f; /* Cor de fundo verde escuro */
+    color: #fff; /* Cor do texto em branco */
+    display: flex; /* Usa flexbox para organizar os itens lado a lado */
+    justify-content: space-around; /* Espaça os blocos igualmente */
+    align-items: center; /* Centraliza verticalmente os itens */
+    padding: 30px; /* Espaçamento interno */
+    flex-wrap: wrap; /* Quebra linha se a tela for pequena */
+}
+
+/* Estilo do logotipo */
+.footer-logo {
+    flex: 1; /* Ocupa espaço proporcional */
+    text-align: center; /* Centraliza dentro do bloco */
+}
+
+/* Ajusta a imagem do logo */
+.footer-logo img {
+    max-width: 120px; /* Limita largura do logo */
+}
+
+/* Estilo das listas de links */
+.footer-links {
+    flex: 2; /* Ocupa mais espaço que o logo */
+    display: flex; /* Coloca os blocos de links lado a lado */
+    justify-content: space-around; /* Espaço igual entre blocos */
+}
+
+/* Cada coluna de links */
+.footer-links ul {
+    list-style: none; /* Remove os pontinhos da lista */
+    padding: 0; /* Remove espaçamento interno padrão */
+}
+
+/* Estilo dos títulos de cada coluna */
+.footer-links h4 {
+    font-size: 16px; /* Tamanho da fonte */
+    margin-bottom: 10px; /* Espaço abaixo do título */
+    font-weight: bold; /* Deixa em negrito */
+}
+
+/* Estilo de cada link */
+.footer-links a {
+    color: #fff; /* Links brancos */
+    text-decoration: none; /* Remove o sublinhado */
+    display: block; /* Faz cada link ocupar uma linha */
+    margin-bottom: 5px; /* Espaço entre links */
+    transition: color 0.3s; /* Animação suave quando passar o mouse */
+}
+
+/* Estilo do texto de citação */
+.footer-quote {
+    flex: 2; /* Ocupa bastante espaço */
+    font-style: italic; /* Deixa o texto em itálico */
+    font-size: 14px; /* Fonte menor */
+    text-align: center; /* Centraliza o texto */
+    margin: 15px 0; /* Espaçamento vertical */
+}
+
+/* Estilo da área de ícones sociais */
+.footer-social {
+    flex: 1; /* Ocupa espaço proporcional */
+    text-align: center; /* Centraliza os ícones */
+}
+
+/* Ícones sociais (ex: WhatsApp, Instagram, Facebook) */
+.footer-social a {
+    margin: 0 8px; /* Espaço entre ícones */
+    color: #fff; /* Cor branca */
+    font-size: 20px; /* Tamanho maior para os ícones */
+    transition: color 0.3s; /* Animação ao passar o mouse */
+}
+
+/* Hover nos ícones sociais */
+.footer-social a:hover {
+    color: #ffc300; /* Amarelo quando passar o mouse */
+}
+
+/* Botão de contato */
+.footer-button {
+    display: inline-block; /* Botão no mesmo fluxo */
+    padding: 10px 20px; /* Espaçamento interno */
+    background-color: #fff; /* Fundo branco */
+    color: #556b2f; /* Texto verde */
+    border-radius: 25px; /* Bordas arredondadas */
+    font-weight: bold; /* Texto em negrito */
+    margin-top: 10px; /* Espaço acima */
+    text-decoration: none; /* Remove sublinhado */
+    transition: background 0.3s, color 0.3s; /* Efeito suave */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Fonte padrão */
+body {
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+    background-color: #fdfaf6; /* Bege claro */
+}
+
+/* Header */
+header {
+    background-color: #556b2f; /* Verde oliva */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+}
+
+/* Logo */
+.logo img {
+    max-height: 70px;
+}
+
+/* Menu no topo */
+.menu {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+/* Botão padrão */
+.btn {
+    padding: 10px 18px;
+    background-color: #fff;
+    color: #333;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+.btn:hover {
+    background-color: #ffc300; /* Amarelo no hover */
+}
+
+/* Barra de pesquisa */
+.search-box {
+    display: flex;
+    align-items: center;
+    background: #fff;
+    border-radius: 20px;
+    padding: 5px 10px;
+}
+.search-box input {
+    border: none;
+    outline: none;
+    padding: 5px;
+}
+.search-box button {
+    border: none;
+    background: transparent;
+    cursor: pointer;
+}
+
+/* Botão de usuário */
+.user-btn {
+    background: #fff;
+    border: none;
+    border-radius: 50%;
+    padding: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.user-btn:hover {
+    background: #ffc300;
+}
+
+/* Cards */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    padding: 50px;
+    justify-items: center;
+}
+
+.card {
+    background: #fff;
+    border: 2px solid #556b2f;
+    border-radius: 10px;
+    overflow: hidden;
+    text-align: center;
+    max-width: 220px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+}
+
+.card p {
+    margin: 10px 0;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* Efeito ao passar o mouse */
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
