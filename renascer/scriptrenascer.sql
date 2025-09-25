@@ -122,39 +122,62 @@ SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
 
 USE renascer;
 
--- tb_usuario
-INSERT INTO tb_usuario (email, senha, tipo, nome, telefone) VALUES ('teste.silva@gmail.com', 'senha123', 'g', 'teste Silva', '11 999999999');
-INSERT INTO tb_usuario (email, senha, tipo, nome, telefone) VALUES ('lucas.moura@gmail.com', 'abc321', 'c', 'Lucas Moura', '21 988888888');
-INSERT INTO tb_usuario (email, senha, tipo, nome, telefone) VALUES ('carla.oliveira@gmail.com', '123456', 'c', 'Carla Oliveira', '31 977777777');
-INSERT INTO tb_usuario (email, senha, tipo, nome, telefone) VALUES ('ricardo.souza@gmail.com', 'teste321', 'c', 'Ricardo Souza', '41 966666666');
-INSERT INTO tb_usuario (email, senha, tipo, nome, telefone) VALUES ('maria.lima@gmail.com', 'maria321', 'c', 'Maria Lima', '51 955555555');
+INSERT INTO tb_usuario (email, senha, tipo, nome, telefone) VALUES 
+('maria.cliente@gmail.com', 'senha123', 'c', 'Maria Souza', '11 988887777'),
+('joao.cliente@gmail.com', 'senha123', 'c', 'João Silva', '11 977776666'),
+('ana.cliente@gmail.com', 'senha123', 'c', 'Ana Pereira', '11 966665555'),
+('carla.cliente@gmail.com', 'senha123', 'c', 'Carla Dias', '11 955554444'),
+('paulo.cliente@gmail.com', 'senha123', 'c', 'Paulo Oliveira', '11 944443333'),
+('jose.func@gmail.com', 'senha123', 'f', 'José Barbosa', '11 933332222'),
+('lucas.func@gmail.com', 'senha123', 'f', 'Lucas Martins', '11 922221111'),
+('fernanda.func@gmail.com', 'senha123', 'f', 'Fernanda Lima', '11 911110000'),
+('aline.func@gmail.com', 'senha123', 'f', 'Aline Ferreira', '11 900009999'),
+('roberto.func@gmail.com', 'senha123', 'f', 'Roberto Costa', '11 988881234');
 
--- tb_servico
-INSERT INTO tb_servico (preco_servico, tipo_servico, descricao_servico, foto) VALUES (30, 'maquiagem', 'feita no rosto');
-INSERT INTO tb_servico (preco_servico, tipo_servico, descricao_servico, foto) VALUES (50, 'corte de cabelo', 'feita no cabelo');
-INSERT INTO tb_servico (preco_servico, tipo_servico, descricao_servico, foto) VALUES (80, 'penteado', 'feita no cabelo');
-INSERT INTO tb_servico (preco_servico, tipo_servico, descricao_servico, foto) VALUES (25, 'sobrancelha', 'feita no rosto');
-INSERT INTO tb_servico (preco_servico, tipo_servico, descricao_servico, foto) VALUES (100, 'hidratação capilar', 'feita no cabelo');
-INSERT INTO tb_servico (preco_servico, tipo_servico, descricao_servico, foto) VALUES (120, 'progressiva', 'feita no cabelo');
-INSERT INTO tb_servico (preco_servico, tipo_servico, descricao_servico, foto) VALUES (60, 'barba completa', 'feita no rosto');
+INSERT INTO tb_servico (preco_servico, tipo_servico, descricao_servico, foto) VALUES
+(50.00, 'Corte', 'Corte de cabelo feminino', 'corte_feminino.jpg'),
+(40.00, 'Corte', 'Corte de cabelo masculino', 'corte_masculino.jpg'),
+(120.00, 'Color', 'Coloração completa', 'coloracao.jpg'),
+(80.00, 'Escova', 'Escova progressiva', 'escova.jpg'),
+(150.00, 'Luzes', 'Luzes no cabelo', 'luzes.jpg'),
+(60.00, 'Barba', 'Barba completa com hidratação', 'barba.jpg'),
+(200.00, 'Penteado', 'Penteado para festa', 'penteado.jpg'),
+(100.00, 'Manicure', 'Manicure completa com esmalte', 'manicure.jpg'),
+(80.00, 'Pedicure', 'Pedicure completa', 'pedicure.jpg'),
+(300.00, 'Noiva', 'Pacote noiva completo', 'noiva.jpg');
 
--- tb_agendamento
-INSERT INTO tb_agendamento (data, horario, tb_servico_id_servico, tb_usuario_idusuario_cliente, tb_usuario_idusuario_funcionario) VALUES ('2025-06-15', '10:15:00', 1, 1, 2);
-INSERT INTO tb_agendamento (data, horario, tb_servico_id_servico, tb_usuario_idusuario_cliente, tb_usuario_idusuario_funcionario) VALUES ('2025-06-16', '11:30:00', 2, 1, 2);
-INSERT INTO tb_agendamento (data, horario, tb_servico_id_servico, tb_usuario_idusuario_cliente, tb_usuario_idusuario_funcionario) VALUES ('2025-06-17', '14:00:00', 1, 1, 3);
-INSERT INTO tb_agendamento (data, horario, tb_servico_id_servico, tb_usuario_idusuario_cliente, tb_usuario_idusuario_funcionario) VALUES ('2025-06-18', '09:00:00', 3, 1, 2);
-INSERT INTO tb_agendamento (data, horario, tb_servico_id_servico, tb_usuario_idusuario_cliente, tb_usuario_idusuario_funcionario) VALUES ('2025-06-19', '15:30:00', 2, 1, 3);
+INSERT INTO tb_agendamento (data, horario, tb_servico_id_servico, tb_usuario_idusuario_cliente, tb_usuario_idusuario_funcionario) VALUES
+('2025-09-15', '10:00:00', 1, 1, 6),
+('2025-09-15', '11:00:00', 2, 2, 7),
+('2025-09-16', '14:00:00', 3, 3, 8),
+('2025-09-16', '15:00:00', 4, 4, 9),
+('2025-09-17', '09:00:00', 5, 5, 10),
+('2025-09-17', '10:00:00', 6, 1, 6),
+('2025-09-18', '13:00:00', 7, 2, 7),
+('2025-09-18', '14:00:00', 8, 3, 8),
+('2025-09-19', '15:00:00', 9, 4, 9),
+('2025-09-20', '16:00:00', 10, 5, 10);
 
--- tb_pagamento
-INSERT INTO tb_pagamento (valor, forma, descricao, tb_agendamento_idagendamento) VALUES (100.00, 'Pix', 'Feito pela cliente Ana', 1);
-INSERT INTO tb_pagamento (valor, forma, descricao, tb_agendamento_idagendamento) VALUES (150.00, 'Dinheiro', 'Pagamento adiantado do cliente João', 2);
-INSERT INTO tb_pagamento (valor, forma, descricao, tb_agendamento_idagendamento) VALUES (200.50, 'Cartão de Crédito', 'Cliente Marina pagou no crédito', 3);
-INSERT INTO tb_pagamento (valor, forma, descricao, tb_agendamento_idagendamento) VALUES (80.00, 'Cartão de Débito', 'Serviço rápido pago pela cliente Carla', 4);
-INSERT INTO tb_pagamento (valor, forma, descricao, tb_agendamento_idagendamento) VALUES (100.00, 'Pix', 'Feito pela cliente Ana', 5);
+INSERT INTO tb_taxa (status, taxa, tb_agendamento_idagendamento) VALUES
+('pendente', 10.00, 1),
+('pago', 5.00, 2),
+('pendente', 12.00, 3),
+('pago', 8.00, 4),
+('pendente', 15.00, 5),
+('pago', 6.00, 6),
+('pendente', 10.00, 7),
+('pago', 5.00, 8),
+('pendente', 7.00, 9),
+('pago', 20.00, 10);
 
--- tb_taxa
-INSERT INTO tb_taxa (status, taxa, tb_agendamento_idagendamento) VALUES ('Sem atraso', 0.00, 1);
-INSERT INTO tb_taxa (status, taxa, tb_agendamento_idagendamento) VALUES ('Sem atraso', 0.00, 1);
-INSERT INTO tb_taxa (status, taxa, tb_agendamento_idagendamento) VALUES ('Atrasado', 100.00, 2);
-INSERT INTO tb_taxa (status, taxa, tb_agendamento_idagendamento) VALUES ('Sem atraso', 0.00, 3);
-INSERT INTO tb_taxa (status, taxa, tb_agendamento_idagendamento) VALUES ('Atrasado', 100.00, 4);
+INSERT INTO tb_pagamento (valor, forma, descricao, tb_agendamento_idagendamento) VALUES
+(50.00, 'Cartão', 'Pagamento corte feminino', 1),
+(40.00, 'Dinheiro', 'Pagamento corte masculino', 2),
+(120.00, 'Cartão', 'Pagamento coloração', 3),
+(80.00, 'Pix', 'Pagamento escova progressiva', 4),
+(150.00, 'Cartão', 'Pagamento luzes', 5),
+(60.00, 'Dinheiro', 'Pagamento barba', 6),
+(200.00, 'Cartão', 'Pagamento penteado festa', 7),
+(100.00, 'Pix', 'Pagamento manicure', 8),
+(80.00, 'Dinheiro', 'Pagamento pedicure', 9),
+(300.00, 'Cartão', 'Pagamento pacote noiva', 10);
