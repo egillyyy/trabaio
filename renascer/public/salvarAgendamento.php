@@ -6,9 +6,8 @@ $data = $_POST['data'];
 $horario = $_POST['horario'];
 $idservico = $_POST['idservico'];
 $idcliente = $_POST['idcliente'];
-$idfuncionario = $_POST['idfuncionario'];
 
-salvarAgendamento($conexao, $data, $horario, $idservico, $idcliente, $idfuncionario);
+salvarAgendamento ($conexao, $data, $horario, $tb_servico_id_servico, $tb_usuario_idusuario_cliente);
 
 header("Location: listarAgendamento.php");
 ?>

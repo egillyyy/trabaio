@@ -273,11 +273,11 @@ function editarServico($conexao, $preco_servico, $tipo_servico, $descricao_servi
  * @throws 0 caso não encontre nenhum usuário.
  * 
  **/
-function salvarAgendamento ($conexao, $data, $horario, $tb_servico_id_servico, $tb_usuario_idusuario_cliente, $tb_usuario_idusuario_funcionario) {
-    $sql = "INSERT INTO tb_agendamento (data, horario, tb_servico_id_servico, tb_usuario_idusuario_cliente, tb_usuario_idusuario_funcionario) VALUES (?, ?, ?, ?, ?)";
+function salvarAgendamento ($conexao, $data, $horario, $tb_servico_id_servico, $tb_usuario_idusuario_cliente) {
+    $sql = "INSERT INTO tb_agendamento (data, horario, tb_servico_id_servico, tb_usuario_idusuario_cliente) VALUES (?, ?, ?, ?)";
     $comando = mysqli_prepare($conexao, $sql);
     
-    mysqli_stmt_bind_param($comando, 'ssiii', $data, $horario, $tb_servico_id_servico, $tb_usuario_idusuario_cliente, $tb_usuario_idusuario_funcionario);
+    mysqli_stmt_bind_param($comando, 'ssiii', $data, $horario, $tb_servico_id_servico, $tb_usuario_idusuario_cliente);
     
     $funcionou = mysqli_stmt_execute($comando);
     mysqli_stmt_close($comando);

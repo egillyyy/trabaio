@@ -122,7 +122,8 @@ SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
 
 USE renascer;
 
-INSERT INTO tb_usuario (email, senha, tipo, nome, telefone) VALUES 
+INSERT INTO tb_usuario (email, senha, tipo, nome, telefone) VALUES
+('marilene.gerente@gmail.com', 'senha123', 'g', 'Marilene', '11 988887770'), 
 ('maria.cliente@gmail.com', 'senha123', 'c', 'Maria Souza', '11 988887777'),
 ('joao.cliente@gmail.com', 'senha123', 'c', 'João Silva', '11 977776666'),
 ('ana.cliente@gmail.com', 'senha123', 'c', 'Ana Pereira', '11 966665555'),
