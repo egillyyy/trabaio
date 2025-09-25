@@ -24,6 +24,7 @@ $lista_servicos = listarServico($conexao);
             $id = $servico['idservico'];
             $tipo = $servico['tipo_servico'];
             $preco = $servico['preco_servico'];
+ 
         ?>
         <div class="card-servico">
             <input type="radio" name="idservico" value="<?= $id ?>" required>

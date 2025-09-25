@@ -324,28 +324,3 @@ header {
 }
 
 
-/* FORM SERVIÇOOOOO */
-/* Área onde ficam os cards */
-.caixa-servicos {
-    display: block;      /* organiza em bloco */
-    margin: 0 auto;      /* centraliza */
-    text-align: center;  /* centraliza o conteúdo */
-}
-
-/* Cada card */
-.card-servico {
-    border: 1px solid #556b2f;  /* borda verde */
-    background-color: #ffffff;  /* fundo branco */
-    margin: 10px;               /* espaço entre os cards */
-    padding: 15px;              /* espaço dentro do card */
-    width: 200px;               /* largura fixa */
-    display: inline-block;      /* deixa os cards lado a lado */
-    border-radius: 8px;         /* cantos arredondados */
-}
-
-/* Texto dentro do card */
-.card-servico p {
-    margin: 5px 0;
-    font-size: 16px;
-    color: #333;
-}
