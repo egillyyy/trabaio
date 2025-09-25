@@ -135,16 +135,16 @@ INSERT INTO tb_usuario (email, senha, tipo, nome, telefone) VALUES
 ('roberto.func@gmail.com', 'senha123', 'f', 'Roberto Costa', '11 988881234');
 
 INSERT INTO tb_servico (preco_servico, tipo_servico, descricao_servico, foto) VALUES
-(50.00, 'Corte', 'Corte de cabelo feminino', 'corte_feminino.jpg'),
-(40.00, 'Corte', 'Corte de cabelo masculino', 'corte_masculino.jpg'),
-(120.00, 'Color', 'Coloração completa', 'coloracao.jpg'),
-(80.00, 'Escova', 'Escova progressiva', 'escova.jpg'),
-(150.00, 'Luzes', 'Luzes no cabelo', 'luzes.jpg'),
-(60.00, 'Barba', 'Barba completa com hidratação', 'barba.jpg'),
+(50.00, 'Cabelo', 'Corte de cabelo feminino', 'corte_feminino.jpg'),
+(40.00, 'Cabelo', 'Corte de cabelo masculino', 'corte_masculino.jpg'),
+(120.00, 'Cabelo', 'Coloração completa', 'coloracao.jpg'),
+(80.00, 'Cabelo', 'Escova progressiva', 'escova.jpg'),
+(150.00, 'Cabelo', 'Luzes no cabelo', 'luzes.jpg'),
+(60.00, 'Cabelo', 'Cabelo completa com hidratação', 'cabelo.jpg'),
 (200.00, 'Penteado', 'Penteado para festa', 'penteado.jpg'),
-(100.00, 'Manicure', 'Manicure completa com esmalte', 'manicure.jpg'),
-(80.00, 'Pedicure', 'Pedicure completa', 'pedicure.jpg'),
-(300.00, 'Noiva', 'Pacote noiva completo', 'noiva.jpg');
+(100.00, 'Maquiagem', 'Manicure completa com esmalte', 'manicure.jpg'),
+(80.00, 'Unha', 'Pedicure completa', 'pedicure.jpg'),
+(300.00, 'Especial', 'Pacote noiva completo', 'noiva.jpg');
 
 INSERT INTO tb_agendamento (data, horario, tb_servico_id_servico, tb_usuario_idusuario_cliente, tb_usuario_idusuario_funcionario) VALUES
 ('2025-09-15', '10:00:00', 1, 1, 6),
