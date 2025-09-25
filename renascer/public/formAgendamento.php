@@ -42,19 +42,6 @@ $usuarios = listarUsuario($conexao);
         </select>
         <br><br>
 
-        Funcionário (Gerente): 
-        <select name="idfuncionario">
-            <option value="">Selecione</option>
-            <?php
-            foreach ($usuarios as $usuario) {
-                if ($usuario['tipo'] == "g") {
-                    echo "<option value='".$usuario['idusuario']."'>".$usuario['nome']."</option>";
-                }
-            }
-            ?>
-        </select>
-        <br><br>
-
         <input type="submit" value="Salvar">
     </form>
 </body>
