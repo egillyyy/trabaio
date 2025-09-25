@@ -8,35 +8,22 @@
     <title>Formulário de Serviço</title>
 </head>
 <body>
-<?php
-require_once "../codigo/conexao.php";
-require_once "../codigo/funcoes.php";
-
-$lista_servicos = listarServico($conexao);
-?>
 
 <h1 style="text-align:center; margin:20px;">Selecionar Serviço</h1>
 
-<form action="salvarServico.php" method="get">
+<?php
+    require_once "../codigo/conexao.php";
+    require_once "../codigo/funcoes.php";
 
-    <div class="caixa-servicos">
-        <?php foreach ($lista_servicos as $servico) { 
-            $id = $servico['idservico'];
-            $tipo = $servico['tipo_servico'];
-            $preco = $servico['preco_servico'];
- 
-        ?>
-        <div class="card-servico">
-            <input type="radio" name="idservico" value="<?= $id ?>" required>
-            <p><?= $tipo ?></p>
-            <p>R$ <?= $preco ?></p>
-        </div>
-        <?php } ?>
-    </div>
+    $tipo_servico = $_GET['tipo_servico'];
 
-    <div style="text-align:center; margin-top:20px;">
-        <button type="submit">Salvar</button>
-    </div>
-</form>
+    echo $tipo_servico;
+
+    $servicos = listarServico($conexao);
+    // $servicos = listarServico($conexao, $tipo_servico);
+
+    print_r($servicos);
+?>
+
 </body>
 </html>

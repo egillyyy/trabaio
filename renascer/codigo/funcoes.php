@@ -172,10 +172,17 @@ function salvarServico($conexao, $preco_servico, $tipo_servico, $descricao_servi
  *     - 'foto' : URL ou caminho da foto do serviço.
  * @throws Exception Caso ocorra algum erro na execução da consulta SQL.
  */
-function listarServico($conexao) {
-    $sql = "SELECT * FROM tb_servico";
-    $comando = mysqli_prepare($conexao, $sql);
-    
+function listarServico($conexao, $tipo_servico = "") {
+    if ($tipo_servico == "") {
+        $sql = "SELECT * FROM tb_servico";
+        $comando = mysqli_prepare($conexao, $sql);
+    }
+    else {
+        $sql = "SELECT * FROM tb_servico WHERE tipo_servico = ?";
+        $comando = mysqli_prepare($conexao, $sql);
+        mysqli_stmt_bind_param($comando, 's', $tipo_servico);
+    }
+
     mysqli_stmt_execute($comando);
     $resultados = mysqli_stmt_get_result($comando);
     

@@ -12,8 +12,9 @@
 <h1 class="text-center my-4">Nossos Serviços</h1>
 
 <div class="container">
-    <div class="row g-4">
         <!-- Card Unhas -->
+        <div class="row g-4">
+        <a href="formServico.php?tipo_servico=Unhas">
         <div class="col-md-3">
             <div class="card h-100">
                 <img src="../imagens/unhas.jpg" class="card-img-top" alt="Unhas Divas">
@@ -23,10 +24,12 @@
 
                 </div>
             </div>
+        </a>
         </div>
 
         <!-- Card Cabelos -->
         <div class="col-md-3">
+            <a href="formServico.php?tipo_servico=Cabelo">
             <div class="card h-100">
                 <img src="../imagens/cabelo.jpg" class="card-img-top" alt="Cabelo">
                 <div class="card-body">
@@ -35,6 +38,7 @@
 
                 </div>
             </div>
+            </a>
         </div>
 
         <!-- Card Maquiagens -->
