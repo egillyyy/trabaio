@@ -258,6 +258,8 @@ function editarServico($conexao, $preco_servico, $tipo_servico, $descricao_servi
     return $funcionou;    
 };
 
+
+
 /**
  * Cadastra o agendamento no Banco de Dados
  * 
