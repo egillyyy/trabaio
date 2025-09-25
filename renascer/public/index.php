@@ -16,7 +16,7 @@
     <a href="listarServicos.php">listar serviços</a> <br> <br>
     <a href="listarUsuarios.php">listar usuarios</a> <br> <br>
 
-    <a href="suscesso.html">Suscesso</a> <br> <br>
+    <a href="sucesso.html">Sucesso</a> <br> <br>
     <a href="rodape.html">Rodapé</a> <br> <br>
 
 
