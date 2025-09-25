@@ -130,13 +130,13 @@ INSERT INTO tb_usuario (email, senha, tipo, nome, telefone) VALUES ('ricardo.sou
 INSERT INTO tb_usuario (email, senha, tipo, nome, telefone) VALUES ('maria.lima@gmail.com', 'maria321', 'c', 'Maria Lima', '51 955555555');
 
 -- tb_servico
-INSERT INTO tb_servico (preco_servico, tipo_servico) VALUES (30, 'maquiagem');
-INSERT INTO tb_servico (preco_servico, tipo_servico) VALUES (50, 'corte de cabelo');
-INSERT INTO tb_servico (preco_servico, tipo_servico) VALUES (80, 'penteado');
-INSERT INTO tb_servico (preco_servico, tipo_servico) VALUES (25, 'sobrancelha');
-INSERT INTO tb_servico (preco_servico, tipo_servico) VALUES (100, 'hidratação capilar');
-INSERT INTO tb_servico (preco_servico, tipo_servico) VALUES (120, 'progressiva');
-INSERT INTO tb_servico (preco_servico, tipo_servico) VALUES (60, 'barba completa');
+INSERT INTO tb_servico (preco_servico, tipo_servico, descricao_servico, foto) VALUES (30, 'maquiagem', 'feita no rosto');
+INSERT INTO tb_servico (preco_servico, tipo_servico, descricao_servico, foto) VALUES (50, 'corte de cabelo', 'feita no cabelo');
+INSERT INTO tb_servico (preco_servico, tipo_servico, descricao_servico, foto) VALUES (80, 'penteado', 'feita no cabelo');
+INSERT INTO tb_servico (preco_servico, tipo_servico, descricao_servico, foto) VALUES (25, 'sobrancelha', 'feita no rosto');
+INSERT INTO tb_servico (preco_servico, tipo_servico, descricao_servico, foto) VALUES (100, 'hidratação capilar', 'feita no cabelo');
+INSERT INTO tb_servico (preco_servico, tipo_servico, descricao_servico, foto) VALUES (120, 'progressiva', 'feita no cabelo');
+INSERT INTO tb_servico (preco_servico, tipo_servico, descricao_servico, foto) VALUES (60, 'barba completa', 'feita no rosto');
 
 -- tb_agendamento
 INSERT INTO tb_agendamento (data, horario, tb_servico_id_servico, tb_usuario_idusuario_cliente, tb_usuario_idusuario_funcionario) VALUES ('2025-06-15', '10:15:00', 1, 1, 2);
@@ -158,6 +158,3 @@ INSERT INTO tb_taxa (status, taxa, tb_agendamento_idagendamento) VALUES ('Sem at
 INSERT INTO tb_taxa (status, taxa, tb_agendamento_idagendamento) VALUES ('Atrasado', 100.00, 2);
 INSERT INTO tb_taxa (status, taxa, tb_agendamento_idagendamento) VALUES ('Sem atraso', 0.00, 3);
 INSERT INTO tb_taxa (status, taxa, tb_agendamento_idagendamento) VALUES ('Atrasado', 100.00, 4);
-
-
-
