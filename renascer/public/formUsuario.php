@@ -22,7 +22,7 @@
         <input type="password" name="senha"> <br><br>
 
         <!-- Tipo de usuário (cliente) -->
-        <input type="hidden" name="c" value="usuario">
+        <input type="hidden" name="tipo" value="c">
 
         <!-- <button type="submit"> <a href="index.php">Criar conta</a></button> -->
         <button type="submit">Criar conta</button>
