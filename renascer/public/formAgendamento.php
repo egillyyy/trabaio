@@ -13,7 +13,7 @@ $usuarios = listarUsuario($conexao);
     <title>Agendamento</title>
 </head>
 <body>
-    <h1>Agendar Serviço</h1>
+    <h1>Agendar</h1>
     <form action="salvarAgendamento.php" method="post">
         Data: <input type="date" name="data"><br><br>
         Horário: <input type="text" name="horario"><br><br>
