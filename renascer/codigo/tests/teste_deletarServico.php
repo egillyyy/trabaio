@@ -2,6 +2,6 @@
     require_once "../funcoes.php";
     require_once "../conexao.php";
 
-    deletarServico($conexao, 1);
+    deletarServico($conexao, 8);
 
 ?>
