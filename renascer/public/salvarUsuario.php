@@ -5,7 +5,7 @@ require_once "../codigo/funcoes.php";
 // $id = $_GET['id'];
 $email = $_POST['email'];
 $senha = $_POST['senha'];
-$tipo = $_POST['c'];
+$tipo = $_POST['tipo'];
 $nome = $_POST['nome'];
 $telefone = $_POST['telefone'];
 
