@@ -275,18 +275,15 @@ function editarServico($conexao, $preco_servico, $tipo_servico, $descricao_servi
  * @param mysqli $conexao Uma conexão com o banco.
  * @param string $data A data de agendamento informada pelo usuário.
  * @param string $horario O horário de agendamento informado pelo usuário.
- * @param string $tb_servico_id_servico O serviço vindo da tabela serviço.
- * @param string $tb_usuario_idusuario O usuário.
- * @param string $tb_usuario_idusuario_funcionario O tipo de funcionário informado pelo usuário.
- * @return int ID do agendamento.
- * @throws 0 caso não encontre nenhum usuário.
- * 
+ * @param int $tb_servico_id_servico O serviço vindo da tabela serviço.
+ * @param int $tb_usuario_idusuario O usuário cliente.
+ * @return bool true em caso de sucesso, false em caso de falha.
  **/
-function salvarAgendamento ($conexao, $data, $horario, $tb_servico_id_servico, $tb_usuario_idusuario) {
+function salvarAgendamento($conexao, $data, $horario, $tb_servico_id_servico, $tb_usuario_idusuario) {
     $sql = "INSERT INTO tb_agendamento (data, horario, tb_servico_id_servico, tb_usuario_idusuario) VALUES (?, ?, ?, ?)";
     $comando = mysqli_prepare($conexao, $sql);
     
-    mysqli_stmt_bind_param($comando, 'ssiii', $data, $horario, $tb_servico_id_servico, $tb_usuario_idusuario);
+    mysqli_stmt_bind_param($comando, 'ssii', $data, $horario, $tb_servico_id_servico, $tb_usuario_idusuario);
     
     $funcionou = mysqli_stmt_execute($comando);
     mysqli_stmt_close($comando);
@@ -300,14 +297,7 @@ function salvarAgendamento ($conexao, $data, $horario, $tb_servico_id_servico, $
  * Retorna uma lista de todos os agendamentos registrados na tabela tb_agendamento.
  *
  * @param mysqli $conexao Conexão com o banco de dados.
- * @return array Lista de agendamentos, onde cada agendamento é representado por um array com as chaves:
- *     - 'idagendamento' : ID do agendamento.
- *     - 'data' : Data do agendamento.
- *     - 'horario' : Horário do agendamento.
- *     - 'tb_servico_id_servico' : ID do serviço agendado.
- *     - 'tb_usuario_idusuario' : ID do usuário cliente que fez o agendamento.
- *     - 'tb_usuario_idusuario_funcionario' : ID do funcionário designado ao serviço.
- * @throws Exception Caso ocorra algum erro na execução da consulta SQL.
+ * @return array Lista de agendamentos.
  **/
 function listarAgendamento($conexao) {
     $sql = "SELECT * FROM tb_agendamento";
@@ -328,12 +318,9 @@ function listarAgendamento($conexao) {
 /**
  * Retorna os dados de um agendamento a partir do ID.
  *
- * Retorna as informações de um agendamento específico, com base no ID informado.
- *
  * @param mysqli $conexao Conexão com o banco de dados.
  * @param int $idagendamento ID de um agendamento existente.
- * @return array $agendamento['idagendamento', 'data', 'horario', 'tb_servico_id_servico', 'tb_usuario_idusuario', 'tb_usuario_idusuario_funcionario']
- * @throws 0 Caso não encontre o ID informado.
+ * @return array|null Dados do agendamento ou null caso não encontre.
  **/
 function pesquisarAgendamentoId($conexao, $idagendamento) { 
     $sql = "SELECT * FROM tb_agendamento WHERE idagendamento = ?";
@@ -344,20 +331,18 @@ function pesquisarAgendamentoId($conexao, $idagendamento) {
     mysqli_stmt_execute($comando);
     $resultado = mysqli_stmt_get_result($comando);
 
-    $usuario = mysqli_fetch_assoc($resultado);
+    $agendamento = mysqli_fetch_assoc($resultado);
 
     mysqli_stmt_close($comando);
-    return $usuario;
+    return $agendamento;
 };
 
 /**
  * Deleta um agendamento do Banco de Dados
  *
- * Remove um agendamento da tabela `tb_agendamento` com base no ID fornecido.
- *
  * @param mysqli $conexao Conexão com o banco de dados.
  * @param int $idagendamento ID do agendamento a ser deletado.
- * @throws Exception Caso ocorra algum erro na execução da consulta SQL.
+ * @return bool true em caso de sucesso, false em caso de falha.
  **/
 function deletarAgendamento($conexao, $idagendamento) {
     $sql = "DELETE FROM tb_agendamento WHERE idagendamento = ?";
@@ -374,22 +359,19 @@ function deletarAgendamento($conexao, $idagendamento) {
 /**
  * Atualiza os dados de um agendamento no Banco de Dados
  *
- * Altera as informações de um agendamento na tabela tb_agendamento com base no ID fornecido.
- *
  * @param mysqli $conexao Conexão com o banco de dados.
  * @param string $data Nova data do agendamento.
  * @param string $horario Novo horário do agendamento.
  * @param int $tb_servico_id_servico Novo ID do serviço agendado.
  * @param int $tb_usuario_idusuario Novo ID do cliente associado ao agendamento.
- * @param int $tb_usuario_idusuario_funcionario Novo ID do funcionário designado ao serviço.
  * @param int $idagendamento ID do agendamento a ser atualizado.
- * @throws Exception Caso ocorra algum erro na execução da consulta SQL.
+ * @return bool true em caso de sucesso, false em caso de falha.
  **/
-function editarAgendamento($conexao, $data, $horario, $tb_servico_id_servico, $tb_usuario_idusuario, $tb_usuario_idusuario_funcionario, $idagendamento) {
-    $sql = "UPDATE tb_agendamento SET data=?, horario=?, tb_servico_id_servico=?, tb_usuario_idusuario=?, tb_usuario_idusuario_funcionario=? WHERE idagendamento=?";
+function editarAgendamento($conexao, $data, $horario, $tb_servico_id_servico, $tb_usuario_idusuario, $idagendamento) {
+    $sql = "UPDATE tb_agendamento SET data=?, horario=?, tb_servico_id_servico=?, tb_usuario_idusuario=? WHERE idagendamento=?";
     $comando = mysqli_prepare($conexao, $sql);
     
-    mysqli_stmt_bind_param($comando, 'ssiiii', $data, $horario, $tb_servico_id_servico, $tb_usuario_idusuario, $tb_usuario_idusuario_funcionario, $idagendamento);
+    mysqli_stmt_bind_param($comando, 'ssiii', $data, $horario, $tb_servico_id_servico, $tb_usuario_idusuario, $idagendamento);
     $funcionou = mysqli_stmt_execute($comando);
 
     mysqli_stmt_close($comando);
@@ -628,3 +610,4 @@ function editarPagamento ($conexao, $valor, $forma, $descricao, $tb_agendamento_
     mysqli_stmt_close($comando);
     return $funcionou;
 };
+

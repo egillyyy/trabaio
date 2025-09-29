@@ -49,7 +49,7 @@
                 echo "<td>$idservico</td>";
                 echo "<td>$idcliente</td>";
                 echo "<td>$idfuncionario</td>";
-                echo "<td><a href='deletarAgendamento.php?id=$id'>Excluir</a></td>";
+                echo "<td><a href='../codigo/funcoes.php/deletaragendamento?id=$id'>Excluir</a></td>";
                 echo "<td><a href='formAgendamento.php?id=$id'>Editar</a></td>";
                 echo "</tr>";
             echo "</tbody>";
