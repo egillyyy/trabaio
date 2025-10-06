@@ -8,10 +8,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>agendamento</title>
 </head>
-<body>
+<body class="fundo-verde">
 
     <h1>Lista de Agendamentos</h1>
-
 
     <?php
     require_once "../codigo/conexao.php";
