@@ -6,7 +6,12 @@
 }
 
 
-
+@font-face {
+    font-family: lamoric;
+    src: url(Lamoric\ Rowen\ TTF.ttf) format(truetype);
+    font-weight: normal;
+    font-style: normal;
+}
 
 
 
@@ -284,10 +289,13 @@ header {
     background-color: #f6f6f6;
 }
 
-#letra-dourada {
+.letra-dourada {
   color: #d4af37; /* dourado clássico */
+  position: absolute;
+  z-index: 10;
+  margin-left: 20px;
+  margin-top: -500px;
+  font-size: 400%;
+  font-family: lamoric;
 }
-
-
-
 
