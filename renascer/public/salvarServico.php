@@ -21,7 +21,7 @@
         $tipo_servico  = $servico['tipo_servico'];
 
     // Salva o serviço novamente no banco 
-        $funcionou = salvarServico($conexao, $preco_servico, $tipo_servico);
+        $funcionou = salvarServico($conexao, $preco_servico, $tipo_servico, $descricao_servico, $foto);
 
         if ($funcionou) {
             echo "Serviço $tipo_servico salvo com sucesso";
