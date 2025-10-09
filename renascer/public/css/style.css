@@ -318,4 +318,41 @@ header {
   border: 2px solid #556b2f;
 }
 
+h1{
+    position: absolute;
+    top: 20px;
+    font-family: lamoric;
+    color: #bec092;
+    cursor: default;
+}
 
+#tituloservicos{
+    position: absolute;
+}
+
+#divcards-unhas{
+    position: absolute;
+    margin-left: -100px;
+    top: 90px;
+}
+
+#divcards-cabelos{
+    position: absolute;
+    margin-left: 300px;
+        top: 90px;
+
+}
+
+#divcards-maquiagem{
+    position: absolute;
+    margin-left: 670px;
+    top: 90px;
+
+}
+
+#divcards-especial{
+    position: absolute;
+    margin-left:  1050px;
+    top: 90px;
+
+}

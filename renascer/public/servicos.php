@@ -5,69 +5,68 @@
     <title>Serviços</title>
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="../css/estilo.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body class="fundo-verde">
+  <h1 class="text-center my-4" id = "tituloservicos">Nossos Serviços</h1>
 
-<h1 class="text-center my-4">Nossos Serviços</h1>
+  <div class="container">
+    <div class="row g-4" id = "tudoserviços">
 
-<div class="container">
-        <!-- Card Unhas -->
-        <div class="row g-4">
-        <a href="formServico.php?tipo_servico=Unha">
-        <div class="col-md-3">
-            <div class="card h-100">
-                <img src="../imagens/unhas.jpg" class="card-img-top" alt="Unha Divas">
-                <div class="card-body">
-                    <h5 class="card-title">Unhas</h5>
-                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-
-                </div>
+      <!-- Card Unhas -->
+      <div class="col-md-3" id = "divcards-unhas">
+        <div class="card h-100">
+          <a href="formServico.php?tipo_servico=Unha">
+            <img src="../imagens/unhas.jpg" class="card-img-top" alt="Unhas Divas" id = "imagemservico">
+            <div class="card-body">
+              <h5 class="card-title">Unhas</h5>
+              <p class="card-text">Transforme suas unhas com estilo e cuidado profissional.</p>
             </div>
-        </a>
+          </a>
         </div>
+      </div>
 
-        <!-- Card Cabelos -->
-        <div class="col-md-3">
-            <a href="formServico.php?tipo_servico=Cabelo">
-            <div class="card h-100">
-                <img src="../imagens/cabelo.jpg" class="card-img-top" alt="Cabelo">
-                <div class="card-body">
-                    <h5 class="card-title">Cabelos</h5>
-                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-
-                </div>
+      <!-- Card Cabelos -->
+      <div class="col-md-3" id="divcards-cabelos">
+        <div class="card h-100">
+          <a href="formServico.php?tipo_servico=Cabelo">
+            <img src="../imagens/cabelo.jpg" class="card-img-top" alt="Cabelos">
+            <div class="card-body">
+              <h5 class="card-title">Cabelos</h5>
+              <p class="card-text">Cortes, hidratações e colorações para realçar sua beleza.</p>
             </div>
-            </a>
+          </a>
         </div>
+      </div>
 
-        <!-- Card Maquiagens -->
-        <div class="col-md-3">
-            <a href="formServico.php?tipo_servico=Maquiagem">
-            <div class="card h-100">
-                <img src="../imagens/maquiagem.png" class="card-img-top" alt="Maquiagem">
-                <div class="card-body">
-                    <h5 class="card-title">Maquiagens</h5>
-                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-
-                </div>
+      <!-- Card Maquiagens -->
+      <div class="col-md-3" id="divcards-maquiagem">
+        <div class="card h-100">
+          <a href="formServico.php?tipo_servico=Maquiagem">
+            <img src="../imagens/maquiagem.png" class="card-img-top" alt="Maquiagens">
+            <div class="card-body">
+              <h5 class="card-title">Maquiagens</h5>
+              <p class="card-text">Maquiagens para qualquer ocasião — realce seu brilho natural.</p>
             </div>
+          </a>
         </div>
+      </div>
 
-        <!-- Card Especial -->
-        <div class="col-md-3">
-            <a href="formServico.php?tipo_servico=Especial">
-            <div class="card h-100">
-                <img src="../imagens/especial.jpg" class="card-img-top" alt="Especial">
-                <div class="card-body">
-                    <h5 class="card-title">Especial</h5>
-                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-
-                </div>
+      <!-- Card Especial -->
+      <div class="col-md-3" id="divcards-especial">
+        <div class="card h-100">
+          <a href="formServico.php?tipo_servico=Especial">
+            <img src="../imagens/especial.jpg" class="card-img-top" alt="Especial">
+            <div class="card-body">
+              <h5 class="card-title">Especial</h5>
+              <p class="card-text">Serviços exclusivos para momentos inesquecíveis.</p>
             </div>
+          </a>
         </div>
+      </div>
+
     </div>
-</div>
+  </div>
 
 </body>
 </html>
