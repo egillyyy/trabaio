@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../css/estilo.css"> <!-- seu CSS -->
@@ -7,23 +8,71 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulário de Serviço</title>
 </head>
-<body> <H1>LUCAS</H1>
 
-<h1 style="text-align:center; margin:20px;">Selecionar Serviço</h1>
+<body>
+    <H1>LUCAS</H1>
 
-<?php
+
+    <h1 style="text-align:center; margin:20px;">Selecionar Serviço</h1>
+    <?php
+
+
+    // require_once "../codigo/conexao.php";
+    // require_once "../codigo/funcoes.php"; -->
+
+    // $tipo_servico = $_GET['tipo_servico'];
+
+    // echo $tipo_servico;
+
+    // $servicos = listarServico($conexao, $tipo_servico);
+    // $servicos = listarServico($conexao, $tipo_servico);
+
+    // echo "<pre>"; // formatar texto para quebrar linhas
+    // print_r($servicos);
+    // Print_r → Mostra o conteúdo do array de forma estruturada (fica fácil de entender o resultado). 
+    //Se for só texto → print. Se for array ou objeto → print_r
+    // echo"</pre>";
+    // </form> -->
+
     require_once "../codigo/conexao.php";
     require_once "../codigo/funcoes.php";
 
     $tipo_servico = $_GET['tipo_servico'];
-
-    // echo $tipo_servico;
-
     $servicos = listarServico($conexao, $tipo_servico);
-    // $servicos = listarServico($conexao, $tipo_servico);
 
-    print_r($servicos);
-?>
+    if ($servicos && count($servicos) > 0) {
+        echo '<div class="container mt-4">';
+        echo '<div class="row justify-content-center">';
+
+        foreach ($servicos as $servico) {
+            echo '
+        <div class="col-md-4 mb-4">
+            <div class="card">
+                <div class="card-header">
+                    <h5 class="card-title">' . $servico["tipo_servico"] . '</h5>
+                </div>
+                <div class="card-body">
+                    <p class="card-text">
+                        <strong>Descrição:</strong> ' . $servico["descricao_servico"] . '<br>
+                        <strong>Preço:</strong> R$ ' . $servico["preco_servico"] . '
+                    </p>
+                    <a href="formagendamento.php?id_servico=' . $servico["idservico"] . '" class="btn btn-success">
+                        Selecionar
+                    </a>
+                </div>
+            </div>
+        </div>';
+        }
+
+        echo '</div>';
+        echo '</div>';
+    } else {
+        echo "<p style='text-align:center;'>Nenhum serviço encontrado.</p>";
+    }
+
+    ?>
+    
+
 
 </body>
 </html>

@@ -14,10 +14,10 @@
 <div class="container">
         <!-- Card Unhas -->
         <div class="row g-4">
-        <a href="formServico.php?tipo_servico=Unhas">
+        <a href="formServico.php?tipo_servico=Unha">
         <div class="col-md-3">
             <div class="card h-100">
-                <img src="../imagens/unhas.jpg" class="card-img-top" alt="Unhas Divas">
+                <img src="../imagens/unhas.jpg" class="card-img-top" alt="Unha Divas">
                 <div class="card-body">
                     <h5 class="card-title">Unhas</h5>
                     <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
