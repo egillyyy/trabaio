@@ -8,7 +8,10 @@
 <body>
     <a href="formAgendamento.php">Formulário de Agendamento</a> <br><br>
     <a href="formPagamento.php">Formulário de Pagamento</a> <br><br>
-    <a href="formServico.php">Formulário de Serviço</a> <br><br>
+
+    <!-- apenas o adm pode ver o form serviço e add novos serviços -->
+    <!-- <a href="formServico.php">Formulário de Serviço</a> <br><br> -->
+     
     <a href="formUsuario.php">Formulário de Usuário</a> <br><br>
     <a href="home.html">Ir pra Home</a> <br> <br>
     <a href="listarAgendamentos.php">listar agendamentos</a> <br> <br>

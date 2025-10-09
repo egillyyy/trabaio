@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulário de Serviço</title>
 </head>
-<body>
+<body> <H1>LUCAS</H1>
 
 <h1 style="text-align:center; margin:20px;">Selecionar Serviço</h1>
 
@@ -17,9 +17,9 @@
 
     $tipo_servico = $_GET['tipo_servico'];
 
-    echo $tipo_servico;
+    // echo $tipo_servico;
 
-    $servicos = listarServico($conexao);
+    $servicos = listarServico($conexao, $tipo_servico);
     // $servicos = listarServico($conexao, $tipo_servico);
 
     print_r($servicos);
