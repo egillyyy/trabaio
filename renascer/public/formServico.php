@@ -16,24 +16,6 @@
     <h1 style="text-align:center; margin:20px;">Selecionar Serviço</h1>
     <?php
 
-
-    // require_once "../codigo/conexao.php";
-    // require_once "../codigo/funcoes.php"; -->
-
-    // $tipo_servico = $_GET['tipo_servico'];
-
-    // echo $tipo_servico;
-
-    // $servicos = listarServico($conexao, $tipo_servico);
-    // $servicos = listarServico($conexao, $tipo_servico);
-
-    // echo "<pre>"; // formatar texto para quebrar linhas
-    // print_r($servicos);
-    // Print_r → Mostra o conteúdo do array de forma estruturada (fica fácil de entender o resultado). 
-    //Se for só texto → print. Se for array ou objeto → print_r
-    // echo"</pre>";
-    // </form> -->
-
     require_once "../codigo/conexao.php";
     require_once "../codigo/funcoes.php";
 
