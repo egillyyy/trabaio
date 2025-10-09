@@ -43,6 +43,7 @@
 
         <!-- Card Maquiagens -->
         <div class="col-md-3">
+            <a href="formServico.php?tipo_servico=Maquiagem">
             <div class="card h-100">
                 <img src="../imagens/maquiagem.png" class="card-img-top" alt="Maquiagem">
                 <div class="card-body">
@@ -55,6 +56,7 @@
 
         <!-- Card Especial -->
         <div class="col-md-3">
+            <a href="formServico.php?tipo_servico=Especial">
             <div class="card h-100">
                 <img src="../imagens/especial.jpg" class="card-img-top" alt="Especial">
                 <div class="card-body">
