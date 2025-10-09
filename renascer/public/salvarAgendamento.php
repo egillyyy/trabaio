@@ -9,5 +9,5 @@ $idcliente = $_POST['idcliente'];
 
 salvarAgendamento ($conexao, $data, $horario, $idservico, $idcliente);
 
-header("Location: listarAgendamento.php");
+header("Location: listarAgendamentos.php");
 ?>
