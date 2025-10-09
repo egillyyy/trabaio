@@ -4,7 +4,6 @@ require_once "../codigo/funcoes.php";
 
 $usuarios = listarUsuario($conexao);
 $idagendamento = $_GET['idagendamento'] ?? null; // pega o id do agendamento pela URL
-
 ?>
 
 <!DOCTYPE html>
