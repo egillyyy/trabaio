@@ -7,7 +7,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../css/estilo.css">
 </head>
-<body>
+<body class="fundo-verde">
 
 <h1 class="text-center my-4">Nossos Serviços</h1>
 

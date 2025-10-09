@@ -263,11 +263,7 @@ header {
 
 
 
-/* Efeito ao passar o mouse */
-.card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-} 
+
 
 /* F U N D O S */
 /* Fundo verde oliva */
@@ -290,7 +286,7 @@ header {
 }
 
 .letra-dourada {
-  color: #d4af37; /* dourado clássico */
+  color: #d4af37; 
   position: absolute;
   z-index: 10;
   margin-left: 20px;
@@ -298,4 +294,28 @@ header {
   font-size: 400%;
   font-family: lamoric;
 }
+
+.letra-normal {
+  color: #000000; 
+  position: absolute;
+  z-index: 10;
+  margin-left: 20px;
+  margin-top: -500px;
+  font-size: 400%;
+  font-family: lamoric;
+}
+
+
+
+/* ****************************************************************AGENDAMENTO************************************************ */
+
+
+.card-agendamento {
+  max-width: 500px;
+  width: 100%;
+  border-radius: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  border: 2px solid #556b2f;
+}
+
 

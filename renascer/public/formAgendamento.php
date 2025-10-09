@@ -8,41 +8,58 @@ $usuarios = listarUsuario($conexao);
 
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <meta charset="UTF-8">
     <title>Agendamento</title>
 </head>
-<body>
-    <h1>Agendar</h1>
-    <form action="salvarAgendamento.php" method="post">
-        Data: <input type="date" name="data"><br><br>
-        Horário: <input type="text" name="horario"><br><br>
 
-        Serviço: 
-        <select name="idservico">
-            <option value="">Selecione</option>
-            <?php
-            foreach ($servicos as $servico) {
-                echo "<option value='".$servico['idservico']."'>".$servico['tipo_servico']." - R$ ".$servico['preco_servico']."</option>";
-            }
-            ?>
-        </select>
-        <br><br>
+<body class="fundo-verde">
 
-        Cliente: 
-        <select name="idcliente">
-            <option value="">Selecione</option>
-            <?php
-            foreach ($usuarios as $usuario) {
-                if ($usuario['tipo'] == "c") {
-                    echo "<option value='".$usuario['idusuario']."'>".$usuario['nome']."</option>";
+    <form action="salvarAgendamento.php" method="post" class="card card-agendamento p-4 shadow">
+        <h1 class="card-title text-center mb-4">Agendamento</h1>
+
+        <div class="mb-3">
+            <label for="data" class="form-label">Data</label>
+            <input type="date" class="form-control" id="data" name="data" required>
+        </div>
+
+        <div class="mb-3">
+            <label for="horario" class="form-label">Horário</label>
+            <input type="time" class="form-control" id="horario" name="horario" required>
+        </div>
+
+        <div class="mb-3">
+            <label for="idservico" class="form-label">Serviço</label>
+            <select class="form-select" id="idservico" name="idservico" required>
+                <option value="">Selecione</option>
+                <?php
+                foreach ($servicos as $servico) {
+                    echo "<option value='" . $servico['idservico'] . "'>" . $servico['tipo_servico'] . " - R$ " . $servico['preco_servico'] . "</option>";
                 }
-            }
-            ?>
-        </select>
-        <br><br>
+                ?>
+            </select>
+        </div>
 
-        <input type="submit" value="Salvar">
+        <div class="mb-3">
+            <label for="idcliente" class="form-label">Cliente</label>
+            <select class="form-select" id="idcliente" name="idcliente" required>
+                <option value="">Selecione</option>
+                <?php
+                foreach ($usuarios as $usuario) {
+                    if ($usuario['tipo'] == "c") {
+                        echo "<option value='" . $usuario['idusuario'] . "'>" . $usuario['nome'] . "</option>";
+                    }
+                }
+                ?>
+            </select>
+        </div>
+
+        <button type="submit" class="btn btn-dark w-100">Salvar Agendamento</button>
     </form>
+
 </body>
+
 </html>

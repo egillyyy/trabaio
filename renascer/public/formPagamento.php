@@ -7,49 +7,57 @@ $idagendamento = $_GET['idagendamento'] ?? null; // pega o id do agendamento pel
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulário de Pagamento</title>
+    <title>Pagamento</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
-<body>
 
-    <form action="salvarPagamento.php" method="post">
+<body class="fundo-verde">
+
+    <form action="salvarPagamento.php" method="post" class="card card-agendamento p-4 shadow">
+        <h1 class="card-title text-center mb-4">Pagamento</h1>
+
         <input type="hidden" name="idagendamento" value="<?= $_POST['idagendamento'] ?? $_GET['id'] ?? '' ?>">
 
-        Cliente: <br>
-        <select name="idusuario">
-            <option value="">Selecione</option>
-            <?php
-            foreach ($usuarios as $usuario) {
-                if ($usuario['tipo'] == "c") {
-                    echo "<option value='".$usuario['idusuario']."'>".$usuario['nome']."</option>";
+        <div class="mb-3">
+            <label for="idusuario" class="form-label">Cliente</label>
+            <select class="form-select" id="idusuario" name="idusuario" required>
+                <option value="">Selecione</option>
+                <?php
+                foreach ($usuarios as $usuario) {
+                    if ($usuario['tipo'] == "c") {
+                        echo "<option value='".$usuario['idusuario']."'>".$usuario['nome']."</option>";
+                    }
                 }
-            }
-            ?>
-        </select>
+                ?>
+            </select>
+        </div>
 
-        <br><br>
+        <div class="mb-3">
+            <label for="valor" class="form-label">Valor</label>
+            <input type="text" class="form-control" id="valor" name="valor" required>
+        </div>
 
-        Valor: <br>
-        <input type="text" name="valor"> 
-        <br><br>
+        <div class="mb-3">
+            <label for="forma_pagamento" class="form-label">Forma de Pagamento</label>
+            <select class="form-select" id="forma_pagamento" name="forma_pagamento" required>
+                <option value="">Selecione</option>
+                <option value="dinheiro">Dinheiro</option>
+                <option value="cartao">Cartão</option>
+                <option value="pix">Pix</option>
+            </select>
+        </div>
 
-        Forma: <br>
-        <select name="forma_pagamento">
-            <option value="dinheiro">Dinheiro</option>
-            <option value="cartao">Cartão</option>
-            <option value="pix">Pix</option>
-        </select>
-        <br><br>
+        <div class="mb-3">
+            <label for="descricao" class="form-label">Descrição</label>
+            <textarea class="form-control" id="descricao" name="descricao" rows="3" placeholder="Escreva algo sobre o pagamento..."></textarea>
+        </div>
 
-        Descrição:<br>
-        <textarea name="descricao" placeholder="Escreva sua mensagem aqui..."></textarea>
-        <br><br>
-        <button type="submit"> <a href="index.php">Fazer pagamento</a></button>
-        
-
+        <button type="submit" class="btn btn-dark w-100">Fazer Pagamento</button>
     </form>
+
 </body>
 </html>
