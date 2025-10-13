@@ -10,7 +10,7 @@
 </head>
 <body class="fundo-verde">
 
-    <h1>Lista de Pagamentos</h1>
+    <h1 id="h1arrumado">Lista de Pagamentos</h1>
 
     <?php
     require_once "../codigo/conexao.php";
