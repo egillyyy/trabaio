@@ -285,3 +285,19 @@ footer {
     color: #bec092;
     cursor: default;
 }
+
+/* ****************************************************************MARILENE************************************************ */
+
+.marilenetexto{
+   position: absolute;
+   margin-top: -200px;
+}
+
+.marilenediv{
+   font-family: marina;
+   position: absolute;
+   height: auto;
+   width: 900px;
+
+
+}
