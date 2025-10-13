@@ -289,8 +289,10 @@ footer {
 /* ****************************************************************MARILENE************************************************ */
 
 .marilenetexto{
-   position: absolute;
-   margin-top: -200px;
+    position: absolute;
+    margin-top: -60px;
+    font-family: lamoric;
+    color: #bec092;
 }
 
 .marilenediv{
