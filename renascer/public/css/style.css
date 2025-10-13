@@ -135,16 +135,14 @@ footer {
 /* Ícones sociais (ex: WhatsApp, Instagram, Facebook) */
 .footer-social a {
     margin: 0 8px; /* Espaço entre ícones */
-    color: #fff; /* Cor branca */
     font-size: 20px; /* Tamanho maior para os ícones */
-    transition: color 0.3s; /* Animação ao passar o mouse */
 }
 
 .footer-button {
     display: inline-block;
     padding: 10px 20px; 
     background-color: #fff; 
-    color: #556b2f; 
+    color: #000;
     border-radius: 25px; 
     font-weight: bold; 
     margin-top: 10px;
@@ -251,5 +249,31 @@ h1{
     position: absolute;
     margin-left:  1050px;
     top: 90px;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.marilenetexto{
+    position: absolute;
+    margin-top: -200px;
+}
+
+
+.marilenediv{
+    font-family: marina;
+    position: absolute;
+    height: auto;
+    width: 900px;
 
 }
