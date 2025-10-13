@@ -135,14 +135,16 @@ footer {
 /* Ícones sociais (ex: WhatsApp, Instagram, Facebook) */
 .footer-social a {
     margin: 0 8px; /* Espaço entre ícones */
+    color: #fff; /* Cor branca */
     font-size: 20px; /* Tamanho maior para os ícones */
+    transition: color 0.3s; /* Animação ao passar o mouse */
 }
 
 .footer-button {
     display: inline-block;
     padding: 10px 20px; 
     background-color: #fff; 
-    color: #000;
+    color: #556b2f; 
     border-radius: 25px; 
     font-weight: bold; 
     margin-top: 10px;
@@ -213,17 +215,6 @@ footer {
   border: 2px solid #556b2f;
 }
 
-#h1arrumado{
-    position: absolute;
-    top: 90px;
-    font-family: lamoric;
-    color: #bec092;
-    cursor: default;
-}
-
-#tituloservicos{
-    position: absolute;
-}
 
 #divcards-unhas{
     position: absolute;
@@ -252,28 +243,45 @@ footer {
 
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-.marilenetexto{
+/* ****************************************************************TÍTULOS************************************************ */
+#titulopagamento{
     position: absolute;
-    margin-top: -200px;
+    top: 20px;
+    top: 105px;
+    font-family: lamoric;
+    color: #bec092;
+    cursor: default;
+}
+
+#tituloagendamento{
+    position: absolute;
+    top: 130px;
+    font-family: lamoric;
+    color: #bec092;
+    cursor: default;
+}
+
+#titulopagamento{
+    position: absolute;
+    top: 105px;
+    font-family: lamoric;
+    color: #bec092;
+    cursor: default;
+}
+
+#h1arrumado{
+    position: absolute;
+    top: 90px;
+    font-family: lamoric;
+    color: #bec092;
+    cursor: default;
 }
 
 
-.marilenediv{
-    font-family: marina;
+#tituloservicos{
     position: absolute;
-    height: auto;
-    width: 900px;
-
+    top: 10px;
+    font-family: lamoric;
+    color: #bec092;
+    cursor: default;
 }

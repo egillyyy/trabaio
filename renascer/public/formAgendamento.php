@@ -17,9 +17,9 @@ $usuarios = listarUsuario($conexao);
 </head>
 
 <body class="fundo-verde">
+    <h1 class="card-title text-center mb-4" id="tituloagendamento">Agendamento</h1>
 
     <form action="salvarAgendamento.php" method="post" class="card card-agendamento p-4 shadow">
-        <h1 class="card-title text-center mb-4">Agendamento</h1>
 
         <div class="mb-3">
             <label for="data" class="form-label">Data</label>

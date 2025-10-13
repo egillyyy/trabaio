@@ -16,9 +16,10 @@ $idagendamento = $_GET['idagendamento'] ?? null; // pega o id do agendamento pel
 </head>
 
 <body class="fundo-verde">
+    <h1 class="card-title text-center mb-4" id="titulopagamento">Pagamento</h1>
+
 
     <form action="salvarPagamento.php" method="post" class="card card-agendamento p-4 shadow">
-        <h1 class="card-title text-center mb-4">Pagamento</h1>
 
         <input type="hidden" name="idagendamento" value="<?= $_POST['idagendamento'] ?? $_GET['id'] ?? '' ?>">
 
