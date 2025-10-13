@@ -246,8 +246,7 @@ footer {
 /* ****************************************************************TÍTULOS************************************************ */
 #titulopagamento{
     position: absolute;
-    top: 20px;
-    top: 105px;
+    top: 100px;
     font-family: lamoric;
     color: #bec092;
     cursor: default;
@@ -271,7 +270,7 @@ footer {
 
 #h1arrumado{
     position: absolute;
-    top: 90px;
+    top: 100px;
     font-family: lamoric;
     color: #bec092;
     cursor: default;
@@ -285,3 +284,22 @@ footer {
     color: #bec092;
     cursor: default;
 }
+
+.titulomenu{
+    position: absolute;
+    top: 10px;
+    font-family: lamoric;
+    color: #bec092;
+    cursor: default;
+}
+
+.linksindex{
+    position: absolute;
+    text-decoration: none;
+    color: #fdf9f4;
+}
+
+.linksindexdiv{
+    position: absolute;
+}
+

@@ -1,28 +1,32 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>index</title>
+    <title>Painel Principal</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
-    <a href="formAgendamento.php">Formulário de Agendamento</a> <br><br>
-    <a href="formPagamento.php">Formulário de Pagamento</a> <br><br>
 
-    <!-- apenas o adm pode ver o form serviço e add novos serviços -->
-    <!-- <a href="formServico.php">Formulário de Serviço</a> <br><br> -->
-     
-    <a href="formUsuario.php">Formulário de Usuário</a> <br><br>
-    <a href="home.html">Ir pra Home</a> <br> <br>
-    <a href="listarAgendamentos.php">listar agendamentos</a> <br> <br>
-    <a href="listarPagamentos.php">listar pagamentos</a> <br> <br>
-    <a href="listarServicos.php">listar serviços</a> <br> <br>
-    <a href="listarUsuarios.php">listar usuarios</a> <br> <br>
-
-    <a href="sucesso.html">Sucesso</a> <br> <br>
-    <a href="rodape.html">Rodapé</a> <br> <br>
-    <a href="servicos.php">Selecionar o serviço</a>
-
+<body class="fundo-verde" style="min-height: 100vh;">
+    
+    <div class="indexdiv">
+        <h1 class="titulomenu">Menu Principal</h1>
+        <div class="linksindexdiv">
+            <a href="formAgendamento.php" class="linksindex" id="agendamentoindex">Formulário de Agendamento</a>
+            <a href="formPagamento.php" class="linksindex" id="pagamentoindex">Formulário de Pagamento</a>
+            <a href="formUsuario.php" class="linksindex" id="usuarioindex">Formulário de Usuário</a>
+            <a href="home.html" class="linksindex" id="homeindex">Ir para Home</a>
+            <a href="listarAgendamentos.php" class="linksindex" id="agendamentoindex2">Listar Agendamentos</a>
+            <a href="listarPagamentos.php" class="linksindex" id="pagamentoindex2">Listar Pagamentos</a>
+            <a href="listarServicos.php" class="linksindex" id="serviçosindex2">Listar Serviços</a>
+            <a href="listarUsuarios.php" class="linksindex" id="usuarioindex">Listar Usuários</a>
+            <a href="sucesso.html" class="linksindex" id="sucessoindex">Página de Sucesso</a>
+            <a href="rodape.html" class="linksindex" id="rodapeindex">Rodapé</a>
+            <a href="servicos.php" class="linksindex" id="serviçosindex">Selecionar Serviço</a>
+        </div>
+    </div>
 
 </body>
 </html>
