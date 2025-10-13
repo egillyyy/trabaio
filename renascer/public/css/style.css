@@ -16,145 +16,120 @@
 
 
 
-
-/* S U C E S S O */
+/* ****************************************************************SUCESSO************************************************ */
 * {
-  margin: 0; /* Remove a margem padrão de todos os elementos */
-  padding: 0; /* Remove o espaçamento interno padrão */
-  box-sizing: border-box; /* Inclui bordas e paddings no cálculo de largura/altura */
-  font-family: Arial, sans-serif; /* Fonte padrão simples e legível */
+  margin: 0; 
+  padding: 0; 
+  box-sizing: border-box; 
+  font-family: Arial, sans-serif;
 }
 
-/* Estilo do corpo da página */
 body {
-  background-color: #fdf9f4; /* Fundo bege claro parecido com a imagem */
-  display: flex; /* Usa flexbox para centralizar */
-  justify-content: center; /* Centraliza horizontalmente */
-  align-items: center; /* Centraliza verticalmente */
-  height: 100vh; /* Faz o body ocupar toda a altura da tela */
+  background-color: #fdf9f4; /*se precisar ussa esse*/
+  display: flex; 
+  justify-content: center;
+  align-items: center; 
+  height: 100vh; 
 }
 
-/* Estilo do "card" central */
 .card {
-  background-color: #ffffff; /* Fundo branco para destacar */
-  border-radius: 20px; /* Deixa as bordas arredondadas */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* Sombra suave para dar destaque */
-  width: 350px; /* Largura fixa do card */
-  text-align: center; /* Centraliza todo o texto */
-  overflow: hidden; /* Faz com que o topo arredondado apareça certo */
-  border: 2px solid #556b2f; /* Borda verde para dar acabamento */
+  background-color: #ffffff; 
+  border-radius: 20px; 
+  width: 350px;
+  text-align: center; 
+  overflow: hidden; 
+  border: 2px solid #556b2f;
 }
 
-/* Cabeçalho verde do card */
 .card-header {
-  background-color: #556b2f; /* Verde escuro do topo */
-  color: #fff; /* Texto branco */
-  padding: 20px; /* Espaçamento interno */
-  border-top-left-radius: 18px; /* Mantém arredondado igual ao card */
+  background-color: #556b2f; 
+  color: #fff; 
+  padding: 20px; 
+  border-top-left-radius: 18px; 
   border-top-right-radius: 18px;
 }
 
-/* Mensagem de agendamento */
 .card-header h2 {
-  font-size: 18px; /* Tamanho médio do texto */
-  margin-top: 10px; /* Espaço acima do título */
+  font-size: 18px;
+  margin-top: 10px; 
 }
 
-/* Corpo do card */
 .card-body {
-  padding: 20px; /* Espaçamento interno */
-  color: #333; /* Cor do texto em cinza escuro */
-  font-size: 15px; /* Tamanho confortável de leitura */
-  line-height: 1.5; /* Espaçamento entre linhas */
+  padding: 20px; 
+  font-size: 15px; 
+  line-height: 1.5; 
 }
 
-/* Botão de voltar */
 button {
-  background-color: #556b2f; /* Fundo verde */
-  color: white; /* Texto branco */
-  border: none; /* Remove a borda padrão */
-  padding: 10px 20px; /* Espaçamento interno */
-  border-radius: 25px; /* Borda arredondada estilo "pill" */
-  font-size: 14px; /* Texto médio */
-  margin-top: 15px; /* Espaço acima do botão */
+  background-color: #556b2f; 
+  color: white; 
+  border: none; 
+  padding: 10px 20px; 
+  border-radius: 25px; 
+  font-size: 14px;
+  margin-top: 15px; 
 }
 
-/* Link sem linha */
 .linkBranco{
     text-decoration: none;
-    color: white; /* Texto branco */
+    color: white;
 }
 
-
-
-
-
-
-
-/* R O D A P É */
+/* ****************************************************************RODAPÉ************************************************ */
 footer {
-    background-color: #556b2f; /* Cor de fundo verde escuro */
-    color: #fff; /* Cor do texto em branco */
-    display: flex; /* Usa flexbox para organizar os itens lado a lado */
-    justify-content: space-around; /* Espaça os blocos igualmente */
-    align-items: center; /* Centraliza verticalmente os itens */
-    padding: 30px; /* Espaçamento interno */
-    flex-wrap: wrap; /* Quebra linha se a tela for pequena */
+    background-color: #556b2f;
+    color: #fff; 
+    display: flex; 
+    justify-content: space-around;
+    align-items: center; 
+    padding: 30px; 
+    flex-wrap: wrap;
 }
 
-/* Estilo do logotipo */
 .footer-logo {
-    flex: 1; /* Ocupa espaço proporcional */
-    text-align: center; /* Centraliza dentro do bloco */
+    flex: 1; 
+    text-align: center; 
 }
 
-/* Ajusta a imagem do logo */
 .footer-logo img {
-    max-width: 120px; /* Limita largura do logo */
+    max-width: 120px; 
 }
 
-/* Estilo das listas de links */
 .footer-links {
-    flex: 2; /* Ocupa mais espaço que o logo */
-    display: flex; /* Coloca os blocos de links lado a lado */
-    justify-content: space-around; /* Espaço igual entre blocos */
+    flex: 2; 
+    display: flex; 
+    justify-content: space-around; 
 }
 
-/* Cada coluna de links */
 .footer-links ul {
-    list-style: none; /* Remove os pontinhos da lista */
-    padding: 0; /* Remove espaçamento interno padrão */
+    list-style: none; 
+    padding: 0; 
 }
 
-/* Estilo dos títulos de cada coluna */
 .footer-links h4 {
-    font-size: 16px; /* Tamanho da fonte */
-    margin-bottom: 10px; /* Espaço abaixo do título */
-    font-weight: bold; /* Deixa em negrito */
+    font-size: 16px; 
+    margin-bottom: 10px; 
+    font-weight: bold;
 }
 
-/* Estilo de cada link */
 .footer-links a {
-    color: #fff; /* Links brancos */
-    text-decoration: none; /* Remove o sublinhado */
-    display: block; /* Faz cada link ocupar uma linha */
-    margin-bottom: 5px; /* Espaço entre links */
-    transition: color 0.3s; /* Animação suave quando passar o mouse */
+    color: #fff; 
+    text-decoration: none; 
+    display: block; 
+    margin-bottom: 5px; 
 }
 
-/* Estilo do texto de citação */
 .footer-quote {
-    flex: 2; /* Ocupa bastante espaço */
-    font-style: italic; /* Deixa o texto em itálico */
-    font-size: 14px; /* Fonte menor */
-    text-align: center; /* Centraliza o texto */
-    margin: 15px 0; /* Espaçamento vertical */
+    flex: 2;
+    font-style: italic; 
+    font-size: 14px; 
+    text-align: center; 
+    margin: 15px 0; 
 }
 
-/* Estilo da área de ícones sociais */
 .footer-social {
-    flex: 1; /* Ocupa espaço proporcional */
-    text-align: center; /* Centraliza os ícones */
+    flex: 1; 
+    text-align: center; 
 }
 
 /* Ícones sociais (ex: WhatsApp, Instagram, Facebook) */
@@ -165,22 +140,16 @@ footer {
     transition: color 0.3s; /* Animação ao passar o mouse */
 }
 
-/* Hover nos ícones sociais */
-.footer-social a:hover {
-    color: #ffc300; /* Amarelo quando passar o mouse */
-}
-
-/* Botão de contato */
 .footer-button {
-    display: inline-block; /* Botão no mesmo fluxo */
-    padding: 10px 20px; /* Espaçamento interno */
-    background-color: #fff; /* Fundo branco */
-    color: #556b2f; /* Texto verde */
-    border-radius: 25px; /* Bordas arredondadas */
-    font-weight: bold; /* Texto em negrito */
-    margin-top: 10px; /* Espaço acima */
-    text-decoration: none; /* Remove sublinhado */
-    transition: background 0.3s, color 0.3s; /* Efeito suave */
+    display: inline-block;
+    padding: 10px 20px; 
+    background-color: #fff; 
+    color: #556b2f; 
+    border-radius: 25px; 
+    font-weight: bold; 
+    margin-top: 10px;
+    text-decoration: none; 
+    transition: background 0.3s, color 0.3s; 
 }
 
 
