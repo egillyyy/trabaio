@@ -159,12 +159,13 @@ footer {
 
 
 /* ****************************************************************FUNDOS************************************************ */
-.fundo-verde {
-    background-color: #6e7f39;
+#fundo2 {
+    background-color:rgb(254,250,224);
+
 }
 
-.fundo-verde2 {
-    background-color: #bec092;
+.fundo-verde {
+    background-color: rgb(96,108,56);
 }
 
 .fundo-verde3 {
@@ -198,6 +199,13 @@ footer {
   font-size: 400%;
   font-family: lamoric;
 }
+
+#fonte {
+    font-family: lamoric;
+
+}
+
+
 
 
 
@@ -251,9 +259,9 @@ footer {
 
 #tituloagendamento{
     position: absolute;
-    top: 130px;
+    top: 70px;
     font-family: lamoric;
-    color: #bec092;
+    color: #e3b133;
     cursor: default;
 }
 
