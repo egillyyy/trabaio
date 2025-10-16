@@ -15,9 +15,9 @@
 <body class="fundo-verde" style="min-height: 100vh;">
    
     <div class="container mt-5">
-        <div class="card mx-auto" style="max-width: 400px;">
+        <div class="card mx-auto" style="max-width: 800px;">
             <div class="card-body">
-                <h1 class="card-title text-center mb-4" id="fonte">MENU PRINCIPAL</h1>
+                <h1 class="card-title text-center mb-4" id="colorida" >MENU PRINCIPAL</h1>
                 <div class="mb-3">
                     <a href="formAgendamento.php" class="linksindex" id="agendamentoindex">Formulário de Agendamento</a> <br>
                 </div>
