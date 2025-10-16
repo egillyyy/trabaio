@@ -1,3 +1,36 @@
+<?php
+if (isset($_GET['id'])) {
+    //editar
+    require_once "../codigo/conexao.php";
+    require_once "../codigo/funcoes.php";
+
+    $id = $_GET['id'];
+
+    salvarUsuario($conexao, $email, $senha, $tipo, $nome, $telefone);
+    $linha = mysqli_fetch_array($funcionou);
+
+    $email = $linha['email'];
+    $senha_hash = $linha['senha'];
+    $tipo = $linha['tipo'];
+    $nome = $linha['nome'];
+    $telefone = $linha['telefone'];
+
+    $botao = "Atualizar";
+    $acao = "editar";
+} else {
+    //adicionar
+    $id = 0;
+    $email = '';
+    $senha_hash = '';
+    $tipo = '';
+    $nome = '';
+    $telefone = '';
+
+    $botao = "Cadastrar";
+    $acao = "adicionar";
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
