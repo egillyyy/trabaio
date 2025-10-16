@@ -115,28 +115,22 @@ function pesquisarUsuarioId($conexao, $idusuario) {
 * @return array $nome
 * @throws 0 Caso não encontrar o nome informado.
 **/
-function pesquisarUsuarioNome($conexao, $nome)
-{
+function pesquisarUsuarioNome($conexao, $nome){
    $sql = "SELECT * FROM tb_usuario WHERE nome LIKE ?";
    $comando = mysqli_prepare($conexao, $sql);
-
 
    $nome = "%" . $nome . "%";
    mysqli_stmt_bind_param($comando, 's', $nome);
 
-
    mysqli_stmt_execute($comando);
 
-
    $resultados = mysqli_stmt_get_result($comando);
-
 
    $listar_usuario = [];
    while ($usuario = mysqli_fetch_assoc($resultados)) {
        $listar_usuario[] = $usuario;
    }
    mysqli_stmt_close($comando);
-
 
    return $listar_usuario;
 };
