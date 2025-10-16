@@ -1,12 +1,4 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>logar</title>
-</head>
-<body>
-    <!DOCTYPE html>
 <html lang="pt-br">
 <head>
   <link rel="stylesheet" href="css/style.css">
@@ -24,6 +16,17 @@
       <div class="card-body">
         <h1 class="card-title text-center mb-4">Criar conta</h1>
 
+        <form action="salvarUsuario.php" method="post">
+          
+          <div class="mb-3">
+            <label for="nome" class="form-label">Nome</label>
+            <input type="text" class="form-control" id="nome" name="nome" required>
+          </div>
+
+          <div class="mb-3">
+            <label for="telefone" class="form-label">Telefone</label>
+            <input type="text" class="form-control" id="telefone" name="telefone" required>
+          </div>
 
           <div class="mb-3">
             <label for="email" class="form-label">E-mail</label>
@@ -51,9 +54,5 @@
 
   <!-- Script do Bootstrap (opcional) -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-</body>
-</html>
-
-    
 </body>
 </html>
