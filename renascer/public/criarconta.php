@@ -45,7 +45,7 @@
         </form>
 
         <div class="text-center mt-3">
-          <a href="home.php" class="btn btn-outline-secondary w-100">Logar</a>
+          <a href="index.php" class="btn btn-outline-secondary w-100">Logar</a>
         </div>
 
       </div>

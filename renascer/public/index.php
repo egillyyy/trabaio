@@ -55,7 +55,7 @@ if (isset($_GET['id'])) {
   <div class="container mt-5">
     <div class="card mx-auto" style="max-width: 400px;">
       <div class="card-body">
-        <h1 class="card-title text-center mb-4">Criar conta</h1>
+        <h1 class="card-title text-center mb-4">Logar</h1>
 
 
           <div class="mb-3">
@@ -71,7 +71,7 @@ if (isset($_GET['id'])) {
           <input type="hidden" name="tipo" value="c">
 
           <!-- Botão Criar conta -->
-          <button type="submit" class="btn btn-dark w-100">Criar conta</button>
+           <a href="criarconta.php" class="btn btn-dark w-100">Criar Conta</a>
         </form>
 
         <div class="text-center mt-3">
