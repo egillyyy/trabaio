@@ -1,32 +1,58 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Painel Principal</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Criar Conta</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 
-<body class="fundo-verde" style="min-height: 100vh;">
-    
-    <div class="indexdiv">
-        <h1 class="titulomenu">Menu Principal</h1>
-        <div class="linksindexdiv">
-            <a href="formAgendamento.php" class="linksindex" id="agendamentoindex">Formulário de Agendamento</a>
-            <a href="formPagamento.php" class="linksindex" id="pagamentoindex">Formulário de Pagamento</a>
-            <a href="formUsuario.php" class="linksindex" id="usuarioindex">Formulário de Usuário</a>
-            <a href="home.html" class="linksindex" id="homeindex">Ir para Home</a>
-            <a href="listarAgendamentos.php" class="linksindex" id="agendamentoindex2">Listar Agendamentos</a>
-            <a href="listarPagamentos.php" class="linksindex" id="pagamentoindex2">Listar Pagamentos</a>
-            <a href="listarServicos.php" class="linksindex" id="serviçosindex2">Listar Serviços</a>
-            <a href="listarUsuarios.php" class="linksindex" id="usuarioindex">Listar Usuários</a>
-            <a href="sucesso.html" class="linksindex" id="sucessoindex">Página de Sucesso</a>
-            <a href="rodape.html" class="linksindex" id="rodapeindex">Rodapé</a>
-            <a href="servicos.php" class="linksindex" id="serviçosindex">Selecionar Serviço</a>
-        </div>
-    </div>
+<body class="fundo-verde">
+    <h1 class="letra-dourada">Ateliê Renascer</h1>
 
+  <div class="container mt-5">
+    <div class="card mx-auto" style="max-width: 400px;">
+      <div class="card-body">
+        <h1 class="card-title text-center mb-4">Criar conta</h1>
+
+        <form action="salvarUsuario.php" method="post">
+          
+          <div class="mb-3">
+            <label for="nome" class="form-label">Nome</label>
+            <input type="text" class="form-control" id="nome" name="nome" required>
+          </div>
+
+          <div class="mb-3">
+            <label for="telefone" class="form-label">Telefone</label>
+            <input type="text" class="form-control" id="telefone" name="telefone" required>
+          </div>
+
+          <div class="mb-3">
+            <label for="email" class="form-label">E-mail</label>
+            <input type="email" class="form-control" id="email" name="email" required>
+          </div>
+
+          <div class="mb-3">
+            <label for="senha" class="form-label">Senha</label>
+            <input type="password" class="form-control" id="senha" name="senha" required>
+          </div>
+
+          <input type="hidden" name="tipo" value="c">
+
+          <!-- Botão Criar conta -->
+          <button type="submit" class="btn btn-dark w-100">Criar conta</button>
+        </form>
+
+        <div class="text-center mt-3">
+          <a href="index.php" class="btn btn-outline-secondary w-100">Logar</a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Script do Bootstrap (opcional) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
