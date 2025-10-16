@@ -369,36 +369,6 @@ function pesquisarAgendamentoId($conexao, $idagendamento) {
 };
 
 /**
-* Retorna os dados de um agendamento a partir do id.
-*
-* Retorna a tabela agendamento.
-*
-* @param mysqli $conexao Conexão com o banco.
-* @param int $tabela é um agendamento existente.
-* @return array $tabela
-* @throws 0 Caso não encontrar o id informado.
-**/
-function pesquisarTabelaAgendamento($conexao, $tb_usuario_idusuario){
-   $sql = "SELECT * FROM tb_agendamento WHERE tb_usuario_idusuario LIKE ?";
-   $comando = mysqli_prepare($conexao, $sql);
-
-   $tb_usuario_idusuario = "%" . $tb_usuario_idusuario . "%";
-   mysqli_stmt_bind_param($comando, 's', $tb_usuario_idusuario);
-
-   mysqli_stmt_execute($comando);
-
-   $resultados = mysqli_stmt_get_result($comando);
-
-   $listar_agendamento = [];
-   while ($agendamento = mysqli_fetch_assoc($resultados)) {
-       $listar_agendamento[] = $agendamento;
-   }
-   mysqli_stmt_close($comando);
-
-   return $listar_agendamento;
-};
-
-/**
  * Deleta um agendamento do Banco de Dados
  *
  * @param mysqli $conexao Conexão com o banco de dados.
