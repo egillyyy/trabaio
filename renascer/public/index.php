@@ -23,7 +23,7 @@
   <div class="container mt-5">
     <div class="card mx-auto" style="max-width: 400px;">
       <div class="card-body">
-        <h1 class="card-title text-center mb-4">Logar</h1>
+        <h1 class="card-title text-center mb-4" id="fonte">Logar</h1>
         <form action="../codigo/verificarLogin.php" method="POST">
             <div class="mb-3">
                 <label for="email" class="form-label">E-mail</label>
@@ -34,9 +34,9 @@
                 <label for="senha" class="form-label">Senha</label>
                 <input type="password" class="form-control" id="senha" name="senha" required>
 
-                <input type="hidden" name="tipo" value="c">
+                <input type="hidden" name="tipo" value="c"> <br><br>
 
-                <a href="criarconta.php" class="btn btn-dark w-100">Criar Conta</a>
+                <a href="criarconta.php" class="btn btn-dark w-100">Criar Conta</a> <br><br>
 
                 <div class="mb-3">
                     <input type="submit" value="Acessar" class="btn btn-outline-secondary w-100">

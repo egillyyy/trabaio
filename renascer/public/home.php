@@ -14,22 +14,56 @@
 
 <body class="fundo-verde" style="min-height: 100vh;">
    
-    
-    <div class="indexdiv">
-        <h1 class="titulomenu">Menu Principal</h1>
-        <div class="linksindexdiv">
-            <a href="formAgendamento.php" class="linksindex" id="agendamentoindex">Formulário de Agendamento</a> <br>
-            <a href="formPagamento.php" class="linksindex" id="pagamentoindex">Formulário de Pagamento</a> <br>
-            <a href="formUsuario.php" class="linksindex" id="usuarioindex">Formulário de Usuário</a> <br>
-            <a href="listarAgendamentos.php" class="linksindex" id="agendamentoindex2">Listar Agendamentos</a> <br>
-            <a href="listarPagamentos.php" class="linksindex" id="pagamentoindex2">Listar Pagamentos</a> <br>
-            <a href="listarServicos.php" class="linksindex" id="serviçosindex2">Listar Serviços</a> <br>
-            <a href="listarUsuarios.php" class="linksindex" id="usuarioindex">Listar Usuários</a> <br>
-            <a href="sucesso.html" class="linksindex" id="sucessoindex">Página de Sucesso</a> <br>
-            <a href="rodape.html" class="linksindex" id="rodapeindex">Rodapé</a> <br>
-            <a href="servicos.php" class="linksindex" id="serviçosindex">Selecionar Serviço</a> <br>
-            <a href="formBusca.php" class="linksindex" id="serviçosindex">Pesquisar</a> <br>
+    <div class="container mt-5">
+        <div class="card mx-auto" style="max-width: 400px;">
+            <div class="card-body">
+                <h1 class="card-title text-center mb-4" id="fonte">MENU PRINCIPAL</h1>
+                <div class="mb-3">
+                    <a href="formAgendamento.php" class="linksindex" id="agendamentoindex">Formulário de Agendamento</a> <br>
+                </div>
+                <div class="mb-3">
+                    <a href="formPagamento.php" class="linksindex" id="pagamentoindex">Formulário de Pagamento</a> <br>
+                </div>
 
+                <div class="mb-3">
+                    <a href="formUsuario.php" class="linksindex" id="usuarioindex">Formulário de Usuário</a> <br>
+                </div>
+
+                <div class="mb-3">
+                    <a href="listarAgendamentos.php" class="linksindex" id="agendamentoindex2">Listar Agendamentos</a> <br>
+                </div>
+
+                <div class="mb-3">
+                    <a href="listarPagamentos.php" class="linksindex" id="pagamentoindex2">Listar Pagamentos</a> <br>
+                </div>
+
+                <div class="mb-3">
+                    <a href="listarServicos.php" class="linksindex" id="servicosindex2">Listar Serviços</a> <br>
+                </div>
+
+                <div class="mb-3">
+                    <a href="listarUsuarios.php" class="linksindex" id="usuarioindex">Listar Usuários</a> <br>
+                </div>
+
+                <div class="mb-3">
+                    <a href="sucesso.html" class="linksindex" id="sucessoindex">Página de Sucesso</a> <br>
+                </div>
+
+                <div class="mb-3">
+                    <a href="rodape.html" class="linksindex" id="rodapeindex">Rodapé</a> <br>
+                </div>
+
+                <div class="mb-3">
+                    <a href="servicos.php" class="linksindex" id="servicosindex">Selecionar Serviço</a> <br>
+                </div>
+
+                <div class="mb-3">
+                    <a href="formBusca.php" class="linksindex" id="servicosindex">Pesquisar</a> <br>
+                </div>
+
+
+            </div>
+            
         </div>
     </div>
 
