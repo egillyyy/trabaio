@@ -285,10 +285,11 @@ function salvarAgendamento($conexao, $data, $horario, $tb_servico_id_servico, $t
     
     mysqli_stmt_bind_param($comando, 'ssii', $data, $horario, $tb_servico_id_servico, $tb_usuario_idusuario);
     
-    $funcionou = mysqli_stmt_execute($comando);
+    mysqli_stmt_execute($comando);
+    $idagendamento = mysqli_stmt_insert_id($comando);
     mysqli_stmt_close($comando);
     
-    return $funcionou;
+    return $idagendamento;
 };
 
 /**

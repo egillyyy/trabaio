@@ -3,7 +3,7 @@ require_once "../codigo/conexao.php";
 require_once "../codigo/funcoes.php";
 
 $usuarios = listarUsuario($conexao);
-$idagendamento = $_GET['idagendamento'] ?? null; // pega o id do agendamento pela URL
+$idagendamento = $_GET['id'];
 ?>
 
 <!DOCTYPE html>
@@ -21,7 +21,7 @@ $idagendamento = $_GET['idagendamento'] ?? null; // pega o id do agendamento pel
 
     <form action="salvarPagamento.php" method="post" class="card card-agendamento p-4 shadow">
 
-        <input type="hidden" name="idagendamento" value="<?= $_POST['idagendamento'] ?? $_GET['id'] ?? '' ?>">
+        <input type="hidden" name="idagendamento" value="<?php echo $idagendamento;?>">
 
         <div class="mb-3">
             <label for="idusuario" class="form-label">Cliente</label>

@@ -7,7 +7,11 @@ $horario = $_POST['horario'];
 $idservico = $_POST['idservico'];
 $idcliente = $_POST['idcliente'];
 
-salvarAgendamento ($conexao, $data, $horario, $idservico, $idcliente);
+$id_agendamento = salvarAgendamento($conexao, $data, $horario, $idservico, $idcliente);
 
-header("Location: listarAgendamentos.php");
+
+if tipo == c para aq, se nao 
+-fazre uma pagina pra pagar
+
+header("Location: formPagamento.php?id=$id_agendamento");
 ?>

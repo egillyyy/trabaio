@@ -20,7 +20,7 @@
             session_start();
             $_SESSION['logado'] = 'sim';
             $_SESSION['tipo'] = $tipo;
-            header("Location: home.php");
+            header("Location: ../public/home.php");
         }
         else {
             header("Location: index.php");

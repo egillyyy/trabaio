@@ -11,5 +11,5 @@ $telefone = $_POST['telefone'];
 
 salvarUsuario($conexao, $email, $senha, $tipo, $nome, $telefone);
 
-header("Location: index.php");
+header("Location: home.php");
 ?>

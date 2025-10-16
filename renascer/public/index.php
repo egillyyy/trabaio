@@ -1,35 +1,3 @@
-<?php
-if (isset($_GET['id'])) {
-    //editar
-    require_once "../codigo/conexao.php";
-    require_once "../codigo/funcoes.php";
-
-    $id = $_GET['id'];
-
-    salvarUsuario($conexao, $email, $senha, $tipo, $nome, $telefone);
-    $linha = mysqli_fetch_array($funcionou);
-
-    $email = $linha['email'];
-    $senha_hash = $linha['senha'];
-    $tipo = $linha['tipo'];
-    $nome = $linha['nome'];
-    $telefone = $linha['telefone'];
-
-    $botao = "Atualizar";
-    $acao = "editar";
-} else {
-    //adicionar
-    $id = 0;
-    $email = '';
-    $senha_hash = '';
-    $tipo = '';
-    $nome = '';
-    $telefone = '';
-
-    $botao = "Cadastrar";
-    $acao = "adicionar";
-}
-?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -56,33 +24,33 @@ if (isset($_GET['id'])) {
     <div class="card mx-auto" style="max-width: 400px;">
       <div class="card-body">
         <h1 class="card-title text-center mb-4">Logar</h1>
+        <form action="../codigo/verificarLogin.php" method="POST">
+            <div class="mb-3">
+                <label for="email" class="form-label">E-mail</label>
+                <input type="email" class="form-control" id="email" name="email" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="senha" class="form-label">Senha</label>
+                <input type="password" class="form-control" id="senha" name="senha" required>
+
+                <input type="hidden" name="tipo" value="c">
+
+                <a href="criarconta.php" class="btn btn-dark w-100">Criar Conta</a>
+
+                <div class="mb-3">
+                    <input type="submit" value="Acessar" class="btn btn-outline-secondary w-100">
+                </div>
 
 
-          <div class="mb-3">
-            <label for="email" class="form-label">E-mail</label>
-            <input type="email" class="form-control" id="email" name="email" required>
-          </div>
+            </div>
 
-          <div class="mb-3">
-            <label for="senha" class="form-label">Senha</label>
-            <input type="password" class="form-control" id="senha" name="senha" required>
-          </div>
-
-          <input type="hidden" name="tipo" value="c">
-
-          <!-- Botão Criar conta -->
-           <a href="criarconta.php" class="btn btn-dark w-100">Criar Conta</a>
         </form>
-
-        <div class="text-center mt-3">
-          <a href="home.php" class="btn btn-outline-secondary w-100">Logar</a>
-        </div>
 
       </div>
     </div>
   </div>
 
-  <!-- Script do Bootstrap (opcional) -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

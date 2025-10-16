@@ -16,7 +16,7 @@
       <div class="card-body">
         <h1 class="card-title text-center mb-4">Criar conta</h1>
 
-        <form action="salvarUsuario.php" method="post">
+        <form action="salvarUsuario.php" method="POST">
           
           <div class="mb-3">
             <label for="nome" class="form-label">Nome</label>
@@ -40,7 +40,6 @@
 
           <input type="hidden" name="tipo" value="c">
 
-          <!-- Botão Criar conta -->
           <button type="submit" class="btn btn-dark w-100">Criar conta</button>
         </form>
 
@@ -52,7 +51,6 @@
     </div>
   </div>
 
-  <!-- Script do Bootstrap (opcional) -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
