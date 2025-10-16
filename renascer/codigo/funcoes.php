@@ -106,6 +106,42 @@ function pesquisarUsuarioId($conexao, $idusuario) {
 };
 
 /**
+* Retorna os dados de um usuário a partir do nome.
+*
+* Retorna nome do usuário.
+*
+* @param mysqli $conexao Conexão com o banco.
+* @param int $nome nome de um usuário existente.
+* @return array $nome
+* @throws 0 Caso não encontrar o nome informado.
+**/
+function pesquisarUsuarioNome($conexao, $nome)
+{
+   $sql = "SELECT * FROM tb_usuario WHERE nome LIKE ?";
+   $comando = mysqli_prepare($conexao, $sql);
+
+
+   $nome = "%" . $nome . "%";
+   mysqli_stmt_bind_param($comando, 's', $nome);
+
+
+   mysqli_stmt_execute($comando);
+
+
+   $resultados = mysqli_stmt_get_result($comando);
+
+
+   $listar_usuario = [];
+   while ($usuario = mysqli_fetch_assoc($resultados)) {
+       $listar_usuario[] = $usuario;
+   }
+   mysqli_stmt_close($comando);
+
+
+   return $listar_usuario;
+};
+
+/**
  * Edita os dados de um usuário no Banco de Dados
  * 
  * Altera as informações de um usuário na tabela tb_usuario com base no ID fornecido.
