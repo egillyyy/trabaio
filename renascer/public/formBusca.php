@@ -22,24 +22,40 @@
     require_once "../codigo/funcoes.php";
 
     $clientes = pesquisarUsuarioNome($conexao, $valor);
+    $agenedamentos = pesquisarAgendamentoId($conexao, $valor);
 
-    if (count($clientes) == 0) {
+    if (count($clientes) == 0 AND count($agenedamentos) == 0) {
       echo "<p>Nenhum cliente encontrado</p>";
     } else {
       echo "<br><table border='1'>";
       echo "<tr>";
       echo "<th>Nome</th>";
-      echo "<th>Email</th>";
+      echo "<th>Data</th>";
+      echo "<th>Horário</th>";
+      echo "<th>Serviço</th>";
       echo "</tr>";
+
       foreach ($clientes as $cliente) {
         echo "<tr>";
         echo "<td>" . $cliente["nome"] . "</td>";
-        echo "<td>" . $cliente["email"] . "</td>";
+        echo "<td></td>";   // Não tem data, horário, serviço aqui, então deixa vazio
+        echo "<td></td>";
+        echo "<td></td>";
         echo "</tr>";
       }
+      foreach ($agenedamentos as $agenedamento) {
+        echo "<tr>";
+        echo "<td></td>";
+        echo "<td>" . $agenedamento["data"] . "</td>";
+        echo "<td>" . $agenedamento["horario"] . "</td>";
+        echo "<td>" . $agenedamento["tb_servico_id_servico"] . "</td>";
+        echo "</tr>";
+      }
+      echo "</table>";
     }
   }
   ?>
+
 </body>
 
 </html>
