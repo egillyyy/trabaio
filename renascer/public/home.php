@@ -28,6 +28,8 @@
             <a href="sucesso.html" class="linksindex" id="sucessoindex">Página de Sucesso</a> <br>
             <a href="rodape.html" class="linksindex" id="rodapeindex">Rodapé</a> <br>
             <a href="servicos.php" class="linksindex" id="serviçosindex">Selecionar Serviço</a> <br>
+            <a href="formBusca.php" class="linksindex" id="serviçosindex">Pesquisar</a> <br>
+
         </div>
     </div>
 
