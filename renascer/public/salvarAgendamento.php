@@ -10,8 +10,8 @@ $idcliente = $_POST['idcliente'];
 $id_agendamento = salvarAgendamento($conexao, $data, $horario, $idservico, $idcliente);
 
 
-if tipo == c para aq, se nao 
--fazre uma pagina pra pagar
+// if tipo == c para aq, se nao 
+// -fazre uma pagina pra pagar
 
 header("Location: formPagamento.php?id=$id_agendamento");
 ?>
