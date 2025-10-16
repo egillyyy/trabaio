@@ -21,7 +21,6 @@
             <a href="formAgendamento.php" class="linksindex" id="agendamentoindex">Formulário de Agendamento</a> <br>
             <a href="formPagamento.php" class="linksindex" id="pagamentoindex">Formulário de Pagamento</a> <br>
             <a href="formUsuario.php" class="linksindex" id="usuarioindex">Formulário de Usuário</a> <br>
-            <a href="home.html" class="linksindex" id="homeindex">Ir para Home</a> <br>
             <a href="listarAgendamentos.php" class="linksindex" id="agendamentoindex2">Listar Agendamentos</a> <br>
             <a href="listarPagamentos.php" class="linksindex" id="pagamentoindex2">Listar Pagamentos</a> <br>
             <a href="listarServicos.php" class="linksindex" id="serviçosindex2">Listar Serviços</a> <br>
