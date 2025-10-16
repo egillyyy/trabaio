@@ -25,11 +25,12 @@ $usuarios = listarUsuario($conexao);
             <label for="data" class="form-label">Data</label>
             <input type="date" class="form-control" id="data" name="data" required>
         </div>
+        <br>  
 
         <div class="mb-3">
             <label for="horario" class="form-label">Horário</label>
             <input type="time" class="form-control" id="horario" name="horario" required>
-        </div>
+        </div> <br>
 
         <div class="mb-3">
             <label for="idservico" class="form-label">Serviço</label>
@@ -41,10 +42,10 @@ $usuarios = listarUsuario($conexao);
                 }
                 ?>
             </select>
-        </div>
+        </div> <br>
 
         <div class="mb-3">
-            <label for="idcliente" class="form-label">Cliente</label>
+            <label for="idcliente" class="form-label w-">Cliente</label>
             <select class="form-select" id="idcliente" name="idcliente" required>
                 <option value="">Selecione</option>
                 <?php
@@ -55,9 +56,9 @@ $usuarios = listarUsuario($conexao);
                 }
                 ?>
             </select>
-        </div>
+        </div> <br>
 
-        <button type="submit" class="btn btn-dark w-100">Salvar Agendamento</button>
+        <button type="submit" class="btn btn w-100" id="teste1l">Salvar Agendamento</button>
     </form>
 
 </body>

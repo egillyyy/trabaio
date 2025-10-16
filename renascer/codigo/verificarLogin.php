@@ -9,7 +9,7 @@
     $resultado = mysqli_query($conexao, $sql);
 
     if (mysqli_num_rows($resultado) == 0) {
-        header("Location: index.php");
+        header("Location: ../public/index.php");
     }
     else {
         $linha = mysqli_fetch_array($resultado);
@@ -23,7 +23,9 @@
             header("Location: ../public/home.php");
         }
         else {
-            header("Location: index.php");
+            header("Location: ../public/index.php");
         }
     }
+    
 ?>
+
