@@ -12,6 +12,7 @@ $id_agendamento = salvarAgendamento($conexao, $data, $horario, $idservico, $idcl
 
 // if tipo == c para aq, se nao 
 // -fazre uma pagina pra pagar
+header("Location: sucesso.html");
 
-header("Location: formPagamento.php?id=$id_agendamento");
+// header("Location: formPagamento.php?id=$id_agendamento");
 ?>
