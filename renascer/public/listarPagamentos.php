@@ -38,7 +38,7 @@
                 $forma = $pagamento['forma'];
                 $descricao = $pagamento['descricao'];
                 $idagendamento = $pagamento['tb_agendamento_idagendamento'];
-
+                
                 echo "<tr>";
                 echo "<td>$id</td>";
                 echo "<td>R$ $valor</td>";
