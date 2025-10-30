@@ -1,5 +1,6 @@
 <?php
     require_once "../codigo/verificarLogado.php";
+    $tipo = $_SESSION['tipo'];
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -13,61 +14,79 @@
 </head>
 
 <body class="fundo-verde" style="min-height: 100vh;">
-   
+
     <div class="container mt-5">
         <div class="card mx-auto" style="max-width: 800px;">
             <div class="card-body">
                 <h1 class="card-title text-center mb-4" id="colorida" >MENU PRINCIPAL</h1>
-                <div class="mb-3">
-                    <a href="formAgendamento.php" class="linksindex" id="agendamentoindex">Formulário de Agendamento</a> <br>
-                </div>
-                <div class="mb-3">
-                    <a href="formPagamento.php" class="linksindex" id="pagamentoindex">Formulário de Pagamento</a> <br>
-                </div>
+                
+            <?php
+                if ($tipo == 'f' AND $tipo == 'g') {
+                    echo "<div class='mb-3'>";
+                    echo "<a href='formUsuario.php' class='linksindex' id='usuarioindex'>Formulário de Usuário</a> <br>";
+                    echo "</div>";
+                }
 
-                <div class="mb-3">
-                    <a href="formUsuario.php" class="linksindex" id="usuarioindex">Formulário de Usuário</a> <br>
-                </div>
+                if ($tipo == 'f' AND $tipo == 'g') {
+                    echo "<div class='mb-3'>";
+                    echo "<a href='listarAgendamentos.php' class='linksindex' id='agendamentoindex2'>Listar Agendamentos</a> <br>";
+                    echo "</div>";
+                }
 
-                <div class="mb-3">
-                    <a href="listarAgendamentos.php" class="linksindex" id="agendamentoindex2">Listar Agendamentos</a> <br>
-                </div>
+                if ($tipo == 'f' AND $tipo == 'g') {
+                    echo "<div class='mb-3'>";
+                    echo "<a href='listarPagamentos.php' class='linksindex' id='pagamentoindex2'>Listar Pagamentos</a> <br>";
+                    echo "</div>";
+                }
 
-                <div class="mb-3">
-                    <a href="listarPagamentos.php" class="linksindex" id="pagamentoindex2">Listar Pagamentos</a> <br>
-                </div>
+                if ($tipo == 'f' AND $tipo == 'g') {
+                    echo "<div class='mb-3'>";
+                    echo "<a href='listarServicos.php' class='linksindex' id='servicosindex2'>Listar Serviços</a> <br>";
+                    echo "</div>";
+                    }
 
-                <div class="mb-3">
-                    <a href="listarServicos.php" class="linksindex" id="servicosindex2">Listar Serviços</a> <br>
-                </div>
-
-                <div class="mb-3">
-                    <a href="listarUsuarios.php" class="linksindex" id="usuarioindex">Listar Usuários</a> <br>
-                </div>
-
-                <div class="mb-3">
-                    <a href="sucesso.html" class="linksindex" id="sucessoindex">Página de Sucesso</a> <br>
-                </div>
-
-                <div class="mb-3">
-                    <a href="rodape.html" class="linksindex" id="rodapeindex">Rodapé</a> <br>
-                </div>
-
-                <div class="mb-3">
-                    <a href="servicos.php" class="linksindex" id="servicosindex">Selecionar Serviço</a> <br>
-                </div>
-
-               <div class="mb-3">
-                    <a href="formBusca.php" class="linksindex" id="servicosindex">Pesquisar</a> <br>
-                </div> 
-
-               <div class="mb-3">
-                    <a href="realizarPagamento.php" class="linksindex" id="servicosindex">realizarPagamento</a> <br>
-                </div> 
-
-                <div class="mb-3">
-                    <a href="criarServico.php" class="linksindex" id="servicosindex">Criar Serviço</a> <br>
-                </div> 
+                if ($tipo == 'f' AND $tipo == 'g') {
+                    echo "<div class='mb-3'>";
+                    echo "<a href='listarUsuarios.php' class='linksindex' id='usuarioindex'>Listar Usuários</a> <br>";
+                    echo "</div>";
+                }
+                
+                if ($tipo == 'f' AND $tipo == 'g') {
+                    echo "<div class='mb-3'>";
+                    echo "<a href='criarServico.php' class='linksindex' id='servicosindex'>Criar Serviço</a> <br>";
+                    echo "</div>";
+                }
+                
+                else {
+                    echo "<div class='mb-3'>";
+                    echo "<a href='formAgendamento.php' class='linksindex' id='agendamentoindex'>Formulário de Agendamento</a> <br>";
+                    echo "</div>";
+                    
+                    echo "<div class='mb-3'>";
+                    echo "<a href='formPagamento.php' class='linksindex' id='pagamentoindex'>Formulário de Pagamento</a> <br>";
+                    echo "</div>";
+                    
+                    echo "<div class='mb-3'>";
+                    echo "<a href='rodape.html' class='linksindex' id='rodapeindex'>Rodapé</a> <br>";
+                    echo "</div>";
+                    
+                    echo "<div class='mb-3'>";
+                    echo "<a href='servicos.php' class='linksindex' id='servicosindex'>Selecionar Serviço</a> <br>";
+                    echo "</div>";
+                    
+                    echo "<div class='mb-3'>";
+                    echo "<a href='formBusca.php' class='linksindex' id='servicosindex'>Pesquisar</a> <br>";
+                    echo "</div>";
+                    
+                    echo "<div class='mb-3'>";
+                    echo "<a href='realizarPagamento.php' class='linksindex' id='servicosindex'>Realizar Pagamento</a> <br>";
+                    echo "</div>";
+                    
+                    echo "<div class='mb-3'>";
+                    echo "<a href='sucesso.html' class='linksindex' id='sucessoindex'>Página de Sucesso</a> <br>";
+                    echo "</div>";
+                }    
+            ?>
 
             </div>
             
