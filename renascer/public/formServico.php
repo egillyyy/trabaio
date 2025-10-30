@@ -38,7 +38,7 @@
                         <strong>Descrição:</strong> ' . $servico["descricao_servico"] . '<br>
                         <strong>Preço:</strong> R$ ' . $servico["preco_servico"] . '
                     </p>
-                    <a href="formagendamento.php?id_servico=' . $servico["idservico"] . '" class="btn btn-success">
+                    <a href="formAgendamento.php?id_servico=' . $servico["idservico"] . '" class="btn btn-success">
                         Selecionar
                     </a>
                 </div>

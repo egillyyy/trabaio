@@ -4,6 +4,9 @@ require_once "../codigo/funcoes.php";
 
 $servicos = listarServico($conexao);
 $usuarios = listarUsuario($conexao);
+
+// aq verifica se veio um serviço selecionado pela URL, dai ele tiver coisado ele vai aparecer selec ionado no formaAgendamento
+$id_servico_selecionado = isset($_GET['id_servico']) ? $_GET['id_servico'] : null;
 ?>
 
 <!DOCTYPE html>
@@ -38,7 +41,8 @@ $usuarios = listarUsuario($conexao);
                 <option value="">Selecione</option>
                 <?php
                 foreach ($servicos as $servico) {
-                    echo "<option value='" . $servico['idservico'] . "'>" . $servico['tipo_servico'] . " - R$ " . $servico['preco_servico'] . "</option>";
+                    $selected = ($servico['idservico'] == $id_servico_selecionado) ? "selected" : "";
+                    echo "<option value='" . $servico['idservico'] . "' $selected>" . $servico['tipo_servico'] . " - R$ " . $servico['preco_servico'] . "</option>";
                 }
                 ?>
             </select>
