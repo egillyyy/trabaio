@@ -57,10 +57,13 @@
                     <a href="servicos.php" class="linksindex" id="servicosindex">Selecionar Serviço</a> <br>
                 </div>
 
-                <div class="mb-3">
+               <div class="mb-3">
                     <a href="formBusca.php" class="linksindex" id="servicosindex">Pesquisar</a> <br>
-                </div>
+                </div> 
 
+               <div class="mb-3">
+                    <a href="realizarPagamento.php" class="linksindex" id="servicosindex">realizarPagamento</a> <br>
+                </div> 
 
             </div>
             
