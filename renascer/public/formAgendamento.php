@@ -5,7 +5,7 @@ require_once "../codigo/funcoes.php";
 $servicos = listarServico($conexao);
 $usuarios = listarUsuario($conexao);
 
-// aq verifica se veio um serviço selecionado pela URL, dai ele tiver coisado ele vai aparecer selec ionado no formaagendamento
+// aq verifica se veio um serviço selecionado pela URL, dai ele tiver coisado ele vai aparecer selec ionado no formaAgendamento
 $id_servico_selecionado = isset($_GET['id_servico']) ? $_GET['id_servico'] : null;
 ?>
 
