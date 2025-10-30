@@ -35,7 +35,3 @@
 
     header("Location: listarServicos.php");
 ?>
-
-    
-</body>
-</html>
