@@ -65,6 +65,10 @@
                     <a href="realizarPagamento.php" class="linksindex" id="servicosindex">realizarPagamento</a> <br>
                 </div> 
 
+                <div class="mb-3">
+                    <a href="criarServico.php" class="linksindex" id="servicosindex">Criar Serviço</a> <br>
+                </div> 
+
             </div>
             
         </div>

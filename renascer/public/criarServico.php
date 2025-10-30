@@ -1,11 +1,11 @@
 <?php
+    require_once "../codigo/conexao.php";
+    require_once "../codigo/funcoes.php";
+
+    $servicos = listarServico($conexao);
+
     if (isset($_GET['id'])) {
         // echo "editar";
-
-        require_once "../codigo/conexao.php";
-        require_once "../codigo/funcoes.php";
-
-        $servicos = listarServico($conexao);
 
         $id = $_GET['id'];
         
@@ -47,7 +47,7 @@
                 <option value="">Selecione</option>
                 <?php
                 foreach ($servicos as $selecione) {
-                    echo "<option value='" . $selecione['idservico'] . "'>" . $selecione['tipo_servico'] . " - R$ " . "</option>";
+                    echo "<option value='" . $selecione['idservico'] . "'>" . $selecione['tipo_servico'] . "</option>";
                 }
                 ?>
             </select>
