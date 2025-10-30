@@ -27,8 +27,8 @@
                 <th scope="col">ID</th>
                 <th scope="col">Data</th>
                 <th scope="col">Horário</th>
-                <th scope="col">ID Serviço</th>
-                <th scope="col">ID Cliente</th>
+                <th scope="col">Serviço</th>
+                <th scope="col">Cliente</th>
                 <th colspan="2">Ações</th>
             </tr>
 
@@ -37,16 +37,16 @@
                 $id = $agendamento['idagendamento'];
                 $data = $agendamento['data'];
                 $horario = $agendamento['horario'];
-                $idservico = $agendamento['tb_servico_id_servico'];
-                $idcliente = $agendamento['tb_usuario_idusuario'];
+                $servico = $agendamento['nome_servico'];
+                $cliente = $agendamento['nome_cliente'];
 
             echo "<tbody>";    
                 echo "<tr>";
                 echo "<td>$id</td>";
                 echo "<td>$data</td>";
                 echo "<td>$horario</td>";
-                echo "<td>$idservico</td>";
-                echo "<td>$idcliente</td>";
+                echo "<td>$servico</td>";
+                echo "<td>$cliente</td>";
                 echo "<td><a href='../codigo/funcoes.php/deletaragendamento?id=$id'>Excluir</a></td>";
                 echo "<td><a href='formAgendamento.php?id=$id'>Editar</a></td>";
                 echo "</tr>";

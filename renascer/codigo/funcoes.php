@@ -331,9 +331,17 @@ function salvarAgendamento($conexao, $data, $horario, $tb_servico_id_servico, $t
  * @return array Lista de agendamentos.
  **/
 function listarAgendamento($conexao) {
-    $sql = "SELECT * FROM tb_agendamento";
-    $comando = mysqli_prepare($conexao, $sql);
+    $sql = "SELECT 
+                a.idagendamento,
+                a.data,
+                a.horario,
+                s.tipo_servico AS nome_servico,
+                u.nome AS nome_cliente
+            FROM tb_agendamento a
+            JOIN tb_servico s ON a.tb_servico_id_servico = s.idservico
+            JOIN tb_usuario u ON a.tb_usuario_idusuario = u.idusuario";
     
+    $comando = mysqli_prepare($conexao, $sql);
     mysqli_stmt_execute($comando);
     $resultados = mysqli_stmt_get_result($comando);
     
@@ -344,7 +352,7 @@ function listarAgendamento($conexao) {
     mysqli_stmt_close($comando);
 
     return $lista_agendamento;
-};
+}
 
 /**
  * Retorna os dados de um agendamento a partir do ID.
