@@ -1,17 +1,25 @@
 <?php
-require_once "../codigo/conexao.php";
-require_once "../codigo/funcoes.php";
+require_once "conexao.php";
+require_once "funcoes.php";
 
 if (isset($_GET['id'])) {
-    $id = intval($_GET['id']); // pega o ID da URL
+    $id = $_GET['id'];
 
+    // tenta deletar
     if (deletarAgendamento($conexao, $id)) {
-        // Se deletou com sucesso, volta pra lista
-        header("Location: ../paginas/agendamento.php?msg=deletado");
-        exit;
+        echo "<script>
+                alert('Agendamento excluído com sucesso!');
+                window.location.href = '../paginas/listarAgendamento.php';
+              </script>";
     } else {
-        echo "Erro ao deletar o agendamento.";
+        echo "<script>
+                alert('Erro ao excluir o agendamento.');
+                window.location.href = '../paginas/listarAgendamento.php';
+              </script>";
     }
 } else {
-    echo "ID não informado.";
+    echo "<script>
+            alert('ID do agendamento não informado.');
+            window.location.href = '../paginas/listarAgendamento.php';
+          </script>";
 }

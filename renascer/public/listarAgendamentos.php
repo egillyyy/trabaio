@@ -47,7 +47,7 @@
                 echo "<td>$horario</td>";
                 echo "<td>$servico</td>";
                 echo "<td>$cliente</td>";
-                echo "<td><a href='../codigo/funcoes.php/deletaragendamento?id=$id'>Excluir</a></td>";
+                echo "<td><a href='../codigo/deletarAgendamento.php?id=$id' onclick=\"return confirm('Tem certeza que deseja excluir este agendamento?')\">Excluir</a></td>";
                 echo "<td><a href='formAgendamento.php?id=$id'>Editar</a></td>";
                 echo "</tr>";
             echo "</tbody>";
