@@ -45,7 +45,7 @@
                 echo "<td>$forma</td>";
                 echo "<td>$descricao</td>";
                 echo "<td>$idagendamento</td>";
-                echo "<td><a href='deletarPagamento.php?id=$id'>Excluir</a></td>";
+                echo "<td><a href='../codigo/deletarPagamento.php?id=$id'>Excluir</a></td>";
                 echo "<td><a href='formPagamento.php?id=$id'>Editar</a></td>";
                 echo "</tr>";
             }
