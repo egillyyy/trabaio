@@ -7,19 +7,12 @@ if (isset($_GET['id'])) {
 
     // tenta deletar
     if (deletarAgendamento($conexao, $id)) {
-        echo "<script>
-                alert('Agendamento excluído com sucesso!');
-                window.location.href = '../paginas/listarAgendamento.php';
-              </script>";
+        echo "Agendamento excluído com sucesso!";
+
     } else {
-        echo "<script>
-                alert('Erro ao excluir o agendamento.');
-                window.location.href = '../paginas/listarAgendamento.php';
-              </script>";
+        echo "Erro ao excluir o agendamento.";
     }
 } else {
-    echo "<script>
-            alert('ID do agendamento não informado.');
-            window.location.href = '../paginas/listarAgendamento.php';
-          </script>";
+    echo "ID não informado.";
+
 }
