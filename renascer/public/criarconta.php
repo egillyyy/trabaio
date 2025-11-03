@@ -40,7 +40,7 @@
 
           <input type="hidden" name="tipo" value="c">
 
-          <button type="submit" class="btn btn-dark w-100">Criar conta</button>
+          <button type="submit" class="btn btn-dark w-100">Criar</button>
         </form>
 
         <div class="text-center mt-3">
