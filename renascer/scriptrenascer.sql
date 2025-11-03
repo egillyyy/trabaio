@@ -118,16 +118,16 @@ USE renascer;
 
 -- Inserir usuários (cliente = 'c', funcionário = 'f', gerente = 'g')
 INSERT INTO tb_usuario (email, senha, tipo, nome, telefone) VALUES
-('marilene.gerente@gmail.com', 'senha123', 'g', 'Marilene', '11 988887770'),
-('maria.cliente@gmail.com', 'senha123', 'c', 'Maria Souza', '11 988887777'),
-('joao.cliente@gmail.com', 'senha123', 'c', 'João Silva', '11 977776666'),
-('ana.cliente@gmail.com', 'senha123', 'c', 'Ana Pereira', '11 966665555'),
-('carla.cliente@gmail.com', 'c123', 'c', 'Carla Dias', '11 955554444'),
-('paulo.cliente@gmail.com', 'senha123', 'c', 'Paulo Oliveira', '11 944443333'),
-('jose.func@gmail.com', 'senha123', 'f', 'José Barbosa', '11 933332222'),
-('lucas.func@gmail.com', 'senha123', 'f', 'Lucas Martins', '11 922221111'),
-('fernanda.func@gmail.com', 'senha123', 'f', 'Fernanda Lima', '11 911110000'),
-('aline.func@gmail.com', 'senha123', 'f', 'Aline Ferreira', '11 900009999');
+('marilene.gerente@gmail.com', '$2y$10$xXhnoo02m00F59k0eOjSCetSM0szfscehDOPsvnpWbDV4zWcurhZi', 'g', 'Marilene', '11 988887770'), --nota2tri
+('maria.cliente@gmail.com', '$2y$10$4Q458yTE3LBqUgB3wbw8MOdaVBWwfAvylltQ0ti84iPqR5m3L3QcG', 'c', 'Maria Souza', '11 988887777'), --senha123
+('joao.cliente@gmail.com', '$2y$10$aqYMHLULzW5.232L5n5eMeXPBCLMotS1890TXBnNpdDZMUE0kbWRO', 'c', 'João Silva', '11 977776666'), --senha123
+('ana.cliente@gmail.com', '$2y$10$rTBCNNtRUG5oCDWwS/O2qukCHWpL9wLLugIjUiAMDRTekrMc9Dyvi', 'c', 'Ana Pereira', '11 966665555'), --senha123
+('carla.cliente@gmail.com', '$2y$10$yS4IYSomXE/ds4oB28Obxe.FrKLYLwt3jjJCy0Mu3L4ZV2NuafLE2', 'c', 'Carla Dias', '11 955554444'), --senha123
+('paulo.cliente@gmail.com', '$2y$10$wz6igcDigAbzsz6XYDPdp./RiiTkrCS5diFi5n1oS4xXSPUZgJS4G', 'c', 'Paulo Oliveira', '11 944443333'), --senha123
+('jose.func@gmail.com', '$2y$10$6oVYVY1LtQLdXdhUI9bzGu51B3j66bK2PMMcO53JyNPRYuQisIb/y', 'f', 'José Barbosa', '11 933332222'), --senha123
+('lucas.func@gmail.com', '$2y$10$ZIPV/qmoZOjoo6ISisuAU.cGb1byZY9gxqDQmnaAIvpEq3qPTEpzC', 'f', 'Lucas Martins', '11 922221111'), --senha123
+('fernanda.func@gmail.com', '$2y$10$EsoxxeapNEMJo5QghvtGwe1RIvEvCeY/yRtlfT809twMHhzsiCyQi', 'f', 'Fernanda Lima', '11 911110000'), --senha123
+('aline.func@gmail.com', '$2y$10$MoBFfqkXPkwosHIOM3L5v.c1o38SyuUNlYHj2IRUMZHeakwNvhlqm', 'f', 'Aline Ferreira', '11 900009999'); --senha123
 
 -- Inserir serviços
 INSERT INTO tb_servico (preco_servico, tipo_servico, descricao_servico, foto) VALUES
