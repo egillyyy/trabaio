@@ -7,8 +7,7 @@ require_once "funcoes.php";
 
     // tenta deletar
     if (deletarServico($conexao, $id)) {
-        echo "Serviço excluído com sucesso!";
-
-    } else {
-        echo "Erro ao excluir o Serviço.";
+    echo "Serviço excluído com sucesso!";
+        } else {
+    echo "Não foi possível excluir: este serviço está ligado a um agendamento.";
     }

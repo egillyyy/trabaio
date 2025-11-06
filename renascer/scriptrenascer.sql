@@ -119,11 +119,6 @@ INSERT INTO tb_usuario (email, senha, tipo, nome, telefone) VALUES
 
 INSERT INTO tb_servico (preco_servico, tipo_servico, descricao_servico, foto) VALUES
 (50.00, 'Cabelo', 'Corte de cabelo feminino', 'corte_feminino.jpg'),
-(40.00, 'Cabelo', 'Corte de cabelo masculino', 'corte_masculino.jpg'),
-(120.00, 'Cabelo', 'Coloração completa', 'coloracao.jpg'),
-(80.00, 'Cabelo', 'Escova progressiva', 'escova.jpg'),
-(150.00, 'Cabelo', 'Luzes no cabelo', 'luzes.jpg'),
-(60.00, 'Cabelo', 'Cabelo completo com hidratação', 'cabelo.jpg'),
 (200.00, 'Penteado', 'Penteado para festa', 'penteado.jpg'),
 (100.00, 'Maquiagem', 'Maquiagem completa', 'maquiagem.jpg'),
 (80.00, 'Unha', 'Manicure completa', 'manicure.jpg'),
