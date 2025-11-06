@@ -21,9 +21,14 @@
                 <h1 class="card-title text-center mb-4" id="colorida" >MENU PRINCIPAL</h1>
                 
             <?php
-                    // if ($tipo == 'f' AND $tipo == 'g') {
+                // if ($tipo == 'f' AND $tipo == 'g') {
                     echo "<div class='mb-3'>";
                     echo "<a href='buscaAgendamento.php' class='linksindex' id='agendamentoindex2'>Pesquisar Agendamentos</a> <br>";
+                    echo "</div>";
+
+                // if ($tipo == 'f' AND $tipo == 'g') {
+                    echo "<div class='mb-3'>";
+                    echo "<a href='formUsuario.php' class='linksindex' id='agendamentoindex2'>Adicionar Usuário</a> <br>";
                     echo "</div>";
 
                 // if ($tipo == 'f' AND $tipo == 'g') {
