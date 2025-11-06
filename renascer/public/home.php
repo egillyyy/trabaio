@@ -80,10 +80,6 @@
                     echo "</div>";
                     
                     echo "<div class='mb-3'>";
-                    echo "<a href='formBusca.php' class='linksindex' id='servicosindex'>Pesquisar</a> <br>";
-                    echo "</div>";
-                    
-                    echo "<div class='mb-3'>";
                     echo "<a href='realizarPagamento.php' class='linksindex' id='servicosindex'>Realizar Pagamento</a> <br>";
                     echo "</div>";
                     
