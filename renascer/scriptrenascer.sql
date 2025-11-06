@@ -116,6 +116,7 @@ INSERT INTO tb_usuario (email, senha, tipo, nome, telefone) VALUES
 ('lucas.func@gmail.com', '$2y$10$ZIPV/qmoZOjoo6ISisuAU.cGb1byZY9gxqDQmnaAIvpEq3qPTEpzC', 'f', 'Lucas Martins', '11 922221111'),
 ('fernanda.func@gmail.com', '$2y$10$EsoxxeapNEMJo5QghvtGwe1RIvEvCeY/yRtlfT809twMHhzsiCyQi', 'f', 'Fernanda Lima', '11 911110000'),
 ('aline.func@gmail.com', '$2y$10$MoBFfqkXPkwosHIOM3L5v.c1o38SyuUNlYHj2IRUMZHeakwNvhlqm', 'f', 'Aline Ferreira', '11 900009999');
+('123@gmail.com', 'u04TlLczKw5Ds5cgOYs86BS', 'g', '123', '12 12312312');
 
 INSERT INTO tb_servico (preco_servico, tipo_servico, descricao_servico, foto) VALUES
 (50.00, 'Cabelo', 'Corte de cabelo feminino', 'corte_feminino.jpg'),
