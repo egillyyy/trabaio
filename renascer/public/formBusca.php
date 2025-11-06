@@ -10,19 +10,19 @@
 <body>
   <form action="formBusca.php">
     Nome do cliente: <br>
-    <input type="text" name="valor"> <br><br>
+    <input type="text" name="nome"> <br><br>
 
     <input type="submit" value="Pesquisar">
   </form>
   <?php
-  if (isset($_GET["valor"]) && !empty($_GET["valor"])) {
-    $valor = $_GET["valor"];
+  if (isset($_GET["nome"]) && !empty($_GET["nome"])) {
+    $nome = $_GET["nome"];
 
     require_once "../codigo/conexao.php";
     require_once "../codigo/funcoes.php";
 
-    $clientes = pesquisarUsuarioNome($conexao, $valor);
-    $agenedamentos = pesquisarAgendamentoId($conexao, $valor);
+    $clientes = pesquisarUsuarioNome($conexao, $nome) ?? [];
+    $agenedamentos = pesquisarAgendamentoId($conexao, $nome) ?? [];
 
     if (count($clientes) == 0 AND count($agenedamentos) == 0) {
       echo "<p>Nenhum cliente encontrado</p>";

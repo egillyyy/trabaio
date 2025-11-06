@@ -377,6 +377,38 @@ function pesquisarAgendamentoId($conexao, $idagendamento) {
 };
 
 /**
+ * Pesquisa todos os agendamentos cadastrados no Banco de Dados
+ *
+ * Retorna uma Pesquisa de todos os agendamentos e dados dos clientes registrados.
+ *
+ * @param mysqli $conexao Conexão com o banco de dados.
+ * @return array Pesquisa de agendamentos com os dados dos clientes.
+ **/
+function pesquisarAgendamentosPorNome($conexao, $nome) {
+    $sql = "SELECT 
+                c.nome,
+                a.data,
+                a.horario,
+                s.nome AS servico
+            FROM tb_agendamento a
+            JOIN tb_cliente c ON a.tb_cliente_id_cliente = c.id_cliente
+            JOIN tb_servico s ON a.tb_servico_id_servico = s.id_servico
+            WHERE c.nome LIKE ?";
+    
+    $comando = mysqli_prepare($conexao, $sql);
+    mysqli_stmt_execute($comando);
+    $resultados = mysqli_stmt_get_result($comando);
+    
+    $agendamentoNome = [];
+    while ($nome = mysqli_fetch_assoc($resultados)) {
+        $agendamentoNome[] = $nome;
+    }
+    mysqli_stmt_close($comando);
+
+    return $agendamentoNome;
+}
+
+/**
  * Deleta um agendamento do Banco de Dados
  *
  * @param mysqli $conexao Conexão com o banco de dados.
