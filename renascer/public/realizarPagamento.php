@@ -64,10 +64,7 @@ if ($idusuario) {
         }
         echo '  </select>
               </div>
-              <div class="mb-3">
-                  <label for="valor" class="form-label">Valor</label>
-                  <input type="text" class="form-control" id="valor" name="valor" required>
-              </div>
+
               <div class="mb-3">
                   <label for="forma_pagamento" class="form-label">Forma de Pagamento</label>
                   <select class="form-select" id="forma_pagamento" name="forma_pagamento" required>
