@@ -21,10 +21,9 @@
     require_once "../codigo/conexao.php";
     require_once "../codigo/funcoes.php";
 
-    $clientes = pesquisarUsuarioNome($conexao, $nome) ?? [];
-    $agenedamentos = pesquisarAgendamentoId($conexao, $nome) ?? [];
+    $agendamentos = pesquisarAgendamentosPorNome($conexao, $nome);  
 
-    if (count($clientes) == 0 AND count($agenedamentos) == 0) {
+    if (count($agendamentos) == 0) {
       echo "<p>Nenhum cliente encontrado</p>";
     } else {
       echo "<br><table border='1'>";
@@ -34,26 +33,18 @@
       echo "<th>Horário</th>";
       echo "<th>Serviço</th>";
       echo "</tr>";
-
-      foreach ($clientes as $cliente) {
-        echo "<tr>";
-        echo "<td>" . $cliente["nome"] . "</td>";
-        echo "<td></td>";   // Não tem data, horário, serviço aqui, então deixa vazio
-        echo "<td></td>";
-        echo "<td></td>";
-        echo "</tr>";
       }
-      foreach ($agenedamentos as $agenedamento) {
+
+      foreach ($agendamentos as $agendamento) {
         echo "<tr>";
-        echo "<td></td>";
-        echo "<td>" . $agenedamento["data"] . "</td>";
-        echo "<td>" . $agenedamento["horario"] . "</td>";
-        echo "<td>" . $agenedamento["tb_servico_id_servico"] . "</td>";
+        echo "<td>" . $agendamento["nome"] . "</td>";
+        echo "<td>" . $agendamento["data"] . "</td>";
+        echo "<td>" . $agendamento["horario"] . "</td>";
+        echo "<td>" . $agendamento["servico"] . "</td>";
         echo "</tr>";
       }
       echo "</table>";
     }
-  }
   ?>
 
 </body>

@@ -386,26 +386,29 @@ function pesquisarAgendamentoId($conexao, $idagendamento) {
  **/
 function pesquisarAgendamentosPorNome($conexao, $nome) {
     $sql = "SELECT 
-                c.nome,
+                u.nome,
                 a.data,
                 a.horario,
-                s.nome AS servico
+                s.tipo_servico AS servico
             FROM tb_agendamento a
-            JOIN tb_cliente c ON a.tb_cliente_id_cliente = c.id_cliente
-            JOIN tb_servico s ON a.tb_servico_id_servico = s.id_servico
-            WHERE c.nome LIKE ?";
+            JOIN tb_usuario u ON a.tb_usuario_idusuario = u.idusuario
+            JOIN tb_servico s ON a.tb_servico_id_servico = s.idservico
+            WHERE u.nome LIKE ?";
     
     $comando = mysqli_prepare($conexao, $sql);
+    $pesquisaNome = "%" . $nome . "%";
+    mysqli_stmt_bind_param($comando, 's', $pesquisaNome);
     mysqli_stmt_execute($comando);
     $resultados = mysqli_stmt_get_result($comando);
-    
-    $agendamentoNome = [];
-    while ($nome = mysqli_fetch_assoc($resultados)) {
-        $agendamentoNome[] = $nome;
+
+    $agendamentos = [];
+    while ($linha = mysqli_fetch_assoc($resultados)) {
+        $agendamentos[] = $linha;
     }
+
     mysqli_stmt_close($comando);
 
-    return $agendamentoNome;
+    return $agendamentos;
 }
 
 /**
