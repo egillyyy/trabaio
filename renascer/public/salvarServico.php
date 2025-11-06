@@ -8,11 +8,15 @@
     $descricao_servico = $_POST['descricao_servico'];
     $idservico = $_POST['idservico'];
 
+    $nome_arquivo = $_FILES['foto']['name'];
+    $caminho_temporario = $_FILES['foto']['tmp_name'];
+
     $servico = pesquisarServicoId($conexao, $idservico);
     $tipo_servico = $servico['tipo_servico'];
 
     $nome_arquivo = $_FILES['foto']['name'];
     $caminho_temporario = $_FILES['foto']['tmp_name'];
+
 
     //pega a extensão do arquivo
     $extensao = pathinfo($nome_arquivo, PATHINFO_EXTENSION);

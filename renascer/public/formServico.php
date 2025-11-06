@@ -34,10 +34,12 @@
                     <h5 class="card-title">' . $servico["tipo_servico"] . '</h5>
                 </div>
                 <div class="card-body">
-                    <p class="card-text">
+                <img src="./fotos_servico/' . $servico["foto"] . '" alt="Imagem do serviço"
+                 class="img-fluid rounded mb-3" style="max-height:200px; object-fit:cover;">
+                   <p class="card-text">
                         <strong>Descrição:</strong> ' . $servico["descricao_servico"] . '<br>
                         <strong>Preço:</strong> R$ ' . $servico["preco_servico"] . '
-                    </p>
+                    </p> 
                     <a href="formAgendamento.php?id_servico=' . $servico["idservico"] . '" class="btn btn-success">
                         Selecionar
                     </a>
