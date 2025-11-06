@@ -1,3 +1,8 @@
+<?php
+    require_once "../codigo/verificarLogado.php";
+    $tipo = $_SESSION['tipo'];
+?>
+
 <!-- EGILLY E MARINA ESSA PAGINA SELECIONA O CLIENTE -->
  <!DOCTYPE html>
  <html lang="en">

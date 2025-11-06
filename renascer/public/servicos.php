@@ -1,3 +1,8 @@
+<?php
+    require_once "../codigo/verificarLogado.php";
+    $tipo = $_SESSION['tipo'];
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>

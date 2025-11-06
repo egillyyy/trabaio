@@ -1,4 +1,9 @@
 <?php
+    require_once "../codigo/verificarLogado.php";
+    $tipo = $_SESSION['tipo'];
+?>
+
+<?php
     require_once "../codigo/conexao.php";
     require_once "../codigo/funcoes.php";
 
