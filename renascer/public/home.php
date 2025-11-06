@@ -29,7 +29,7 @@
 
                     // if ($tipo == 'f' AND $tipo == 'g') {
                     echo "<div class='mb-3'>";
-                    echo "<a href='formBusca.php' class='linksindex' id='agendamentoindex2'>Pesquisar</a> <br>";
+                    echo "<a href='buscaAgendamento.php' class='linksindex' id='agendamentoindex2'>Pesquisar Agendamentos</a> <br>";
                     echo "</div>";
 
                 // if ($tipo == 'f' AND $tipo == 'g') {
