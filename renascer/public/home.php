@@ -83,6 +83,8 @@
                 // }    
             ?>
 
+            <a href="deslogar.php">Sair</a>
+
             </div>
             
         </div>
