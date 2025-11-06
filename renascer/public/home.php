@@ -19,7 +19,6 @@
         <div class="card mx-auto" style="max-width: 800px;">
             <div class="card-body">
                 <h1 class="card-title text-center mb-4" id="colorida" >MENU PRINCIPAL</h1>
-                
             <?php
                     // if ($tipo == 'f' AND $tipo == 'g') {
                     echo "<div class='mb-3'>";
