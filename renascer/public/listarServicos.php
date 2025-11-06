@@ -41,7 +41,7 @@
                 echo "<td>$id</td>";
                 echo "<td>R$ $preco_servico</td>";
                 echo "<td>$tipo_servico</td>";
-                echo "<td><a href='deletarServico.php?id=$id'>Excluir</a></td>";
+                echo "<td><a href='../codigo/deletarServico.php?id=$id'>Excluir</a></td>";
                 echo "<td><a href='editarServico.php?id=$id'>Editar</a></td>";
                 echo "</tr>";
             }
