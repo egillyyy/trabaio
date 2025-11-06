@@ -27,6 +27,11 @@
                     echo "</div>";
                 // }
 
+                    // if ($tipo == 'f' AND $tipo == 'g') {
+                    echo "<div class='mb-3'>";
+                    echo "<a href='formBusca.php' class='linksindex' id='agendamentoindex2'>Pesquisar</a> <br>";
+                    echo "</div>";
+
                 // if ($tipo == 'f' AND $tipo == 'g') {
                     echo "<div class='mb-3'>";
                     echo "<a href='listarAgendamentos.php' class='linksindex' id='agendamentoindex2'>Listar Agendamentos</a> <br>";
