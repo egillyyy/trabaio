@@ -8,11 +8,10 @@
 <head>
     <meta charset="UTF-8">
     <title>Serviços</title>
-    <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body class="fundo-verde">
+<body class="fundo-bege">
   <h1 class="text-center my-4" id = "tituloservicos">Nossos Serviços</h1>
 
   <div class="container">

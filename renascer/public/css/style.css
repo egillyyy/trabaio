@@ -156,7 +156,7 @@ footer {
 /* ****************************************************************IFRAME************************************************ */
 
 .cabecalho {
-    background-color: #4c5b2a;
+    background-color: rgb(96,108,56);
     color: white;
     display: flex;
     justify-content: space-between;
@@ -223,6 +223,10 @@ iframe {
 }
 
 .fundo-verde {
+    background-color: rgb(96,108,56);
+}
+
+#fundo-verde {
     background-color: rgb(96,108,56);
 }
 

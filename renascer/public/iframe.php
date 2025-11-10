@@ -6,7 +6,7 @@
     <title>Ateliê Renascer</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+<body class="fundo-verde">
     <header class="cabecalho">
         <div class="logo">
             <img src="css/logoBranca.png" alt="Logo Ateliê Renascer">
@@ -33,7 +33,7 @@
         </div>
     </header>
 <!-- main significa meioq o conteudo do iframe tlgd? -->
-    <main class="conteudo">
+    <main class="conteudo" id="fundo-verde">
         <iframe src="home.php" name="conteudoFrame" frameborder="0"></iframe>
     </main>
 </body>
