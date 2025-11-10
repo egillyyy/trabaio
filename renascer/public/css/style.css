@@ -26,9 +26,9 @@
 
 body {
   background-color: #fdf9f4; /*se precisar ussa esse*/
-  display: flex; 
+  /* display: flex; 
   justify-content: center;
-  align-items: center; 
+  align-items: center;  */
   height: 100vh; 
 }
 
@@ -154,27 +154,9 @@ footer {
 
 
 /* ****************************************************************IFRAME************************************************ */
-.conteudo {
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
-}
+.botoes {
 
-.conteudo-frame {
-  width: 100%;
-  border: none;
-}
-
-/* Parte de cima (verde) */
-.linkhome {
-  height: 35%; /* ajuste a proporção aqui */
-  background-color: rgb(96,108,56);
-}
-
-/* Parte de baixo (branca) */
-.servicos {
-  height: 65%;
-  background-color: #fdf9f4;
+    text-decoration: none;
 }
 
 
