@@ -26,9 +26,9 @@
 
 body {
   background-color: #fdf9f4; /*se precisar ussa esse*/
-  display: flex; 
+  /* display: flex; 
   justify-content: center;
-  align-items: center; 
+  align-items: center;  */
   height: 100vh; 
 }
 
@@ -154,29 +154,43 @@ footer {
 
 
 /* ****************************************************************IFRAME************************************************ */
-.conteudo {
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
+.botoes {
+    display: flex;
+    background-color: #fdf9f4;
+
+    text-decoration: none;
 }
 
-.conteudo-frame {
-  width: 100%;
-  border: none;
+.cabecalho {
+    background-color: #4c5b2a;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    position: fixed;
+    width: 100%;
+    height: 100px;
+    z-index: 10;
 }
 
-/* Parte de cima (verde) */
-.linkhome {
-  height: 35%; /* ajuste a proporção aqui */
-  background-color: rgb(96,108,56);
+.botoes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: flex-end;
+    max-width: 70%;
 }
 
-/* Parte de baixo (branca) */
-.servicos {
-  height: 65%;
-  background-color: #fdf9f4;
+/* esse "a" é pra selecionar todos os elementos dentro da class botões */
+.botoes a {
+    background-color: white;
+    color: #4c5b2a;
+    text-decoration: none;
+    padding: 8px 15px;
+    border-radius: 20px;
+    /* font-weight: 600; */
 }
-
 
 
 
