@@ -1,8 +1,8 @@
-console.log("✅ JavaScript carregado!");
+console.log("JavaScript carregado!");
 
 // Espera o documento estar pronto
 $(document).ready(function() {
-  console.log("✅ jQuery ativo!");
+  console.log("jQuery ativo!");
 
   const mensagem = $("#mensagem");
 
@@ -12,12 +12,13 @@ $(document).ready(function() {
     const campo = $("#senha");
     const tipo = campo.attr("type") === "password" ? "text" : "password";
     campo.attr("type", tipo);
+    // TEM QWUE ARRUMAR ISSO
     $(this).text(tipo === "password" ? "👁️" : "🙈");
   });
 
   // ========== LOGIN ==========
   if ($("#formLogin").length) {
-    console.log("🟢 Tela de login detectada!");
+    console.log("Tela de login detectada!");
 
     // Validação ao sair do campo de e-mail
     $("#email").on("blur", function() {
@@ -63,7 +64,7 @@ $(document).ready(function() {
 
   // ========== CRIAR CONTA ==========
   if ($("#formCriarConta").length) {
-    console.log("🟢 Tela de criar conta detectada!");
+    console.log("Tela de criar conta detectada!");
 
     // Aplica máscara no telefone
     $("#telefone").mask("(00) 00000-0000");
