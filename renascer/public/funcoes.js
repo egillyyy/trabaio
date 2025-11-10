@@ -1,43 +1,130 @@
-// Mostra uma mensagem no console pra testar se o JS está funcionando
-function teste() {
-  console.log("JavaScript conectado!");
-}
+console.log("✅ JavaScript carregado!");
 
-// Mostrar ou ocultar senha
-function mostrarSenha() {
-  let campo = document.getElementById("senha");
-  if (campo.type === "password") {
-    campo.type = "text";
-  } else {
-    campo.type = "password";
+// Espera o documento estar pronto
+$(document).ready(function() {
+  console.log("✅ jQuery ativo!");
+
+  const mensagem = $("#mensagem");
+
+  // Mostrar / ocultar senha (em ambos os formulários)
+  $("#verSenha").on("click", function(e) {
+    e.preventDefault();
+    const campo = $("#senha");
+    const tipo = campo.attr("type") === "password" ? "text" : "password";
+    campo.attr("type", tipo);
+    $(this).text(tipo === "password" ? "👁️" : "🙈");
+  });
+
+  // ========== LOGIN ==========
+  if ($("#formLogin").length) {
+    console.log("🟢 Tela de login detectada!");
+
+    // Validação ao sair do campo de e-mail
+    $("#email").on("blur", function() {
+      let email = $(this).val().trim();
+
+      if (email === "") {
+        mensagem.text("O e-mail não pode ficar vazio.");
+      } else if (!email.includes("@")) {
+        mensagem.text("Digite um e-mail válido (exemplo@gmail.com).");
+      } else if (!email.endsWith("@gmail.com")) {
+        mensagem.text("Apenas e-mails @gmail.com são aceitos.");
+      } else {
+        mensagem.text("");
+      }
+    });
+
+    // Validação ao enviar o formulário
+    $("#formLogin").on("submit", function(e) {
+      let email = $("#email").val().trim();
+      let senha = $("#senha").val().trim();
+
+      if (email === "" || senha === "") {
+        e.preventDefault();
+        mensagem.text("Preencha todos os campos.");
+        return;
+      }
+
+      if (!email.includes("@") || !email.endsWith("@gmail.com")) {
+        e.preventDefault();
+        mensagem.text("Digite um e-mail válido que termine com @gmail.com.");
+        return;
+      }
+
+      if (senha.length < 3) {
+        e.preventDefault();
+        mensagem.text("A senha deve ter pelo menos 3 caracteres.");
+        return;
+      }
+
+      mensagem.text("");
+    });
   }
-}
 
-// Verifica se o formulário foi preenchido corretamente antes de enviar
-function validarLogin() {
-  let email = document.getElementById("email").value;
-  let senha = document.getElementById("senha").value;
-  let mensagem = document.getElementById("mensagem");
+  // ========== CRIAR CONTA ==========
+  if ($("#formCriarConta").length) {
+    console.log("🟢 Tela de criar conta detectada!");
 
-  if (email === "" || senha === "") {
-    mensagem.innerText = "Por favor, preencha todos os campos.";
-    mensagem.style.color = "red";
-    return false; // Impede o envio
+    // Aplica máscara no telefone
+    $("#telefone").mask("(00) 00000-0000");
+
+    // Bloqueia letras no telefone
+    $("#telefone").on("input", function() {
+      let valor = $(this).val().replace(/[^0-9]/g, "");
+      if (isNaN(valor)) {
+        mensagem.text("O telefone deve conter apenas números.");
+      } else {
+        mensagem.text("");
+      }
+    });
+
+    // Validação de e-mail (ao sair do campo)
+    $("#email").on("blur", function() {
+      let email = $(this).val().trim();
+
+      if (email === "") {
+        mensagem.text("O campo de e-mail não pode ficar vazio.");
+      } else if (!email.includes("@")) {
+        mensagem.text("Digite um e-mail válido (exemplo@gmail.com).");
+      } else if (!email.endsWith("@gmail.com")) {
+        mensagem.text("Apenas e-mails @gmail.com são aceitos.");
+      } else {
+        mensagem.text("");
+      }
+    });
+
+    // Validação antes de enviar
+    $("#formCriarConta").on("submit", function(e) {
+      let nome = $("#nome").val().trim();
+      let telefone = $("#telefone").val().trim();
+      let email = $("#email").val().trim();
+      let senha = $("#senha").val().trim();
+
+      if (nome === "" || telefone === "" || email === "" || senha === "") {
+        e.preventDefault();
+        mensagem.text("Por favor, preencha todos os campos.");
+        return;
+      }
+
+      if (!email.includes("@") || !email.endsWith("@gmail.com")) {
+        e.preventDefault();
+        mensagem.text("Digite um e-mail válido que termine com @gmail.com.");
+        return;
+      }
+
+      if (senha.length < 3) {
+        e.preventDefault();
+        mensagem.text("A senha deve ter pelo menos 3 caracteres.");
+        return;
+      }
+
+      if (telefone.length < 14) {
+        e.preventDefault();
+        mensagem.text("Digite um telefone válido no formato (00) 00000-0000.");
+        return;
+      }
+
+      mensagem.text("");
+    });
   }
-
-  if (!email.includes("@")) {
-    mensagem.innerText = "Digite um e-mail válido.";
-    mensagem.style.color = "red";
-    return false;
-  }
-
-  if (senha.length < 4) {
-    mensagem.innerText = "A senha deve ter pelo menos 4 caracteres.";
-    mensagem.style.color = "red";
-    return false;
-  }
-
-  // Se tudo estiver ok
-  mensagem.innerText = "";
-  return true;
-}
+});
