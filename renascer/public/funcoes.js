@@ -1,24 +1,43 @@
+// Mostra uma mensagem no console pra testar se o JS está funcionando
 function teste() {
-    console.log("testeeeeee");
+  console.log("JavaScript conectado!");
 }
 
-function calcular() {
-    let quantidade1 = document.getElementById('quantidade[1]').value;
-    let preco1 = document.getElementById('preco[1]').innerHTML;
-    
-    let total = quantidade1 * preco1;
-    
-    let quantidade3 = document.getElementById('quantidade[3]').value;
-    let preco3 = document.getElementById('preco[3]').innerHTML;
-    
-    total = total + (quantidade3 * preco3);
-    
-    document.getElementById('valor_total').value = total;
-    document.getElementById('total').innerHTML = total;
-    console.log("finalizou...");
+// Mostrar ou ocultar senha
+function mostrarSenha() {
+  let campo = document.getElementById("senha");
+  if (campo.type === "password") {
+    campo.type = "text";
+  } else {
+    campo.type = "password";
+  }
 }
 
-function aviso() {
-    // alert("oi");
-    console.log("oi");
+// Verifica se o formulário foi preenchido corretamente antes de enviar
+function validarLogin() {
+  let email = document.getElementById("email").value;
+  let senha = document.getElementById("senha").value;
+  let mensagem = document.getElementById("mensagem");
+
+  if (email === "" || senha === "") {
+    mensagem.innerText = "Por favor, preencha todos os campos.";
+    mensagem.style.color = "red";
+    return false; // Impede o envio
+  }
+
+  if (!email.includes("@")) {
+    mensagem.innerText = "Digite um e-mail válido.";
+    mensagem.style.color = "red";
+    return false;
+  }
+
+  if (senha.length < 4) {
+    mensagem.innerText = "A senha deve ter pelo menos 4 caracteres.";
+    mensagem.style.color = "red";
+    return false;
+  }
+
+  // Se tudo estiver ok
+  mensagem.innerText = "";
+  return true;
 }
