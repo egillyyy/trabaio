@@ -155,10 +155,42 @@ footer {
 
 /* ****************************************************************IFRAME************************************************ */
 .botoes {
+    display: flex;
+    background-color: #fdf9f4;
 
     text-decoration: none;
 }
 
+.cabecalho {
+    background-color: #4c5b2a;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    position: fixed;
+    width: 100%;
+    height: 100px;
+    z-index: 10;
+}
+
+.botoes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: flex-end;
+    max-width: 70%;
+}
+
+/* esse "a" é pra selecionar todos os elementos dentro da class botões */
+.botoes a {
+    background-color: white;
+    color: #4c5b2a;
+    text-decoration: none;
+    padding: 8px 15px;
+    border-radius: 20px;
+    /* font-weight: 600; */
+}
 
 
 
