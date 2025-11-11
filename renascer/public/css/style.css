@@ -457,6 +457,30 @@ iframe {
     color: #ddb141;
 }
 
+#cadastroS {
+    height: 150%;
+    width: 40%;
+}
+
+.titulocadasS{
+    text-align: center;
+    top: 10px;
+    font-family: lamoric;
+    color: #000000;
+    cursor: default;
+    font-size: 50px
+
+}
+
+#body-Cservico{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: rgb(96, 108, 56);
+
+}
+
 
 /* ****************************************************************MARILENE************************************************ */
 
