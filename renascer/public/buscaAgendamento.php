@@ -1,6 +1,6 @@
 <?php
-    require_once "../codigo/verificarLogado.php";
-    $tipo = $_SESSION['tipo'];
+require_once "../codigo/verificarLogado.php";
+$tipo = $_SESSION['tipo'];
 
 require_once "../codigo/conexao.php";
 require_once "../codigo/funcoes.php";
@@ -39,7 +39,7 @@ require_once "../codigo/funcoes.php";
       require_once "../codigo/conexao.php";
       require_once "../codigo/funcoes.php";
 
-      $agendamentos = pesquisarAgendamentosPorNome($conexao, $nome);  
+      $agendamentos = pesquisarAgendamentosPorNome($conexao, $nome);
 
       if (count($agendamentos) == 0) {
         echo "<p>Nenhum cliente encontrado</p>";
@@ -52,20 +52,23 @@ require_once "../codigo/funcoes.php";
         echo "<th>Horário</th>";
         echo "<th>Serviço</th>";
         echo "</tr></thead><tbody>";
-        }
-
-        foreach ($agendamentos as $agendamento) {
-          echo "<tr>";
-          echo "<td>" . $agendamento["nome"] . "</td>";
-          echo "<td>" . $agendamento["data"] . "</td>";
-          echo "<td>" . $agendamento["horario"] . "</td>";
-          echo "<td>" . $agendamento["servico"] . "</td>";
-          echo "</tr>";
-        }
-        echo "</tbody></table></div>";
       }
-      ?>
+
+      foreach ($agendamentos as $agendamento) {
+        echo "<tr>";
+        echo "<td>" . $agendamento["nome"] . "</td>";
+        echo "<td>" . $agendamento["data"] . "</td>";
+        echo "<td>" . $agendamento["horario"] . "</td>";
+        echo "<td>" . $agendamento["servico"] . "</td>";
+        echo "</tr>";
+      }
+      echo "</tbody></table></div>";
+    }
+    ?>
   </div>
+
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="funcoes.js"></script>
 </body>
 
 </html>

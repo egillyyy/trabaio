@@ -122,3 +122,12 @@ $(document).ready(function () {
     });
   }
 });
+
+// Bloquear números no campo "nome"
+$(function () {
+  $("#nome").on("input", function () {
+    const apenasLetras = $(this).val().replace(/[^a-zA-ZÀ-ÿ\s]/g, "");
+    $(this).val(apenasLetras);
+    $("#mensagem").text(apenasLetras.length < $(this).val().length ? "Somente letras são permitidas." : "");
+  });
+});
