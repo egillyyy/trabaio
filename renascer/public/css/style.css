@@ -337,7 +337,7 @@ iframe {
 }
 
 .card-servico img {
-    height: 500px;
+    height: 380px;
     object-fit: cover;
 }
 
@@ -403,7 +403,7 @@ iframe {
     font-family: lamoric;
     color: #000000;
     cursor: default;
-    font-size: 70px;
+    font-size: 50px;
 }
 
 .colorida {
