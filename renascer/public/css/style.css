@@ -455,7 +455,6 @@ iframe {
     letter-spacing: 2px;
 }
 
-/* Dourado destacado no subtítulo */
 .selecionarS .colorida {
     color: #ddb141;
 }
@@ -478,8 +477,8 @@ iframe {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh; /* ocupa a altura toda da tela */
-    background-color: rgb(96, 108, 56); /* mantém o fundo verde */
+    height: 100vh; 
+    background-color: rgb(96, 108, 56); 
 }
 
 #cadastroS {
@@ -488,7 +487,22 @@ iframe {
     text-align: center;
 }
 
+.realizarP{
+    text-align: center;
+    top: 10px;
+    font-family: lamoric;
+    color: #000000;
+    cursor: default;
+}
 
+#tituloreaP{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; 
+    background-color: rgb(96, 108, 56); 
+
+}
 
 
 /* ****************************************************************MARILENE************************************************ */

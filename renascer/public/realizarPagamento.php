@@ -30,10 +30,10 @@ if ($idusuario) {
     <link rel="stylesheet" href="css/style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
-<body class="fundo-verde">
-    <h1 class="card-title text-center mb-4" id="titulopagamento">Realizar Pagamento</h1>
+<body class="fundo-verde" id="tituloreaP">
 
     <form method="GET" action="realizarPagamento.php" class="card card-agendamento p-4 shadow mb-3">
+        <h1 class="realizarP">Realizar Pagamento</h1>
         <div class="mb-3">
             <label for="idusuario" class="form-label">Selecione o Cliente</label>
             <select class="form-select" id="idusuario" name="idusuario" onchange="this.form.submit()">
