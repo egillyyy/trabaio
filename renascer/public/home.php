@@ -35,5 +35,10 @@
     <main class="conteudo" id="fundo-verde">
         <iframe src="servicos.php" name="conteudoFrame" frameborder="0"></iframe>
     </main>
+<footer>
+    <?php
+    require_once "rodape.php";
+    ?>
+</footer>  
 </body>
 </html>
