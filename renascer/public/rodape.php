@@ -16,7 +16,6 @@
     <ul>
       <h4>Páginas</h4>
       <li><a href="index.php">Login</a></li>
-      <li><a href="home.html">Home</a></li>
       <li><a href="servicos.php">Unhas</a></li>
       <li><a href="servicos.php">Cabelos</a></li>
       <li><a href="servicos.php">Maquiagem</a></li>
@@ -26,7 +25,6 @@
     <ul>
       <h4>Sobre nós</h4>
       <li><a href="marilene.html">Informação do salão</a></li>
-      <li><a href="#">Contato</a></li>
     </ul>
   </div>
 
@@ -35,11 +33,7 @@
   </div>
 
   <div class="footer-social">
-    <a href="#"><i class="fab fa-whatsapp"></i></a>
-    <a href="#"><i class="fab fa-instagram"></i></a>
-    <a href="#"><i class="fab fa-facebook"></i></a>
-    <br>
-    <a href="deslogar.php" class="footer-button">Deslogar</a>
+    <button type="submit"> <a class="linkBranco" href="deslogar.php">Deslogar</a></button>
   </div>
 </footer>
 
