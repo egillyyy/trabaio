@@ -22,10 +22,11 @@ $id_servico_selecionado = isset($_GET['id_servico']) ? $_GET['id_servico'] : nul
     <title>Agendamento</title>
 </head>
 
-<body class="fundo-verde">
-    <h1 class="card-title text-center mb-4" id="tituloagendamento">Agendamento</h1>
+<body class="fundo-verde" id="body-agendamento">
 
-    <form action="salvarAgendamento.php" method="post" class="card card-agendamento p-4 shadow">
+
+    <form id="formA" action="salvarAgendamento.php" method="post" class="card card-agendamento p-4 shadow">
+        <h1 class="tituloagendamento">Agendamento</h1>
 
         <div class="mb-3">
             <label for="data" class="form-label">Data</label>
@@ -65,7 +66,7 @@ $id_servico_selecionado = isset($_GET['id_servico']) ? $_GET['id_servico'] : nul
             </select>
         </div> <br>
 
-        <button type="submit" class="btn btn w-100" id="teste1l">Salvar Agendamento</button>
+        <button type="submit" class="btn btn-dark w-100" id="teste1l">Salvar Agendamento</button>
     </form>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="funcoes.js"></script>

@@ -312,7 +312,7 @@ iframe {
 
 }
 
-/* ****************************************************************TÍTULOS************************************************ */
+/* ****************************************************************FORMS************************************************ */
 #titulopagamento{
     position: absolute;
     top: 100px;
@@ -321,12 +321,12 @@ iframe {
     cursor: default;
 }
 
-#tituloagendamento{
-    position: absolute;
+.tituloagendamento{
     top: 70px;
     font-family: lamoric;
-    color: #ddb141;
+    color: #000000;
     cursor: default;
+    text-align: center;
 }
 
 #titulopagamento{
@@ -381,6 +381,25 @@ iframe {
     color: #ddb141;
     font-family: lamoric;
 
+}
+
+#formA{
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 20px;
+    width: 100%;
+    max-width: 500px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    border: 2px solid #556b2f;
+    
+}
+
+#body-agendamento {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; 
+    background-color: rgb(96,108,56);
 }
 
 /* ****************************************************************MARILENE************************************************ */
