@@ -23,7 +23,6 @@
             <div class="linkframe"><a href="listarUsuarios.php" target="conteudoFrame">Listar Usuários</a></div>
             <div class="linkframe"><a href="criarServico.php" target="conteudoFrame">Criar Serviço</a></div>
             <div class="linkframe"><a href="formAgendamento.php" target="conteudoFrame">Formulário de Agendamento</a></div>
-            <div class="linkframe"><a href="rodape.html" target="conteudoFrame">Rodapé</a></div>
             <div class="linkframe"><a href="servicos.php" target="conteudoFrame">Selecionar Serviço</a></div>
             <div class="linkframe"><a href="realizarPagamento.php" target="conteudoFrame">Realizar Pagamento</a></div>
             <!-- <div class="linkframe"><a href="sucesso.html" target="conteudoFrame">Sucesso</a></div> -->
