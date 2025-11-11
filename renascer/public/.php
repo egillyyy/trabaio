@@ -14,7 +14,7 @@
         </div>
 
         <div class="botoes">
-            <div class="linkframe"><a href="home.php" target="conteudoFrame">Home</a></div>
+            <div class="linkframe"><a href="servicos.php" target="conteudoFrame">Selecionar Serviço</a></div>
             <div class="linkframe"><a href="buscaAgendamento.php" target="conteudoFrame">Pesquisar Agendamentos</a></div>
             <div class="linkframe"><a href="formUsuario.php" target="conteudoFrame">Adicionar Usuário</a></div>
             <div class="linkframe" ><a href="listarAgendamentos.php" target="conteudoFrame">Listar Agendamentos</a></div>
