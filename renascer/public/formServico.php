@@ -8,17 +8,14 @@
 
 <head>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="./css/style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulário de Serviço</title>
 </head>
 
 <body>
-
-
-
-    <h1 class="selecionarS text-center mt-4 mb-5">Selecionar <span class="colorida">Serviço</span></h1>
+    <h1 class="selecionarS">Selecione um serviço</h1>
     <?php
 
     require_once "../codigo/conexao.php";
