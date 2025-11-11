@@ -20,8 +20,6 @@ $tipos = listarUsuario($conexao);
 </head>
 
 <body class="fundo-verde">
-  <h1 class="letra-dourada text-center mt-3">Ateliê Renascer</h1>
-
   <div class="container mt-4">
     <div class="card mx-auto shadow" style="max-width: 400px;">
       <div class="card-body">
