@@ -18,10 +18,10 @@
 
 /* ****************************************************************SUCESSO************************************************ */
 * {
-  margin: 0; 
-  padding: 0; 
-  box-sizing: border-box; 
-  font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
 }
 
 
@@ -31,133 +31,133 @@
     width: 350px;
 
     overflow: hidden;
-    border: 2px solid rgb(96,108,56);
-  }
-  
+    border: 2px solid rgb(96, 108, 56);
+}
+
 
 
 .card-corzinha {
-  background-color: rgb(96,108,56); 
-  color: #fff; 
-  padding: 20px; 
-  border-top-left-radius: 18px; 
-  border-top-right-radius: 18px;
+    background-color: rgb(96, 108, 56);
+    color: #fff;
+    padding: 20px;
+    border-top-left-radius: 18px;
+    border-top-right-radius: 18px;
 }
 
 .card-corzinha h2 {
-  font-size: 18px;
-  margin-top: 10px; 
+    font-size: 18px;
+    margin-top: 10px;
 }
 
 .card-body {
-  padding: 20px; 
-  font-size: 15px; 
-  line-height: 1.5; 
+    padding: 20px;
+    font-size: 15px;
+    line-height: 1.5;
 }
 
 button {
-  background-color:rgb(96,108,56); 
-  color: white; 
-  border: none; 
-  padding: 10px 20px; 
-  border-radius: 25px; 
-  font-size: 14px;
-  margin-top: 15px; 
+    background-color: rgb(96, 108, 56);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-size: 14px;
+    margin-top: 15px;
 }
 
-.linkBranco{
+.linkBranco {
     text-decoration: none;
     color: white;
 }
 
 .body-sucesso {
     display: flex;
-    justify-content: center;   
-    align-items: center;       
-    height: 100vh;             
-    background-color: rgb(96,108,56); 
-  }
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: rgb(96, 108, 56);
+}
 
 /* ****************************************************************RODAPÉ************************************************ */
 footer {
-    background-color: rgb(96,108,56);
-    color: #fff; 
-    display: flex; 
+    background-color: rgb(96, 108, 56);
+    color: #fff;
+    display: flex;
     justify-content: space-around;
-    align-items: center; 
-    padding: 30px; 
+    align-items: center;
+    padding: 30px;
     flex-wrap: wrap;
 }
 
 .footer-logo {
-    flex: 1; 
-    text-align: center; 
+    flex: 1;
+    text-align: center;
 }
 
 .footer-logo img {
-    max-width: 220px; 
+    max-width: 220px;
 }
 
 .footer-links {
-    flex: 2; 
-    display: flex; 
-    justify-content: space-around; 
+    flex: 2;
+    display: flex;
+    justify-content: space-around;
 }
 
 .footer-links ul {
-    list-style: none; 
-    padding: 0; 
+    list-style: none;
+    padding: 0;
 }
 
 .footer-links h4 {
-    font-size: 16px; 
-    margin-bottom: 10px; 
+    font-size: 16px;
+    margin-bottom: 10px;
     font-weight: bold;
 }
 
 .footer-links a {
-    color: #fdf9f4; 
-    text-decoration: none; 
-    display: block; 
-    margin-bottom: 5px; 
+    color: #fdf9f4;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 5px;
 }
 
 .footer-quote {
     flex: 2;
-    font-style: italic; 
-    font-size: 14px; 
-    text-align: center; 
-    margin: 15px 0; 
+    font-style: italic;
+    font-size: 14px;
+    text-align: center;
+    margin: 15px 0;
 }
 
 .footer-social {
-    flex: 1; 
-    text-align: center; 
+    flex: 1;
+    text-align: center;
 }
 
 /* Ícones  (ex: WhatsApp, Instagram, Facebook) */
 .footer-social a {
-    margin: 0 8px; 
-    color: #fff; 
-    font-size: 20px; 
+    margin: 0 8px;
+    color: #fff;
+    font-size: 20px;
 }
 
 .footer-button {
     display: inline-block;
-    padding: 10px 20px; 
-    background-color: #fff; 
-    color: rgb(96,108,56); 
-    border-radius: 25px; 
-    font-weight: bold; 
+    padding: 10px 20px;
+    background-color: #fff;
+    color: rgb(96, 108, 56);
+    border-radius: 25px;
+    font-weight: bold;
     margin-top: 10px;
-    text-decoration: none; 
+    text-decoration: none;
 }
 
 
 /* ****************************************************************IFRAME************************************************ */
 
 .cabecalho {
-    background-color: rgb(96,108,56);
+    background-color: rgb(96, 108, 56);
     color: white;
     display: flex;
     justify-content: space-between;
@@ -167,6 +167,7 @@ footer {
     height: 100px;
     z-index: 10;
 }
+
 /* esse flex-wrap meio q quebra a linha dos liunks pra eles irem pra baixp */
 .botoes {
     display: flex;
@@ -208,7 +209,7 @@ iframe {
     display: flex;
     align-items: center;
     gap: 15px;
-} 
+}
 
 .logo img {
     height: 60px;
@@ -220,16 +221,16 @@ iframe {
 
 /* ****************************************************************FUNDOS************************************************ */
 #fundo2 {
-    background-color:rgb(254,250,224);
+    background-color: rgb(254, 250, 224);
 
 }
 
 .fundo-verde {
-    background-color: rgb(96,108,56);
+    background-color: rgb(96, 108, 56);
 }
 
 #fundo-verde {
-    background-color: rgb(96,108,56);
+    background-color: rgb(96, 108, 56);
 }
 
 .fundo-verde3 {
@@ -245,23 +246,23 @@ iframe {
 }
 
 .letra-dourada {
-  color: #d4af37; 
-  position: absolute;
-  z-index: 10;
-  margin-left: 20px;
-  margin-top: -500px;
-  font-size: 400%;
-  font-family: lamoric;
+    color: #d4af37;
+    position: absolute;
+    z-index: 10;
+    margin-left: 20px;
+    margin-top: -500px;
+    font-size: 400%;
+    font-family: lamoric;
 }
 
 .letra-normal {
-  color: #000000; 
-  position: absolute;
-  z-index: 10;
-  margin-left: 20px;
-  margin-top: -500px;
-  font-size: 400%;
-  font-family: lamoric;
+    color: #000000;
+    position: absolute;
+    z-index: 10;
+    margin-left: 20px;
+    margin-top: -500px;
+    font-size: 400%;
+    font-family: lamoric;
 }
 
 #fonte {
@@ -277,43 +278,77 @@ iframe {
 
 
 .card-agendamento {
-  max-width: 500px;
-  width: 100%;
-  border-radius: 20px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-  border: 2px solid #556b2f;
+    max-width: 500px;
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    border: 2px solid #556b2f;
 }
 
 
-#divcards-unhas{
+#divcards-unhas {
     position: absolute;
     margin-left: -100px;
     top: 90px;
 }
 
-#divcards-cabelos{
+#divcards-cabelos {
     position: absolute;
     margin-left: 300px;
-        top: 90px;
+    top: 90px;
 
 }
 
-#divcards-maquiagem{
+#divcards-maquiagem {
     position: absolute;
     margin-left: 670px;
     top: 90px;
 
 }
 
-#divcards-especial{
+#divcards-especial {
     position: absolute;
-    margin-left:  1050px;
+    margin-left: 1050px;
     top: 90px;
 
 }
 
+.card-servico {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transition: transform 0.2s ease-in-out;
+}
+
+.card-servico .card-body {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+  }
+  
+/* animacao bonitinha isso aq */
+.card-servico:hover {
+    transform: scale(1.03);
+}
+
+.card-servico img {
+    height: 500px;
+    object-fit: cover;
+}
+
+.card-servico a {
+    color: inherit;
+    text-decoration: none;
+    display: block;
+    height: 100%;
+  }
 /* ****************************************************************FORMS************************************************ */
-#titulopagamento{
+#titulopagamento {
     position: absolute;
     top: 100px;
     font-family: lamoric;
@@ -321,7 +356,7 @@ iframe {
     cursor: default;
 }
 
-.tituloagendamento{
+.tituloagendamento {
     top: 70px;
     font-family: lamoric;
     color: #000000;
@@ -329,7 +364,7 @@ iframe {
     text-align: center;
 }
 
-#titulopagamento{
+#titulopagamento {
     position: absolute;
     top: 105px;
     font-family: lamoric;
@@ -337,7 +372,7 @@ iframe {
     cursor: default;
 }
 
-.pesquisarA{
+.pesquisarA {
     top: 105px;
     font-family: lamoric;
     color: #000000;
@@ -345,7 +380,7 @@ iframe {
 
 }
 
-.tituloConta{
+.tituloConta {
     top: 105px;
     font-family: lamoric;
     color: #030303;
@@ -353,37 +388,36 @@ iframe {
     text-align: center;
 
 }
-.listarU{
+
+.listarU {
 
     font-family: lamoric;
     color: #ffffff;
     cursor: default;
     text-align: center;
-
-
-
 }
 
-#tituloservicos{
-    position: absolute;
+#tituloservicos {
+    text-align: center;
     top: 10px;
     font-family: lamoric;
-    color: #ddb141;
+    color: #000000;
     cursor: default;
+    font-size: 70px;
 }
 
-.colorida{
+.colorida {
     color: #ddb141;
     font-family: lamoric;
 }
 
-#colorida{
+#colorida {
     color: #ddb141;
     font-family: lamoric;
 
 }
 
-#formA{
+#formA {
     background-color: #fff;
     padding: 30px;
     border-radius: 20px;
@@ -391,33 +425,31 @@ iframe {
     max-width: 500px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
     border: 2px solid #556b2f;
-    
+
 }
 
 #body-agendamento {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh; 
-    background-color: rgb(96,108,56);
+    height: 100vh;
+    background-color: rgb(96, 108, 56);
 }
 
 /* ****************************************************************MARILENE************************************************ */
 
-.marilenetexto{
+.marilenetexto {
     position: absolute;
     margin-top: -60px;
     font-family: lamoric;
     color: #bec092;
 }
 
-.marilenediv{
-   font-family: marina;
-   position: absolute;
-   height: auto;
-   width: 900px;
+.marilenediv {
+    font-family: marina;
+    position: absolute;
+    height: auto;
+    width: 900px;
 
 
 }
-
-
