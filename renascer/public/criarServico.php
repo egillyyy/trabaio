@@ -49,11 +49,6 @@ if (isset($_GET['id'])) {
             </div>
 
             <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="tipo_servico" id="penteado" value="Penteado">
-                <label class="form-check-label" for="penteado">Penteado</label>
-            </div>
-
-            <div class="form-check form-check-inline">
                 <input class="form-check-input" type="radio" name="tipo_servico" id="maquiagem" value="Maquiagem" required>
                 <label class="form-check-label" for="maquiagem">Maquiagem</label>
             </div>
