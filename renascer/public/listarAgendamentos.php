@@ -27,7 +27,7 @@
         echo "Não existem agendamentos cadastrados.";
     } else {
     ?>
-        <table class="table table-success table-striped">
+        <table class="table">
             <thead>
                 <th scope="col">ID</th>
                 <th scope="col">Data</th>

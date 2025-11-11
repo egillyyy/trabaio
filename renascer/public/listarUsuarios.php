@@ -27,37 +27,44 @@
         echo "Não existem usuários cadastrados.";
     } else {
     ?>
-        <table class="table table-success table-striped">
-            <tr>
-                <th>ID</th>
-                <th>Email</th>
-                <th>Nome</th>
-                <th>Telefone</th>
-                <th colspan="2">Ações</th>
-            </tr>
-            <?php
-            foreach ($lista_usuario as $usuario) {
-                $id = $usuario['idusuario'];
-                $email = $usuario['email'];
-                $nome = $usuario['nome'];
-                $telefone = $usuario['telefone'];
+            <div class="table">
+                <table class="table">
+                    <thead class="table-success text-center">
+                        <tr>
+                            <th scope="col">ID</th>
+                            <th scope="col">Email</th>
+                            <th scope="col">Nome</th>
+                            <th scope="col">Telefone</th>
+                            <th scope="col" colspan="2">Ações</th>
+                        </tr>
+                    </thead>
+                    <tbody class="text-center">
+                        <?php
+                        foreach ($lista_usuario as $usuario) {
+                            $id = $usuario['idusuario'];
+                            $email = $usuario['email'];
+                            $nome = $usuario['nome'];
+                            $telefone = $usuario['telefone'];
 
-                echo "<tr>";
-                echo "<td>$id</td>";
-                echo "<td>$email</td>";
-                echo "<td>$nome</td>";
-                echo "<td>$telefone</td>";
-                echo "<td><a href='deletarusuario.php?id=$id'>Excluir</a></td>";
-                echo "<td><a href='formUsuario.php?id=$id'>Editar</a></td>";
-                echo "</tr>";
-            }
+                            echo "<tr>";
+                            echo "<td>$id</td>";
+                            echo "<td>$email</td>";
+                            echo "<td>$nome</td>";
+                            echo "<td>$telefone</td>";
+                            echo "<td><a href='deletarusuario.php?id=$id'>Excluir</a></td>";
+                            echo "<td><a href='formUsuario.php?id=$id'>Editar</a></td>";
+                            echo "</tr>";
+                        }
+                        ?>
+                    </tbody>
+                </table>
+            </div>
+        <?php
+        }
+        ?>
+    </div>
 
-            ?>
-        </table>
-    <?php
-    }
-    ?>
-  
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
 
