@@ -12,7 +12,7 @@ $tipo = $_SESSION['tipo'];
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 
-    <title>pagamentp</title>
+    <title>Listar Pagamento</title>
 </head>
 
 <body class="fundo-verde">
@@ -30,7 +30,7 @@ $tipo = $_SESSION['tipo'];
     } else {
     ?>
         <div class="table">
-            <table class="table table-success table-striped">
+            <table class="table">
                 <thead class="text-center">
                     <tr>
                         <th scope="col">ID</th>

@@ -46,7 +46,7 @@ require_once "../codigo/funcoes.php";
         echo "<p>Nenhum cliente encontrado</p>";
       } else {
         echo "<div class='table-responsive'>";
-        echo "<table class='table table-success table-striped mx-auto' style='width:80%;'>";
+        echo "<table class='table'>";
         echo "<thead><tr>";
         echo "<th>Nome</th>";
         echo "<th>Data</th>";
