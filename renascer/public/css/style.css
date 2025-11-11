@@ -380,6 +380,12 @@ iframe {
 
 }
 
+.titulo-home {
+    font-family: lamoric;
+    color: #ffffff;
+
+
+}
 .tituloConta {
     top: 105px;
     font-family: lamoric;
@@ -434,6 +440,15 @@ iframe {
     align-items: center;
     height: 100vh;
     background-color: rgb(96, 108, 56);
+}
+.selecionarS{
+    text-align: center;
+    top: 10px;
+    font-family: lamoric;
+    color: #000000;
+    cursor: default;
+    font-size: 50px;
+
 }
 
 /* ****************************************************************MARILENE************************************************ */

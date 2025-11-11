@@ -10,7 +10,7 @@
     <header class="cabecalho">
         <div class="logo">
             <img src="css/logoBranca.png" alt="Logo Ateliê Renascer">
-            <h1>Ateliê Renascer</h1>
+            <h1 class="titulo-home">Ateliê Renascer</h1>
         </div>
 
         <div class="botoes">
