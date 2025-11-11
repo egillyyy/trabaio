@@ -474,9 +474,21 @@ iframe {
     font-size: 50px
 }
 
-#cadastrosS{
+#body-Cservico {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* ocupa a altura toda da tela */
+    background-color: rgb(96, 108, 56); /* mantém o fundo verde */
+}
+
+#cadastroS {
+    width: 100%;
+    max-width: 450px;
     text-align: center;
 }
+
+
 
 
 /* ****************************************************************MARILENE************************************************ */
