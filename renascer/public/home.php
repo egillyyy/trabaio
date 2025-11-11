@@ -14,7 +14,6 @@
         </div>
 
         <div class="botoes">
-            <div class="linkframe"><a href="home.php" target="conteudoFrame">Home</a></div>
             <div class="linkframe"><a href="buscaAgendamento.php" target="conteudoFrame">Pesquisar Agendamentos</a></div>
             <div class="linkframe"><a href="formUsuario.php" target="conteudoFrame">Adicionar Usuário</a></div>
             <div class="linkframe" ><a href="listarAgendamentos.php" target="conteudoFrame">Listar Agendamentos</a></div>
@@ -27,14 +26,14 @@
             <div class="linkframe"><a href="rodape.html" target="conteudoFrame">Rodapé</a></div>
             <div class="linkframe"><a href="servicos.php" target="conteudoFrame">Selecionar Serviço</a></div>
             <div class="linkframe"><a href="realizarPagamento.php" target="conteudoFrame">Realizar Pagamento</a></div>
-            <div class="linkframe"><a href="sucesso.html" target="conteudoFrame">Sucesso</a></div>
+            <!-- <div class="linkframe"><a href="sucesso.html" target="conteudoFrame">Sucesso</a></div> -->
 
 
         </div>
     </header>
 <!-- main significa meioq o conteudo do iframe tlgd? -->
     <main class="conteudo" id="fundo-verde">
-        <iframe src="home.php" name="conteudoFrame" frameborder="0"></iframe>
+        <iframe src="servicos.php" name="conteudoFrame" frameborder="0"></iframe>
     </main>
 </body>
 </html>
