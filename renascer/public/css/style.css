@@ -353,7 +353,16 @@ iframe {
     text-align: center;
 
 }
+.listarU{
 
+    font-family: lamoric;
+    color: #ffffff;
+    cursor: default;
+    text-align: center;
+
+
+
+}
 
 #tituloservicos{
     position: absolute;

@@ -15,7 +15,7 @@
 </head>
 <body class="fundo-verde">
 
-    <h1 id="h1arrumado">Lista de Usuário</h1>
+    <h1 class="listarU">Lista de Usuários</h1>
 
     <?php
     require_once "../codigo/conexao.php";
@@ -29,7 +29,7 @@
     ?>
             <div class="table">
                 <table class="table">
-                    <thead class="table-success text-center">
+                    <thead class="text-center" id="">
                         <tr>
                             <th scope="col">ID</th>
                             <th scope="col">Email</th>
