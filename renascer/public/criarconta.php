@@ -9,12 +9,10 @@
 </head>
 
 <body class="fundo-verde">
-  <h1 class="letra-dourada text-center mt-3">Ateliê Renascer</h1>
-
   <div class="container mt-4">
     <div class="card mx-auto shadow" style="max-width: 400px;">
       <div class="card-body">
-        <h1 class="card-title text-center mb-4">Criar Conta</h1>
+        <h1 class="tituloConta">Criar Conta</h1>
 
         <form id="formCriarConta" action="salvarUsuario.php" method="POST" novalidate>
           

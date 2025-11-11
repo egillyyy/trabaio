@@ -24,7 +24,7 @@ $tipos = listarUsuario($conexao);
   <div class="container mt-5">
     <div class="card mx-auto" style="max-width: 400px;">
       <div class="card-body">
-        <h1 class="card-title text-center mb-4">Criar conta</h1>
+        <h1 class="tituloConta">Criar conta</h1>
 
         <form action="salvarUsuario.php" method="POST">
           

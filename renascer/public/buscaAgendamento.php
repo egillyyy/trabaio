@@ -19,9 +19,11 @@ require_once "../codigo/funcoes.php";
 
 <body class="fundo-verde">
   <div class="container text-center mt-4">
-    <h1 id="h1arrumado">Pesquisar Agendamentos</h1>
+    <h1 class="pesquisarA">Pesquisar Agendamentos</h1>
 
-    <form action="buscaAgendamento.php" class="card card-agendamento p-4 shadow mx-auto mb-4" style="max-width: 400px;">
+    <br>
+
+    <form action="buscaAgendamento.php" class="card card-agendamento p-4 shadow mx-auto mb-4">
       <div class="mb-3 text-start">
         <label for="nome" class="form-label">Nome:</label>
         <input type="text" class="form-control" id="nome" name="nome" required>
