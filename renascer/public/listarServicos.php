@@ -1,10 +1,11 @@
 <?php
-    require_once "../codigo/verificarLogado.php";
-    $tipo = $_SESSION['tipo'];
+require_once "../codigo/verificarLogado.php";
+$tipo = $_SESSION['tipo'];
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <link rel="stylesheet" href="css/style.css">
     <meta charset="UTF-8">
@@ -13,8 +14,9 @@
 
     <title>Listar Serviços</title>
 </head>
+
 <body class="fundo-verde">
-    
+
 
     <h1 class="listarU">Lista de Serviços</h1>
 
@@ -60,10 +62,10 @@
     <?php
     }
     ?>
-    
+
+    <button type="submit"> <a class="linkBranco" href="servicos.php">Volta</a></button>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>
-
-
