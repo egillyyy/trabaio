@@ -15,7 +15,7 @@
 </head>
 <body class="fundo-verde">
 
-    <h1 id="h1arrumado">Lista de Pagamentos</h1>
+    <h1 class="listarU">Lista de Pagamentos</h1>
 
     <?php
     require_once "../codigo/conexao.php";
@@ -27,38 +27,45 @@
         echo "Não existem pagamentos cadastrados.";
     } else {
     ?>
-        <table class="table table-success table-striped">
-            <tr>
-                <th>ID</th>
-                <th>Valor</th>
-                <th>Forma</th>
-                <th>Descrição</th>
-                <th>ID agendamento</th>
-                <th colspan="2">Ações</th>
-            </tr>
-            <?php
-            foreach ($lista_pagamento as $pagamento) {
-                $id = $pagamento['idpagamento'];
-                $valor = $pagamento['valor'];
-                $forma = $pagamento['forma'];
-                $descricao = $pagamento['descricao'];
-                $idagendamento = $pagamento['tb_agendamento_idagendamento'];
-                
-                echo "<tr>";
-                echo "<td>$id</td>";
-                echo "<td>R$ $valor</td>";
-                echo "<td>$forma</td>";
-                echo "<td>$descricao</td>";
-                echo "<td>$idagendamento</td>";
-                echo "<td><a href='../codigo/deletarPagamento.php?id=$id'>Excluir</a></td>";
-                echo "<td><a href='formPagamento.php?id=$id'>Editar</a></td>";
-                echo "</tr>";
-            }
-            ?>
-        </table>
+        <div class="table">
+            <table class="table table-success table-striped">
+                <thead class="text-center">
+                    <tr>
+                        <th scope="col">ID</th>
+                        <th scope="col">Valor</th>
+                        <th scope="col">Forma</th>
+                        <th scope="col">Descrição</th>
+                        <th scope="col">ID Agendamento</th>
+                        <th scope="col" colspan="2">Ações</th>
+                    </tr>
+                </thead>
+                <tbody class="text-center">
+                    <?php
+                    foreach ($lista_pagamento as $pagamento) {
+                        $id = $pagamento['idpagamento'];
+                        $valor = $pagamento['valor'];
+                        $forma = $pagamento['forma'];
+                        $descricao = $pagamento['descricao'];
+                        $idagendamento = $pagamento['tb_agendamento_idagendamento'];
+
+                        echo "<tr>";
+                        echo "<td>$id</td>";
+                        echo "<td>R$ $valor</td>";
+                        echo "<td>$forma</td>";
+                        echo "<td>$descricao</td>";
+                        echo "<td>$idagendamento</td>";
+                        echo "<td><a href='../codigo/deletarPagamento.php?id=$id'>Excluir</a></td>";
+                        echo "<td><a href='formPagamento.php?id=$id'>Editar</a></td>";
+                        echo "</tr>";
+                    }
+                    ?>
+                </tbody>
+            </table>
+        </div>
     <?php
     }
     ?>
-  
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
