@@ -504,14 +504,10 @@ iframe {
 
 }
 
+.linkvolta{
+    text-decoration: none;
+}
+
 
 /* ****************************************************************MARILENE************************************************ */
-.tituloMarilene {
-    font-family: marina;
-    color: #fff;
-}
 
-.textomarilene {
-    font-family: lamoric;
-    text-align: justify;
-}
