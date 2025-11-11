@@ -441,15 +441,22 @@ iframe {
     height: 100vh;
     background-color: rgb(96, 108, 56);
 }
-.selecionarS{
+.selecionarS {
     text-align: center;
-    top: 10px;
     font-family: lamoric;
     color: #000000;
-    cursor: default;
     font-size: 50px;
-
+    cursor: default;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    letter-spacing: 2px;
 }
+
+/* Dourado destacado no subtítulo */
+.selecionarS .colorida {
+    color: #ddb141;
+}
+
 
 /* ****************************************************************MARILENE************************************************ */
 

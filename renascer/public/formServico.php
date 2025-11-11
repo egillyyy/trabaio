@@ -17,7 +17,8 @@
 <body>
 
 
-    <h1 class="selecionarS">Selecionar Serviço</h1>
+
+    <h1 class="selecionarS text-center mt-4 mb-5">Selecionar <span class="colorida">Serviço</span></h1>
     <?php
 
     require_once "../codigo/conexao.php";
