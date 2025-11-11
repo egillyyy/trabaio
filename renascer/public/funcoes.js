@@ -131,3 +131,28 @@ $(function () {
     $("#mensagem").text(apenasLetras.length < $(this).val().length ? "Somente letras são permitidas." : "");
   });
 });
+
+// ======== Validação do formulário de agendamento =========
+$(function() {
+  // Quando sair de um campo
+  $("#formAgendamento input, #formAgendamento select").on("blur change", function() {
+    if ($(this).val().trim() === "") {
+      alert("Por favor, preencha o campo: " + $("label[for='" + this.id + "']").text());
+      $(this).focus();
+    }
+  });
+
+  // Antes de enviar o formulário
+  $("#formAgendamento").on("submit", function(e) {
+    let vazio = false;
+    $("#formAgendamento input, #formAgendamento select").each(function() {
+      if ($(this).val().trim() === "") {
+        alert("Preencha todos os campos antes de enviar.");
+        $(this).focus();
+        vazio = true;
+        return false; // sai do loop
+      }
+    });
+    if (vazio) e.preventDefault(); // bloqueia envio
+  });
+});

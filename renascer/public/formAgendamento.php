@@ -1,6 +1,6 @@
 <?php
-    require_once "../codigo/verificarLogado.php";
-    $tipo = $_SESSION['tipo'];
+require_once "../codigo/verificarLogado.php";
+$tipo = $_SESSION['tipo'];
 
 require_once "../codigo/conexao.php";
 require_once "../codigo/funcoes.php";
@@ -31,7 +31,7 @@ $id_servico_selecionado = isset($_GET['id_servico']) ? $_GET['id_servico'] : nul
             <label for="data" class="form-label">Data</label>
             <input type="date" class="form-control" id="data" name="data" required>
         </div>
-        <br>  
+        <br>
 
         <div class="mb-3">
             <label for="horario" class="form-label">Horário</label>
@@ -67,7 +67,9 @@ $id_servico_selecionado = isset($_GET['id_servico']) ? $_GET['id_servico'] : nul
 
         <button type="submit" class="btn btn w-100" id="teste1l">Salvar Agendamento</button>
     </form>
-
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="funcoes.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
