@@ -156,3 +156,93 @@ $(function() {
     if (vazio) e.preventDefault(); // bloqueia envio
   });
 });
+
+// ========== JQUERY: FORMULÁRIO DE SERVIÇO ==========
+$(document).ready(function () {
+  const form = $("#formServico");
+  const preco = $('input[name="preco_servico"]');
+  const descricao = $('textarea[name="descricao_servico"]');
+  const foto = $('input[name="foto"]');
+  const mensagem = $("<p id='mensagem' style='color:red; font-weight:bold;'></p>");
+  form.append(mensagem);
+
+  // ======== Máscara do campo preço ========
+  preco.mask("R$ 000.000.000,00", { reverse: true });
+
+  // Bloquear letras
+  preco.on("input", function () {
+    let valor = $(this).val().replace(/[A-Za-z]/g, "");
+    $(this).val(valor);
+  });
+
+  // ======== Mensagens ao sair do campo ========
+  preco.on("blur", function () {
+    if ($(this).val().trim() === "R$ ,00" || $(this).val().trim() === "") {
+      mensagem.text("O campo de preço não pode ficar vazio.");
+    } else {
+      mensagem.text("");
+    }
+  });
+
+  descricao.on("blur", function () {
+    if ($(this).val().trim() === "") {
+      mensagem.text("A descrição do serviço é obrigatória.");
+    } else {
+      mensagem.text("");
+    }
+  });
+
+  foto.on("blur", function () {
+    if ($(this).val().trim() === "") {
+      mensagem.text("Por favor, selecione uma foto.");
+    } else {
+      mensagem.text("");
+    }
+  });
+
+  // ======== Validação completa no envio ========
+  form.on("submit", function (e) {
+    const precoVal = preco.val().trim();
+    const tipoVal = $('input[name="tipo_servico"]:checked').val();
+    const descricaoVal = descricao.val().trim();
+    const fotoVal = foto.val().trim();
+
+    if (precoVal === "" || precoVal === "R$ ,00") {
+      e.preventDefault();
+      mensagem.text("Preencha o campo de preço corretamente.");
+      preco.focus();
+      return;
+    }
+
+    // Limita ao formato 10,2 (até 10 dígitos antes da vírgula e 2 depois)
+    const numeros = precoVal.replace(/[^\d]/g, "");
+    if (numeros.length > 12) {
+      e.preventDefault();
+      mensagem.text("O valor do preço excede o limite permitido (10 dígitos e 2 decimais).");
+      preco.focus();
+      return;
+    }
+
+    if (!tipoVal) {
+      e.preventDefault();
+      mensagem.text("Selecione um tipo de serviço.");
+      return;
+    }
+
+    if (descricaoVal === "") {
+      e.preventDefault();
+      mensagem.text("A descrição do serviço não pode estar vazia.");
+      descricao.focus();
+      return;
+    }
+
+    if (fotoVal === "") {
+      e.preventDefault();
+      mensagem.text("Selecione uma foto para o serviço.");
+      foto.focus();
+      return;
+    }
+
+    mensagem.text("");
+  });
+});
