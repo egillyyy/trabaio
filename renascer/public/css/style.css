@@ -510,44 +510,54 @@ iframe {
 
 .sobre-container {
     display: flex;
+    justify-content: center;
     align-items: center;
-    justify-content: center; 
-    gap: 20px; 
-    margin-bottom: 30px;
-}
-
-.imgmarinele {
-    max-width: 200px;
-    height: auto;
-}
-
-.tituloMarilene {
+  }
+  
+  .tituloMarilene {
     font-family: lamoric;
     color: #000000;
     font-size: 50px;
-    margin: 0;
-}
-
-#botaomarilene {
-    background-color: #000000; 
-    color: #ffffff; 
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .textomarilene {
+    font-size: 16px;
+    line-height: 1.7;
+    color: #333;
+    text-align: justify;
+    padding: 20px 25px;
+    background-color: #ffffff;
+    border-radius: 15px;
+    border: 2px solid #556b2f;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  #botaomarilene {
+    background-color: #000000;
+    color: #ffffff;
     border: none;
-    padding: 10px 20px;
-    border-radius: 10px;
+    padding: 10px 25px;
+    border-radius: 25px;
     font-family: lamoric;
     font-size: 18px;
-    transition: 0.3s;
-}
-
-
-#botaomarilene a {
-    color: #ffffff; 
+    transition: all 0.3s ease;
+  }
+  
+  #botaomarilene:hover {
+    background-color: rgb(96, 108, 56);
+    transform: scale(1.05);
+  }
+  
+  #botaomarilene .linkvolta {
     text-decoration: none;
-}
-
-#card-bodyM {
-    padding: 40px; 
-}
+    color: white;
+  }
+  
+  .linkvolta:hover {
+    color: #f1f1f1;
+  }
 
 /* ****************************************************************MARILENE************************************************ */
 
