@@ -38,7 +38,7 @@ $tipo = $_SESSION['tipo'];
                         <th scope="col">Forma</th>
                         <th scope="col">Descrição</th>
                         <th scope="col">ID Agendamento</th>
-                        <th scope="col" colspan="2">Ações</th>
+                        <th scope="col">Ações</th>
                     </tr>
                 </thead>
                 <tbody class="text-center">
@@ -57,7 +57,6 @@ $tipo = $_SESSION['tipo'];
                         echo "<td>$descricao</td>";
                         echo "<td>$idagendamento</td>";
                         echo "<td><a href='../codigo/deletarPagamento.php?id=$id'>Excluir</a></td>";
-                        echo "<td><a href='formPagamento.php?id=$id'>Editar</a></td>";
                         echo "</tr>";
                     }
                     ?>
