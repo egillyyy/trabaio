@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body class="fundo-verde">
+<body class="fundo-verde" id="index">
 
   <div class="container mt-4">
     <div class="card mx-auto shadow" style="max-width: 400px;">
