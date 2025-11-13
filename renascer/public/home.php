@@ -89,11 +89,11 @@
                     echo "<a href='realizarPagamento.php' class='linkframe' target='conteudoFrame' id='servicosindex'>Realizar Pagamento</a> <br>";
                     echo "</div>";
                 }
-                if ($tipo == 'f' or $tipo == 'g' or $tipo =='c') {
-                    echo "<div class='mb-3'>";
-                    echo "<a href='sucesso.html' class='linkframe' target='conteudoFrame' id='sucessoindex'>Página de Sucesso</a> <br>";
-                    echo "</div>";
-                }    
+                // if ($tipo == 'f' or $tipo == 'g' or $tipo =='c') {
+                //     echo "<div class='mb-3'>";
+                //     echo "<a href='sucesso.html' class='linkframe' target='conteudoFrame' id='sucessoindex'>Página de Sucesso</a> <br>";
+                //     echo "</div>";
+                // }    
             ?>
         
     </header>
@@ -108,5 +108,3 @@
 </footer>  
 </body>
 </html>
-class="linkframe"
-target="conteudoFrame"
