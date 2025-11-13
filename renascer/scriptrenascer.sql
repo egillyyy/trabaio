@@ -106,23 +106,42 @@ SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
 USE renascer;
 
 INSERT INTO tb_usuario (email, senha, tipo, nome, telefone) VALUES
-('marilene.gerente@gmail.com', '$2y$10$xXhnoo02m00F59k0eOjSCetSM0szfscehDOPsvnpWbDV4zWcurhZi', 'g', 'Marilene', '11 988887770'),
-('maria.cliente@gmail.com', '$2y$10$4Q458yTE3LBqUgB3wbw8MOdaVBWwfAvylltQ0ti84iPqR5m3L3QcG', 'c', 'Maria Souza', '11 988887777'),
-('joao.cliente@gmail.com', '$2y$10$aqYMHLULzW5.232L5n5eMeXPBCLMotS1890TXBnNpdDZMUE0kbWRO', 'c', 'João Silva', '11 977776666'),
-('ana.cliente@gmail.com', '$2y$10$rTBCNNtRUG5oCDWwS/O2qukCHWpL9wLLugIjUiAMDRTekrMc9Dyvi', 'c', 'Ana Pereira', '11 966665555'),
-('carla.cliente@gmail.com', '$2y$10$yS4IYSomXE/ds4oB28Obxe.FrKLYLwt3jjJCy0Mu3L4ZV2NuafLE2', 'c', 'Carla Dias', '11 955554444'),
-('paulo.cliente@gmail.com', '$2y$10$wz6igcDigAbzsz6XYDPdp./RiiTkrCS5diFi5n1oS4xXSPUZgJS4G', 'c', 'Paulo Oliveira', '11 944443333'),
-('jose.func@gmail.com', '$2y$10$6oVYVY1LtQLdXdhUI9bzGu51B3j66bK2PMMcO53JyNPRYuQisIb/y', 'f', 'José Barbosa', '11 933332222'),
-('lucas.func@gmail.com', '$2y$10$ZIPV/qmoZOjoo6ISisuAU.cGb1byZY9gxqDQmnaAIvpEq3qPTEpzC', 'f', 'Lucas Martins', '11 922221111'),
-('fernanda.func@gmail.com', '$2y$10$EsoxxeapNEMJo5QghvtGwe1RIvEvCeY/yRtlfT809twMHhzsiCyQi', 'f', 'Fernanda Lima', '11 911110000'),
-('aline.func@gmail.com', '$2y$10$MoBFfqkXPkwosHIOM3L5v.c1o38SyuUNlYHj2IRUMZHeakwNvhlqm', 'f', 'Aline Ferreira', '11 900009999'),
-('123@gmail.com', 'u04TlLczKw5Ds5cgOYs86BS', 'g', '123', '12 12312312');
+('marilene.gerente@gmail.com', '$2y$10$xXhnoo02m00F59k0eOjSCetSM0szfscehDOPsvnpWbDV4zWcurhZi', 'g', 'Marilene', '(43) 53543-5446'), 
+('maria.cliente@gmail.com', '$2y$10$4Q458yTE3LBqUgB3wbw8MOdaVBWwfAvylltQ0ti84iPqR5m3L3QcG', 'c', 'Maria Souza', '(43) 53543-5422'),
+('joao.cliente@gmail.com', '$2y$10$aqYMHLULzW5.232L5n5eMeXPBCLMotS1890TXBnNpdDZMUE0kbWRO', 'c', 'João Silva', '(43) 52243-5446'),
+('ana.cliente@gmail.com', '$2y$10$rTBCNNtRUG5oCDWwS/O2qukCHWpL9wLLugIjUiAMDRTekrMc9Dyvi', 'c', 'Ana Pereira', '(43) 53543-2246'),
+('carla.cliente@gmail.com', '$2y$10$yS4IYSomXE/ds4oB28Obxe.FrKLYLwt3jjJCy0Mu3L4ZV2NuafLE2', 'c', 'Carla Dias', '(43) 22543-5446'),
+('paulo.cliente@gmail.com', '$2y$10$wz6igcDigAbzsz6XYDPdp./RiiTkrCS5diFi5n1oS4xXSPUZgJS4G', 'c', 'Paulo Oliveira', '(43) 53511-5446'),
+('jose.func@gmail.com', '$2y$10$6oVYVY1LtQLdXdhUI9bzGu51B3j66bK2PMMcO53JyNPRYuQisIb/y', 'f', 'José Barbosa', '(43) 51143-5446'),
+('lucas.func@gmail.com', '$2y$10$ZIPV/qmoZOjoo6ISisuAU.cGb1byZY9gxqDQmnaAIvpEq3qPTEpzC', 'f', 'Lucas Martins', '(43) 11543-5446'),
+('fernanda.func@gmail.com', '$2y$10$EsoxxeapNEMJo5QghvtGwe1RIvEvCeY/yRtlfT809twMHhzsiCyQi', 'f', 'Fernanda Lima', '(43) 53543-1146'),
+('aline.func@gmail.com', '$2y$10$MoBFfqkXPkwosHIOM3L5v.c1o38SyuUNlYHj2IRUMZHeakwNvhlqm', 'f', 'Aline Ferreira', '(43) 53543-5123'),
+('123@gmail.com', '$2y$10$wUqKjowrYkPyzpusaVrq.eielpGrYZ5SKVjcmau6Pt/mdh3Cwlb9e', 'g', 'ADM', '(11) 11111-1111');
 
 INSERT INTO tb_servico (preco_servico, tipo_servico, descricao_servico, foto) VALUES
-(50.00, 'Cabelo', 'Corte de cabelo feminino', 'corte_feminino.jpg'),
+(250.00, 'Cabelo', 'Corte de cabelo feminino', 'corte_feminino.jpg'),
 (100.00, 'Maquiagem', 'Maquiagem completa', 'maquiagem.jpg'),
 (80.00, 'Unha', 'Manicure completa', 'manicure.jpg'),
-(300.00, 'Especial', 'Pacote noiva completo', 'noiva.jpg');
+(300.00, 'Especial', 'Pacote noiva completo', 'noiva.jpg'),
+(250.00, 'Cabelo', 'Cabelo com luzes em moreno', '6915c61856752.jpeg'),
+(250.00, 'Cabelo', 'Corte de cabelo Wolf cut cacheado', '6915c71c36955.jpg'),
+(250.00, 'Cabelo', 'Finalização para cabelo ondulado', '6915c7777df9a.jpg'),
+(250.00, 'Cabelo', 'Corte em camadas', '6915c7b76d9dd.jpg'),
+(250.00, 'Cabelo', 'Penteado cabelo preso', '6915c83d463fa.jpg'),
+(80.00, 'Unha', 'Unha arredondada ', '6915c8bf64c4a.jpg'),
+(80.00, 'Unha', 'Unha verde', '6915c8e536791.jpg'),
+(80.00, 'Unha', 'Unha primavera', '6915c9018a4d3.jpg'),
+(80.00, 'Unha', 'Unha azul bebê', '6915c93d3a9ce.jpg'),
+(80.00, 'Unha', 'Unha Romântica', '6915c97d95d8f.jpg'),
+(100.00, 'Maquiagem', 'Maquiagem básica', '6915c9bef0067.jpg'),
+(100.00, 'Maquiagem', 'Maquiagem glow', '6915ca2c3ea1a.jpg'),
+(100.00, 'Maquiagem', 'Maquiagem em alta 2025', '6915ca66e81db.jpg'),
+(100.00, 'Maquiagem', 'Maquiagem outono', '6915cae917dcd.jpg'),
+(100.00, 'Maquiagem', 'Maquiagem sombra simples', '6915cb417187c.jpg'),
+(300.00, 'Especial', 'Pacote formatura', '6915cbc9df56a.jpg'),
+(300.00, 'Especial', 'Pacote dia de Spa', '6915cc4d32402.jpg'),
+(300.00, 'Especial', 'Pacote dia das maẽs', '6915ccc44f6a3.jpg'),
+(300.00, 'Especial', 'Pacote natal', '6915cd0a92a33.jpg');
 
 INSERT INTO tb_agendamento (data, horario, tb_servico_id_servico, tb_usuario_idusuario) VALUES
 ('2025-09-15', '10:00:00', 1, 2),
