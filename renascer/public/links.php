@@ -20,43 +20,43 @@
             <div class="card-body">
                 <h1 class="card-title text-center mb-4" id="colorida" >MENU PRINCIPAL</h1>
             <?php
-                if ($tipo == 'f' AND $tipo == 'g') {
+                if ($tipo == 'f' or $tipo == 'g') {
                     echo "<div class='mb-3'>";
                     echo "<a href='buscaAgendamento.php' class='linksindex' id='agendamentoindex2'>Pesquisar Agendamentos</a> <br>";
                     echo "</div>";
                 }
 
-                if ($tipo == 'f' AND $tipo == 'g') {
+                if ($tipo == 'f' or $tipo == 'g') {
                     echo "<div class='mb-3'>";
                     echo "<a href='formUsuario.php' class='linksindex' id='agendamentoindex2'>Adicionar Usuário</a> <br>";
                     echo "</div>";
                 }
 
-                if ($tipo == 'f' AND $tipo == 'g') {
+                if ($tipo == 'f' or $tipo == 'g') {
                     echo "<div class='mb-3'>";
                     echo "<a href='listarAgendamentos.php' class='linksindex' id='agendamentoindex2'>Listar Agendamentos</a> <br>";
                     echo "</div>";
                 }
 
-                if ($tipo == 'f' AND $tipo == 'g') {
+                if ($tipo == 'f' or $tipo == 'g') {
                     echo "<div class='mb-3'>";
                     echo "<a href='listarPagamentos.php' class='linksindex' id='pagamentoindex2'>Listar Pagamentos</a> <br>";
                     echo "</div>";
                 }
 
-                if ($tipo == 'f' AND $tipo == 'g') {
+                if ($tipo == 'f' or $tipo == 'g') {
                     echo "<div class='mb-3'>";
                     echo "<a href='listarServicos.php' class='linksindex' id='servicosindex2'>Listar Serviços</a> <br>";
                     echo "</div>";
                     }
 
-                if ($tipo == 'f' AND $tipo == 'g') {
+                if ($tipo == 'f' or $tipo == 'g') {
                     echo "<div class='mb-3'>";
                     echo "<a href='listarUsuarios.php' class='linksindex' id='usuarioindex'>Listar Usuários</a> <br>";
                     echo "</div>";
                 }
                 
-                if ($tipo == 'f' AND $tipo == 'g') {
+                if ($tipo == 'f' or $tipo == 'g') {
                     echo "<div class='mb-3'>";
                     echo "<a href='criarServico.php' class='linksindex' id='servicosindex'>Criar Serviço</a> <br>";
                     echo "</div>";

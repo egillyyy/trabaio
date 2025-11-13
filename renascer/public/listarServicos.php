@@ -37,7 +37,7 @@ $tipo = $_SESSION['tipo'];
                         <th scope="col">ID</th>
                         <th scope="col">Preço Serviço</th>
                         <th scope="col">Tipo Serviço</th>
-                        <th scope="col">Ações</th>
+                        <th scope="col" colspan="2">Ações</th>
                     </tr>
                 </thead>
                 <tbody class="text-center">
@@ -52,6 +52,7 @@ $tipo = $_SESSION['tipo'];
                         echo "<td>R$ $preco_servico</td>";
                         echo "<td>$tipo_servico</td>";
                         echo "<td><a href='../codigo/deletarServico.php?id=$id'>Excluir</a></td>";
+                        echo "<td><a href='criarServico.php?id=$id'>Editar</a></td>";
                         echo "</tr>";
                     }
                     ?>
