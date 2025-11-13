@@ -26,7 +26,7 @@
                     echo "</div>";
                 }
 
-                if ($tipo == 'f' or $tipo == 'g') {
+                if ($tipo == 'g') {
                     echo "<div class='mb-3'>";
                     echo "<a href='formUsuario.php' class='linkframe' target='conteudoFrame' id='agendamentoindex2'>Adicionar Usuário</a> <br>";
                     echo "</div>";
@@ -56,33 +56,40 @@
                     echo "</div>";
                 }
                 
-                if ($tipo == 'f' or $tipo == 'g') {
+                if ($tipo == 'g') {
                     echo "<div class='mb-3'>";
                     echo "<a href='criarServico.php' class='linkframe' target='conteudoFrame' id='servicosindex'>Criar Serviço</a> <br>";
                     echo "</div>";
                 }
                 
-                else {
+                if ($tipo == 'f' or $tipo == 'g' or $tipo =='c') {
                     echo "<div class='mb-3'>";
                     echo "<a href='formAgendamento.php' class='linkframe' target='conteudoFrame' id='agendamentoindex'>Formulário de Agendamento</a> <br>";
                     echo "</div>";
-                    
+                }
+                if ($tipo == 'f' or $tipo == 'g' or $tipo =='c') {
+
                     echo "<div class='mb-3'>";
                     echo "<a href='formPagamento.php' class='linkframe' target='conteudoFrame' id='pagamentoindex'>Formulário de Pagamento</a> <br>";
                     echo "</div>";
-                    
+                }  
+                if ($tipo == 'f' or $tipo == 'g' or $tipo =='c') {
+
                     echo "<div class='mb-3'>";
                     echo "<a href='rodape.html' class='linkframe' target='conteudoFrame' id='rodapeindex'>Rodapé</a> <br>";
                     echo "</div>";
-                    
+                }
+                if ($tipo == 'f' or $tipo == 'g' or $tipo =='c') {
                     echo "<div class='mb-3'>";
                     echo "<a href='servicos.php' class='linkframe' target='conteudoFrame' id='servicosindex'>Selecionar Serviço</a> <br>";
                     echo "</div>";
-                    
+                } 
+                if ($tipo == 'f' or $tipo == 'g' or $tipo =='c') {
                     echo "<div class='mb-3'>";
                     echo "<a href='realizarPagamento.php' class='linkframe' target='conteudoFrame' id='servicosindex'>Realizar Pagamento</a> <br>";
                     echo "</div>";
-                    
+                }
+                if ($tipo == 'f' or $tipo == 'g' or $tipo =='c') {
                     echo "<div class='mb-3'>";
                     echo "<a href='sucesso.html' class='linkframe' target='conteudoFrame' id='sucessoindex'>Página de Sucesso</a> <br>";
                     echo "</div>";
