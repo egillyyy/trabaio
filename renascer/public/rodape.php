@@ -16,10 +16,7 @@
     <ul>
       <h4>Páginas</h4>
       <li><a href="index.php">Login</a></li>
-      <li><a href="servicos.php">Unhas</a></li>
-      <li><a href="servicos.php">Cabelos</a></li>
-      <li><a href="servicos.php">Maquiagem</a></li>
-      <li><a href="servicos.php">Especial</a></li>
+      <li><a href="servicos.php">Serviços</a></li>
     </ul>
 
     <ul>
