@@ -240,10 +240,16 @@ function deletarServico($conexao, $idservico) {
 
     mysqli_stmt_bind_param($comando, 'i', $idservico);
 
-    $funcionou = mysqli_stmt_execute($comando);
+    try {
+        mysqli_stmt_execute($comando);
+        $retorno = true;
+    }
+    catch (Exception $e) {
+        $retorno = false;
+    }
     mysqli_stmt_close($comando);
 
-    return $funcionou;
+    return $retorno;
 };
 
 /**

@@ -18,4 +18,4 @@ if (isset($_GET['id'])) {
 }
 ?>
 <br><br>
-<a href="../public/listarAgendamento.php">Voltar para lista</a>
+<a href="../public/listarAgendamentos.php">Voltar para lista</a>
