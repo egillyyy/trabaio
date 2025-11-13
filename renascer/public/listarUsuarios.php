@@ -56,7 +56,7 @@ $tipo = $_SESSION['tipo'];
                         echo "<td>$nome</td>";
                         echo "<td>$tipo</td>";
                         echo "<td>$telefone</td>";
-                        echo "<td><a href='../codigo/deletarusuario.php?id=$id'>Excluir</a></td>";
+                        echo "<td><a href='../codigo/deletarUsuario.php?id=$id'>Excluir</a></td>";
                         echo "</tr>";
                     }
                     ?>

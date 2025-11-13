@@ -67,12 +67,12 @@
                     echo "<a href='formAgendamento.php' class='linkframe' target='conteudoFrame' id='agendamentoindex'>Formulário de Agendamento</a> <br>";
                     echo "</div>";
                 }
-                if ($tipo == 'f' or $tipo == 'g' or $tipo =='c') {
+                // if ($tipo == 'f' or $tipo == 'g') {
 
-                    echo "<div class='mb-3'>";
-                    echo "<a href='formPagamento.php' class='linkframe' target='conteudoFrame' id='pagamentoindex'>Formulário de Pagamento</a> <br>";
-                    echo "</div>";
-                }  
+                //     echo "<div class='mb-3'>";
+                //     echo "<a href='formPagamento.php' class='linkframe' target='conteudoFrame' id='pagamentoindex'>Formulário de Pagamento</a> <br>";
+                //     echo "</div>";
+                // }  
                 if ($tipo == 'f' or $tipo == 'g' or $tipo =='c') {
 
                     echo "<div class='mb-3'>";

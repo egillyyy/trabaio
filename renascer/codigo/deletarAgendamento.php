@@ -16,3 +16,6 @@ if (isset($_GET['id'])) {
     echo "ID não informado.";
 
 }
+?>
+<br><br>
+<a href="../public/listarAgendamento.php">Voltar para lista</a>

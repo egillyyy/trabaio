@@ -11,3 +11,7 @@ require_once "funcoes.php";
         } else {
     echo "Não foi possível excluir: este serviço está ligado a um agendamento.";
     }
+    ?>
+<br><br>
+<a href="../public/listarServicos.php">Voltar para lista</a>
+
