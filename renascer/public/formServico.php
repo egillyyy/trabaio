@@ -36,7 +36,7 @@
                     <h5 class="card-title">' . $servico["tipo_servico"] . '</h5>
                 </div>
                 <div class="card-body">
-                <img src="./fotos_servico/' . $servico["foto"] . '" alt="Imagem do serviço"
+                <img class="imgservico" src="./fotos_servico/' . $servico["foto"] . '" alt="Imagem do serviço"
                  class="img-fluid rounded mb-3" style="max-height:200px; object-fit:cover;">
                    <p class="card-text">
                         <strong>Descrição:</strong> ' . $servico["descricao_servico"] . '<br>
