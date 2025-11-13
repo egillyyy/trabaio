@@ -565,6 +565,12 @@ iframe {
     margin: auto;
     align-items: center;
     display: flex;
+    
+
+}
+
+.pagsucesso{
+    text-align: center;
 
 }
 

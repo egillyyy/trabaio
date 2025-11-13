@@ -20,6 +20,7 @@ if ($idusuario) {
     $resultado = mysqli_query($conexao, $sql);
     $agendamentosPendentes = mysqli_fetch_all($resultado, MYSQLI_ASSOC);
 }
+
 ?>
 
 <!DOCTYPE html>

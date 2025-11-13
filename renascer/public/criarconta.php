@@ -14,7 +14,7 @@
       <div class="card-body">
         <h1 class="tituloConta">Criar Conta</h1>
 
-        <form id="formCriarConta" action="salvarUsuario.php" method="POST" novalidate>
+        <form id="formCriarConta" action="salvarUsuario.php" method="POST" novalidate >
           
           <div class="mb-3">
             <label for="nome" class="form-label">Nome</label>
