@@ -73,12 +73,12 @@
                 //     echo "<a href='formPagamento.php' class='linkframe' target='conteudoFrame' id='pagamentoindex'>Formulário de Pagamento</a> <br>";
                 //     echo "</div>";
                 // }  
-                if ($tipo == 'f' or $tipo == 'g' or $tipo =='c') {
+                // if ($tipo == 'f' or $tipo == 'g' or $tipo =='c') {
 
-                    echo "<div class='mb-3'>";
-                    echo "<a href='rodape.html' class='linkframe' target='conteudoFrame' id='rodapeindex'>Rodapé</a> <br>";
-                    echo "</div>";
-                }
+                //     echo "<div class='mb-3'>";
+                //     echo "<a href='rodape.html' class='linkframe' target='conteudoFrame' id='rodapeindex'>Rodapé</a> <br>";
+                //     echo "</div>";
+                // }
                 if ($tipo == 'f' or $tipo == 'g' or $tipo =='c') {
                     echo "<div class='mb-3'>";
                     echo "<a href='servicos.php' class='linkframe' target='conteudoFrame' id='servicosindex'>Selecionar Serviço</a> <br>";
