@@ -120,7 +120,6 @@ INSERT INTO tb_usuario (email, senha, tipo, nome, telefone) VALUES
 
 INSERT INTO tb_servico (preco_servico, tipo_servico, descricao_servico, foto) VALUES
 (50.00, 'Cabelo', 'Corte de cabelo feminino', 'corte_feminino.jpg'),
-(200.00, 'Penteado', 'Penteado para festa', 'penteado.jpg'),
 (100.00, 'Maquiagem', 'Maquiagem completa', 'maquiagem.jpg'),
 (80.00, 'Unha', 'Manicure completa', 'manicure.jpg'),
 (300.00, 'Especial', 'Pacote noiva completo', 'noiva.jpg');
