@@ -1,3 +1,8 @@
+<?php
+    require_once "../codigo/verificarLogado.php";
+    $tipo = $_SESSION['tipo'];
+?>
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -14,21 +19,76 @@
         </div>
 
         <div class="botoes">
-            <div class="linkframe"><a href="buscaAgendamento.php" target="conteudoFrame">Pesquisar Agendamentos</a></div>
-            <div class="linkframe"><a href="formUsuario.php" target="conteudoFrame">Adicionar Usuário</a></div>
-            <div class="linkframe" ><a href="listarAgendamentos.php" target="conteudoFrame">Listar Agendamentos</a></div>
-            <div class="linkframe"><a href="listarPagamentos.php" target="conteudoFrame">Listar Pagamentos</a></div>
+            <?php
+                if ($tipo == 'f' or $tipo == 'g') {
+                    echo "<div class='mb-3'>";
+                    echo "<a href='buscaAgendamento.php' class='linkframe' target='conteudoFrame' id='agendamentoindex2'>Pesquisar Agendamentos</a> <br>";
+                    echo "</div>";
+                }
 
-            <div class="linkframe"><a href="listarServicos.php" target="conteudoFrame">Listar Serviços</a></div>
-            <div class="linkframe"><a href="listarUsuarios.php" target="conteudoFrame">Listar Usuários</a></div>
-            <div class="linkframe"><a href="criarServico.php" target="conteudoFrame">Criar Serviço</a></div>
-            <div class="linkframe"><a href="formAgendamento.php" target="conteudoFrame">Formulário de Agendamento</a></div>
-            <div class="linkframe"><a href="servicos.php" target="conteudoFrame">Selecionar Serviço</a></div>
-            <div class="linkframe"><a href="realizarPagamento.php" target="conteudoFrame">Realizar Pagamento</a></div>
-            <!-- <div class="linkframe"><a href="sucesso.html" target="conteudoFrame">Sucesso</a></div> -->
+                if ($tipo == 'f' or $tipo == 'g') {
+                    echo "<div class='mb-3'>";
+                    echo "<a href='formUsuario.php' class='linkframe' target='conteudoFrame' id='agendamentoindex2'>Adicionar Usuário</a> <br>";
+                    echo "</div>";
+                }
 
+                if ($tipo == 'f' or $tipo == 'g') {
+                    echo "<div class='mb-3'>";
+                    echo "<a href='listarAgendamentos.php' class='linkframe' target='conteudoFrame' id='agendamentoindex2'>Listar Agendamentos</a> <br>";
+                    echo "</div>";
+                }
 
-        </div>
+                if ($tipo == 'f' or $tipo == 'g') {
+                    echo "<div class='mb-3'>";
+                    echo "<a href='listarPagamentos.php' class='linkframe' target='conteudoFrame' id='pagamentoindex2'>Listar Pagamentos</a> <br>";
+                    echo "</div>";
+                }
+
+                if ($tipo == 'f' or $tipo == 'g') {
+                    echo "<div class='mb-3'>";
+                    echo "<a href='listarServicos.php' class='linkframe' target='conteudoFrame' id='servicosindex2'>Listar Serviços</a> <br>";
+                    echo "</div>";
+                    }
+
+                if ($tipo == 'f' or $tipo == 'g') {
+                    echo "<div class='mb-3'>";
+                    echo "<a href='listarUsuarios.php' class='linkframe' target='conteudoFrame' id='usuarioindex'>Listar Usuários</a> <br>";
+                    echo "</div>";
+                }
+                
+                if ($tipo == 'f' or $tipo == 'g') {
+                    echo "<div class='mb-3'>";
+                    echo "<a href='criarServico.php' class='linkframe' target='conteudoFrame' id='servicosindex'>Criar Serviço</a> <br>";
+                    echo "</div>";
+                }
+                
+                else {
+                    echo "<div class='mb-3'>";
+                    echo "<a href='formAgendamento.php' class='linkframe' target='conteudoFrame' id='agendamentoindex'>Formulário de Agendamento</a> <br>";
+                    echo "</div>";
+                    
+                    echo "<div class='mb-3'>";
+                    echo "<a href='formPagamento.php' class='linkframe' target='conteudoFrame' id='pagamentoindex'>Formulário de Pagamento</a> <br>";
+                    echo "</div>";
+                    
+                    echo "<div class='mb-3'>";
+                    echo "<a href='rodape.html' class='linkframe' target='conteudoFrame' id='rodapeindex'>Rodapé</a> <br>";
+                    echo "</div>";
+                    
+                    echo "<div class='mb-3'>";
+                    echo "<a href='servicos.php' class='linkframe' target='conteudoFrame' id='servicosindex'>Selecionar Serviço</a> <br>";
+                    echo "</div>";
+                    
+                    echo "<div class='mb-3'>";
+                    echo "<a href='realizarPagamento.php' class='linkframe' target='conteudoFrame' id='servicosindex'>Realizar Pagamento</a> <br>";
+                    echo "</div>";
+                    
+                    echo "<div class='mb-3'>";
+                    echo "<a href='sucesso.html' class='linkframe' target='conteudoFrame' id='sucessoindex'>Página de Sucesso</a> <br>";
+                    echo "</div>";
+                }    
+            ?>
+        
     </header>
 <!-- main significa meioq o conteudo do iframe tlgd? -->
     <main class="conteudo" id="fundo-verde">
@@ -41,3 +101,5 @@
 </footer>  
 </body>
 </html>
+class="linkframe"
+target="conteudoFrame"
