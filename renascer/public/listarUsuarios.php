@@ -38,7 +38,7 @@ $tipo = $_SESSION['tipo'];
                         <th scope="col">Nome</th>
                         <th scope="col">Tipo</th>
                         <th scope="col">Telefone</th>
-                        <th scope="col" colspan="2">Ações</th>
+                        <th scope="col">Ações</th>
                     </tr>
                 </thead>
                 <tbody class="text-center">
@@ -56,8 +56,7 @@ $tipo = $_SESSION['tipo'];
                         echo "<td>$nome</td>";
                         echo "<td>$tipo</td>";
                         echo "<td>$telefone</td>";
-                        echo "<td><a href='deletarusuario.php?id=$id'>Excluir</a></td>";
-                        echo "<td><a href='formUsuario.php?id=$id'>Editar</a></td>";
+                        echo "<td><a href='../codigo/deletarusuario.php?id=$id'>Excluir</a></td>";
                         echo "</tr>";
                     }
                     ?>
